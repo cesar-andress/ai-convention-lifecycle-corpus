@@ -162,4 +162,5 @@ Cite this corpus via `CITATION.cff`. After Zenodo registration, use the assigned
 - `docs/repository_migration.md` — layout mapping from the internal study workspace
 - `docs/separation_audit.md` — paper/corpus boundary and verification
 - `docs/legacy_removal_log.md` — removed pilot artifacts (corpus copy only)
+- `docs/commit_policy.md` — required git commit workflow for this repository
 - `metadata/study_manifest.json` — machine-readable sample summary
