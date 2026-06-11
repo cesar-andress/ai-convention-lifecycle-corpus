@@ -153,7 +153,7 @@ Equivalent: `python scripts/lifecycle/run_v2.py` with `PYTHONPATH=./scripts`.
 
 ```bibtex
 @dataset{ai_convention_lifecycle_corpus_v2,
-  author       = {Anonymous Author(s)},
+  author       = {Andr{\'e}s, C\'esar},
   title        = {{AI Convention Lifecycle Corpus} --- Adoption Is Not Maintenance (v2)},
   year         = {2026},
   publisher    = {Zenodo},

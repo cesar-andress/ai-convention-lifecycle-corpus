@@ -7,7 +7,7 @@ Use **`metadata/zenodo.json`** as the canonical upload metadata template (copy f
 ## Before uploading
 
 1. Replace `XXXXXXX` in `CITATION.cff`, `metadata/zenodo.json`, and `README.md` with the assigned Zenodo record ID.
-2. Replace anonymous author placeholders when de-anonymizing.
+2. Confirm author metadata in `CITATION.cff` and `metadata/zenodo.json` matches the release tag.
 3. Tag the GitHub release as **`v2.0.0`**.
 
 ## Upload set

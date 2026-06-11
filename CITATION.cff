@@ -3,8 +3,11 @@ message: "If you use this corpus, please cite it as below."
 title: "AI Convention Lifecycle Corpus"
 type: dataset
 authors:
-  - family-names: "Sánchez"
-    given-names: "Cesar Andrés"
+  - family-names: "Andrés"
+    given-names: "César"
+    orcid: "https://orcid.org/0009-0001-8968-3404"
+    affiliation: "CRIA-BDHS Research Group, Higher Polytechnic School of Technology and Science, Universidad Camilo José Cela, Madrid, Spain"
+    email: "cesar.andress@ucjc.edu"
 version: "1.0.1"
 date-released: "2026-06-11"
 repository-code: "https://github.com/cesar-andress/ai-convention-lifecycle-corpus"

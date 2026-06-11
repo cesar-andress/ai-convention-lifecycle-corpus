@@ -305,7 +305,7 @@ Release procedure: [`docs/ZENODO_RELEASE_CHECKLIST.md`](../docs/ZENODO_RELEASE_C
 
 ### Contact and authorship
 
-Author metadata: [`CITATION.cff`](../CITATION.cff) (update after de-anonymization).
+Author metadata: [`CITATION.cff`](../CITATION.cff) (César Andrés; ORCID 0009-0001-8968-3404).
 
 ### Update policy
 
