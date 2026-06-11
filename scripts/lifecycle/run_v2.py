@@ -73,7 +73,7 @@ def main() -> int:
     summary_path = ROOT / "results" / "lifecycle" / "adoption_maintenance_v2.json"
     if summary_path.exists():
         s = json.loads(summary_path.read_text())
-        print("submission_readiness:", s.get("submission_readiness"))
+        print("reproduction_checks:", s.get("reproduction_checks"))
     return 0
 
 

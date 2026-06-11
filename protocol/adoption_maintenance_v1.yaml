@@ -1,6 +1,4 @@
-# adoption_maintenance v1 — protocol extension (pivot from instruction lifecycle)
-# Paper: "Adoption Is Not Maintenance"
-# Extends: protocol/lifecycle_v1.yaml (artifact scope, extraction unchanged)
+# adoption_maintenance v1 — protocol extension (extends lifecycle detection/extraction)
 
 project: adoption-is-not-maintenance
 extends: protocol/lifecycle_v1.yaml
@@ -161,45 +159,3 @@ outputs:
   table_gap_by_cohort: results/lifecycle/table_gap_by_cohort.csv
   table_repo_summary: results/lifecycle/table_repo_summary.csv
   funnel: results/lifecycle/funnel_adoption_maintenance.csv
-
-# --- Tables and figures (paper) ---
-
-deliverables:
-  tables:
-    T1_operational_definitions: [adoption, maintenance, states, gap formulas]
-    T2_sample: [n_repos, n_artifacts, n_present, n_deleted, by_type counts]
-    T3_states_primary: [ACTIVE, DORMANT, DELETED, TOO_YOUNG at T=180]
-    T4_gap_by_threshold: [90, 180, 365 artifact + repo gap + CI]
-    T5_gap_by_type: [types with n_mature_present_180 >= 30]
-    T6_gap_by_cohort: [introduced_at_quarter]
-    T7_repo_cross_tab: [adopted x maintained x dormant_only]
-  figures:
-    F1_state_stacked_bar: stacked counts ACTIVE/DORMANT/DELETED/TOO_YOUNG
-    F2_adoption_vs_maintenance_by_type: grouped bar adopted vs maintained
-    F3_gap_by_cohort: line or bar gap_rate by quarter
-    F4_repo_scatter: x=n_present paths, y=gap_rate or pct_dormant
-
-# --- Claims ---
-
-claims_allowed:
-  - Presence of AI convention paths in HEAD is common in the sample.
-  - A substantial fraction of present artifacts are git-dormant at 180d among mature present.
-  - Repository-level adoption exceeds repository-level maintenance.
-  - Gap magnitude differs by artifact family and introduction cohort.
-  - Deletion is less common than git-dormant persistence in HEAD (if supported).
-  - All rates report cluster-bootstrap 95% CI and mature-present denominators.
-
-claims_forbidden:
-  - AI governance is abandoned / failed (semantic).
-  - Adoption causes workflow outcomes.
-  - Findings generalize to all OSS or all AI-assisted development.
-  - Dormant implies unused by developers or agents.
-  - Headline rates without mature-present denominator.
-  - pooled rates that ignore artifact-type composition confounds without cohort controls.
-
-# --- Pilot scale (current) ---
-
-pilot:
-  n_repos: 55
-  n_artifacts: 650
-  note: AI-adopter biased sample; scale to N=500 repos for submission

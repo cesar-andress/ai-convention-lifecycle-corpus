@@ -1,5 +1,5 @@
 {
-  "paper_title": "Adoption Is Not Maintenance",
+  "study_id": "adoption-maintenance-v2",
   "sample_descriptor": "GitHub OSS candidate repos from mixed AI-adopter and general seed pools with at least one detected AI convention path",
   "discovery_funnel": {
     "candidates_processed:ALL": 81,
@@ -235,7 +235,7 @@
   "loo_max_abs_delta_repo_gap": 0.00446264262053736,
   "n_comparable_age_strata": 3,
   "annotation_rows": 40,
-  "annotation_path": "/home/cesar/papers/ai-artifact-cochange/annotation/annotation_sheet.csv",
+  "annotation_path": "annotation/annotation_sheet.csv",
   "annotation_summary": {
     "n_rows": 40,
     "git_state_correct_yes": 40,
@@ -244,21 +244,10 @@
     "ambiguous_yes": 3,
     "fully_labeled": 40
   },
-  "claims_allowed": [
-    "Adoption (HEAD presence) exceeds git-based maintenance among mature-present artifacts.",
-    "Repo-level maintenance metrics can mask artifact-level dormancy.",
-    "Gap magnitude varies by artifact type and introduction cohort where sample size permits.",
-    "Deletion and git-dormant persistence are distinct outcomes."
-  ],
-  "claims_forbidden": [
-    "General OSS prevalence of AI governance.",
-    "Semantic obsolescence or governance failure.",
-    "Causal workflow effects."
-  ],
   "n_repos": 209,
-  "submission_readiness": {
-    "label": "WEAK_ACCEPT_READY",
-    "note": "Meets minimum MSR v2 checklist; manual labels still required before submission.",
+  "reproduction_checks": {
+    "label": "COMPLETE",
+    "note": "All bundled reproduction checks passed.",
     "checks": {
       "n_repos_at_least_200": true,
       "bootstrap_present": true,

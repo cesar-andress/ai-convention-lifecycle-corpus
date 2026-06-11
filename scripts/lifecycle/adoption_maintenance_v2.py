@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Adoption-maintenance v2 analysis for MSR submission readiness."""
+"""Adoption-maintenance v2 analysis for the public replication corpus."""
 
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ from lifecycle.adoption_maintenance import (
     load_am_config,
     table_by_cohort,
 )
-from lifecycle.analyze import load_artifact_frame
+from lifecycle.build_dataset import load_artifact_frame
 from lifecycle.detection import load_config
 from lifecycle.fill_annotation import annotation_summary, fill_sheet
 
@@ -337,8 +337,8 @@ def headline_metrics(df: pd.DataFrame, t: int) -> dict:
     }
 
 
-def assess_submission_readiness(v2_cfg: dict, summary: dict) -> dict:
-    min_repos = int(v2_cfg["submission_readiness"]["min_repos"])
+def assess_reproduction_checks(v2_cfg: dict, summary: dict) -> dict:
+    min_repos = int(v2_cfg["reproduction_checks"]["min_repos"])
     n_repos = summary["n_repos"]
     checks = {
         "n_repos_at_least_200": n_repos >= min_repos,
@@ -350,14 +350,14 @@ def assess_submission_readiness(v2_cfg: dict, summary: dict) -> dict:
     }
     passed = sum(checks.values())
     if all(checks.values()):
-        label = "WEAK_ACCEPT_READY"
-        note = "Meets minimum MSR v2 checklist; manual labels still required before submission."
+        label = "COMPLETE"
+        note = "All bundled reproduction checks passed."
     elif passed >= 4 and n_repos >= 150:
-        label = "BORDERLINE"
-        note = "Close; address failed checks before submission."
+        label = "PARTIAL"
+        note = "Some reproduction checks failed; inspect checks map."
     else:
-        label = "NOT_READY"
-        note = "Scale or analyses incomplete."
+        label = "INCOMPLETE"
+        note = "Scale or required outputs missing."
     return {"label": label, "note": note, "checks": checks, "checks_passed": f"{passed}/{len(checks)}"}
 
 
@@ -401,7 +401,7 @@ def run_v2_analysis(
     n_comparable = int(age_adj["comparable"].sum()) if not age_adj.empty and "comparable" in age_adj.columns else 0
 
     summary = {
-        "paper_title": "Adoption Is Not Maintenance",
+        "study_id": "adoption-maintenance-v2",
         "sample_descriptor": "GitHub OSS candidate repos from mixed AI-adopter and general seed pools with at least one detected AI convention path",
         "discovery_funnel": discovery_funnel,
         "headline_primary_180": headline,
@@ -417,22 +417,11 @@ def run_v2_analysis(
         "loo_max_abs_delta_repo_gap": float(loo["abs_delta_repo_gap"].max()) if len(loo) else None,
         "n_comparable_age_strata": n_comparable,
         "annotation_rows": len(sheet),
-        "annotation_path": str(ann_path),
+        "annotation_path": str(ann_path.relative_to(ROOT)) if ann_path.is_relative_to(ROOT) else str(ann_path),
         "annotation_summary": annotation_summary(sheet),
-        "claims_allowed": [
-            "Adoption (HEAD presence) exceeds git-based maintenance among mature-present artifacts.",
-            "Repo-level maintenance metrics can mask artifact-level dormancy.",
-            "Gap magnitude varies by artifact type and introduction cohort where sample size permits.",
-            "Deletion and git-dormant persistence are distinct outcomes.",
-        ],
-        "claims_forbidden": [
-            "General OSS prevalence of AI governance.",
-            "Semantic obsolescence or governance failure.",
-            "Causal workflow effects.",
-        ],
     }
     summary["n_repos"] = headline["n_repos"]
-    summary["submission_readiness"] = assess_submission_readiness(v2_cfg, summary)
+    summary["reproduction_checks"] = assess_reproduction_checks(v2_cfg, summary)
 
     return summary, df
 

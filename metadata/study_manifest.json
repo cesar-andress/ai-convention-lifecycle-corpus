@@ -1,6 +1,5 @@
 {
   "title": "Adoption Is Not Maintenance — AI Instructional Artifact Lifecycle Corpus (v2)",
-  "paper_title": "Adoption Is Not Maintenance: The Adoption--Maintenance Gap in AI Instructional Artifacts on GitHub",
   "study_id": "adoption-maintenance-v2",
   "protocol_files": [
     "protocol/lifecycle_v1.yaml",

@@ -1,4 +1,4 @@
-# adoption_maintenance v2 — MSR submission prep (extends v1)
+# adoption_maintenance v2 — scale and outputs (extends v1)
 
 extends: protocol/adoption_maintenance_v1.yaml
 
@@ -43,7 +43,7 @@ outputs:
   type_gap_age_adjusted: results/lifecycle/type_gap_age_adjusted.csv
   annotation_sheet: annotation/annotation_sheet.csv
 
-submission_readiness:
+reproduction_checks:
   min_repos: 200
   require_bootstrap: true
   require_loo: true
