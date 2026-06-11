@@ -1,9 +1,10 @@
 # Dataset description
 
-**Corpus:** AI Convention Lifecycle Corpus (v2)  
+**Corpus:** AI Convention Lifecycle Corpus  
+**Release:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
 **Version:** 2.0.0  
 **Primary maintenance window:** *T* = 180 days  
-**Citation:** see root `CITATION.cff` and Zenodo DOI (when assigned)
+**Citation:** [`CITATION.cff`](../CITATION.cff) · [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986)
 
 This document describes the corpus as a **standalone research artifact**. A researcher can understand what was collected, how it was operationalized, and what limitations apply without consulting any companion publication.
 
@@ -416,7 +417,7 @@ Bootstrap 95% intervals and leave-one-out ranges: `results/lifecycle/bootstrap_v
 ## 14. How to cite
 
 ```text
-César Andrés. (2026). AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20637986
+Andrés, C., & Moncunilla, D. M. (2026). AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework (Version 2.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20637986
 ```
 
-Update author names and DOI after deposit. Full metadata: `CITATION.cff`.
+Full metadata: [`CITATION.cff`](../CITATION.cff) · [`docs/CITING.md`](CITING.md).

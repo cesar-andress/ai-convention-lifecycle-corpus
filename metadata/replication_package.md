@@ -1,6 +1,6 @@
 # Replication package inventory
 
-Explicit manifest of bundled files for the **AI Convention Lifecycle Corpus v2.0.0**.
+Explicit manifest of bundled files for **AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework**.
 
 This document describes **data, code, and protocols only**. It does not reproduce manuscript text, figures, or paper-specific claims.
 
@@ -170,4 +170,5 @@ Technical notes for reproduction and release auditing. **No manuscript content.*
 
 ## Citation
 
-Dataset DOI: `10.5281/zenodo.20637986` — see `CITATION.cff` and `README.md` §6.
+**Release:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
+Dataset DOI: [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986) — see `CITATION.cff` and `README.md` §6.

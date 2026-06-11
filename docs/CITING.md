@@ -1,6 +1,6 @@
 # How to cite this corpus
 
-Use these instructions when you reuse **data**, **code**, or **headline statistics** from the AI Convention Lifecycle Corpus. You do **not** need the companion MSR paper to cite this replication package.
+Use these instructions when you reuse **data**, **code**, or **headline statistics** from the **AI Convention Lifecycle Corpus**. You do **not** need the companion MSR paper to cite this replication package.
 
 | What you used | Cite |
 |---------------|------|
@@ -18,7 +18,7 @@ The Zenodo record is the **canonical, citable archive** for the bundled datasets
 
 | Field | Value |
 |-------|-------|
-| Title | AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2) |
+| Title | AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework |
 | Version | 2.0.0 |
 | DOI | `10.5281/zenodo.20637986` |
 | URL | `https://doi.org/10.5281/zenodo.20637986` |
@@ -27,8 +27,8 @@ The Zenodo record is the **canonical, citable archive** for the bundled datasets
 
 ```bibtex
 @dataset{ai_convention_lifecycle_corpus_v2,
-  author       = {Andr{\'e}s, C\'esar},
-  title        = {{AI Convention Lifecycle Corpus} --- Adoption Is Not Maintenance (v2)},
+  author       = {Andr{\'e}s, C\'esar and Moncunilla, David Mart{\'i}n},
+  title        = {{AI Convention Lifecycle Corpus v2.0.0 --- Expanded 209-Repository Dataset and Adoption--Maintenance Framework}},
   year         = {2026},
   publisher    = {Zenodo},
   version      = {2.0.0},
@@ -39,7 +39,7 @@ The Zenodo record is the **canonical, citable archive** for the bundled datasets
 
 ### Plain text (APA-style)
 
-> César Andrés. (2026). *AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2)* (Version 2.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20637986
+> Andrés, C., & Moncunilla, D. M. (2026). *AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework* (Version 2.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20637986
 
 ### Markdown link
 
@@ -62,18 +62,18 @@ Cite the **GitHub repository** when you refer to the **live source tree**, devel
 
 ```bibtex
 @software{ai_convention_lifecycle_corpus_github,
-  author       = {Andr{\'e}s, C\'esar},
+  author       = {Andr{\'e}s, C\'esar and Moncunilla, David Mart{\'i}n},
   title        = {{AI Convention Lifecycle Corpus}},
   year         = {2026},
   url          = {https://github.com/cesar-andress/ai-convention-lifecycle-corpus},
   version      = {2.0.0},
-  note         = {Mining pipeline and replication materials for AI instructional artifact lifecycle study}
+  note         = {Mining pipeline and replication materials for the AI Convention Lifecycle Corpus}
 }
 ```
 
 ### Plain text
 
-> César Andrés. (2026). *AI Convention Lifecycle Corpus* (Version 2.0.0) [Software]. GitHub. https://github.com/cesar-andress/ai-convention-lifecycle-corpus
+> Andrés, C., & Moncunilla, D. M. (2026). *AI Convention Lifecycle Corpus* (Version 2.0.0) [Software]. GitHub. https://github.com/cesar-andress/ai-convention-lifecycle-corpus
 
 **Recommendation:** For reproducible research, prefer the **Zenodo DOI** (§1) for data and results. Use GitHub when the citation target is the codebase itself.
 
@@ -93,8 +93,8 @@ Use this when you need an explicit version string in the citation key or bibliog
 
 ```bibtex
 @dataset{ai_convention_lifecycle_corpus_v2_0_0,
-  author       = {Andr{\'e}s, C\'esar},
-  title        = {{AI Convention Lifecycle Corpus} --- Adoption Is Not Maintenance},
+  author       = {Andr{\'e}s, C\'esar and Moncunilla, David Mart{\'i}n},
+  title        = {{AI Convention Lifecycle Corpus v2.0.0 --- Expanded 209-Repository Dataset and Adoption--Maintenance Framework}},
   year         = {2026},
   publisher    = {Zenodo},
   version      = {v2.0.0},
@@ -106,7 +106,7 @@ Use this when you need an explicit version string in the citation key or bibliog
 
 ### In prose (methods / data availability)
 
-> We used the AI Convention Lifecycle Corpus v2.0.0 (César Andrés, 2026; Zenodo: 10.5281/zenodo.20637986), comprising 209 analyzed GitHub repositories and 13,988 ever-introduced AI instructional artifact instances.
+> We used the AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework (Andrés & Moncunilla, 2026; Zenodo: https://doi.org/10.5281/zenodo.20637986), comprising 209 analyzed GitHub repositories and 13,988 ever-introduced AI instructional artifact instances.
 
 ### Version + Git commit (optional, for code-only forks)
 
@@ -114,7 +114,7 @@ If you cite a specific commit rather than a tag:
 
 ```bibtex
 @software{ai_convention_lifecycle_corpus_commit,
-  author       = {Andr{\'e}s, C\'esar},
+  author       = {Andr{\'e}s, C\'esar and Moncunilla, David Mart{\'i}n},
   title        = {{AI Convention Lifecycle Corpus}},
   year         = {2026},
   url          = {https://github.com/cesar-andress/ai-convention-lifecycle-corpus},

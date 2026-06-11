@@ -4,6 +4,8 @@
 
 Use **`metadata/zenodo.json`** as the canonical upload metadata template (copy fields into the Zenodo web form or REST API).
 
+**Canonical v2.0.0 release title:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework
+
 ## Before uploading
 
 1. Confirm DOI `10.5281/zenodo.20637986` in `CITATION.cff`, `metadata/zenodo.json`, and `README.md` matches the Zenodo record for this release.

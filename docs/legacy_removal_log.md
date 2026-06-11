@@ -2,7 +2,7 @@
 
 **Date:** 2026-06-10  
 **Scope:** `ai-convention-lifecycle-corpus/` only (internal study workspace unchanged).  
-**Goal:** retain assets required to reproduce the final **Adoption Is Not Maintenance** study (`adoption_maintenance_v2`).
+**Goal:** retain assets required to reproduce the final **AI Convention Lifecycle Corpus v2.0.0** release (`adoption_maintenance_v2` study ID).
 
 ---
 

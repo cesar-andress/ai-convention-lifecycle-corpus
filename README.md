@@ -1,6 +1,9 @@
 # AI Convention Lifecycle Corpus
 
-**Replication package (v2.0.0)** for measuring the adoption–maintenance gap in AI instructional artifacts on public GitHub repositories.
+**Canonical public release (v2.0.0):** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
+**DOI:** [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986)
+
+Replication package for measuring the adoption–maintenance gap in AI instructional artifacts on public GitHub repositories.
 
 This deposit is **self-contained**: a researcher can understand, cite, and reproduce the empirical study from this README and the bundled files alone. Start with **[`docs/DATASET.md`](docs/DATASET.md)** for a standalone introduction. The companion LaTeX manuscript lives in a separate repository/directory and is **not** included here.
 
@@ -153,8 +156,8 @@ Equivalent: `python scripts/lifecycle/run_v2.py` with `PYTHONPATH=./scripts`.
 
 ```bibtex
 @dataset{ai_convention_lifecycle_corpus_v2,
-  author       = {Andr{\'e}s, C\'esar},
-  title        = {{AI Convention Lifecycle Corpus} --- Adoption Is Not Maintenance (v2)},
+  author       = {Andr{\'e}s, C\'esar and Moncunilla, David Mart{\'i}n},
+  title        = {{AI Convention Lifecycle Corpus v2.0.0 --- Expanded 209-Repository Dataset and Adoption--Maintenance Framework}},
   year         = {2026},
   publisher    = {Zenodo},
   version      = {2.0.0},
@@ -191,6 +194,7 @@ When in doubt, treat **tabular outputs and seed lists as CC-BY 4.0** and **code 
 
 | Field | Value |
 |-------|-------|
+| **Release title** | AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework |
 | **DOI** | `10.5281/zenodo.20637986` |
 | **URL** | `https://doi.org/10.5281/zenodo.20637986` |
 | **Version** | 2.0.0 |

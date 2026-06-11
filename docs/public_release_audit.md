@@ -92,7 +92,7 @@ Searched terms: `cochange`, `co-change`, `VDG`, `A10`, `workflow predictor`, `pr
 
 ### 3.6 Tracked release inventory (53 files)
 
-All tracked paths belong to the final **Adoption Is Not Maintenance v2** replication package:
+All tracked paths belong to the final **AI Convention Lifecycle Corpus v2.0.0** replication package:
 
 - `protocol/` (3 YAML)
 - `scripts/lifecycle/` (11 Python modules)

@@ -1,13 +1,18 @@
 {
   "upload_type": "dataset",
   "publication_date": "2026-06-11",
-  "title": "AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2)",
+  "title": "AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework",
   "version": "2.0.0",
   "creators": [
     {
       "name": "César Andrés",
-      "affiliation": "CRIA-BDHS Research Group, Higher Polytechnic School of Technology and Science, Universidad Camilo José Cela, Madrid, Spain",
+      "affiliation": "CRIA-BDHS Research Group, Higher Polytechnic School of Technology and Science, Universidad Camilo José Cela, C/de Juan Hurtado de Mendoza, 4, 28036 Madrid, Spain",
       "orcid": "0009-0001-8968-3404"
+    },
+    {
+      "name": "David Martín Moncunilla",
+      "affiliation": "CRIA-BDHS Research Group, Higher Polytechnic School of Technology and Science, Universidad Camilo José Cela, C/de Juan Hurtado de Mendoza, 4, 28036 Madrid, Spain",
+      "orcid": "0000-0003-2422-9005"
     }
   ],
   "description": "<p>Self-contained replication package for an MSR study of AI instructional artifacts on GitHub (e.g. <code>AGENTS.md</code>, <code>CLAUDE.md</code>, Copilot/Cursor rule paths, <code>prompts/</code> trees).</p><p><strong>Research question:</strong> Does snapshot adoption of these paths at <code>HEAD</code> reflect git-based maintenance within a lookback window?</p><p><strong>v2 cohort:</strong> 220 discovered adopted repositories; 209 extracted and analyzed; 13,988 ever-introduced artifact instances. Primary maintenance window <em>T</em> = 180 days.</p><p><strong>Headline results:</strong> artifact-level mature-present gap 56.0%; repository-level gap 7.2%.</p><p><strong>Contents:</strong> frozen YAML protocols, seed URL lists, Python discovery/extraction/analysis pipeline, Parquet/CSV/JSON aggregates, bootstrap and sensitivity outputs, 40-row annotation sample.</p><p><strong>Not included:</strong> full git clones (<code>data/repos/</code>); re-extraction clones public URLs from <code>data/lifecycle/discovered_v2.csv</code>.</p><p><strong>Reproduction:</strong> <code>make verify-headline</code> (offline check); <code>make analyze</code> (offline recompute); <code>make lifecycle-v2</code> (full pipeline). See <code>README.md</code>, <code>metadata/replication_package.md</code>, and <code>docs/reproducibility.md</code>.</p><p><strong>Licensing:</strong> aggregated data CC-BY 4.0; source code MIT (<code>LICENSE</code>).</p>",

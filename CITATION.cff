@@ -1,14 +1,19 @@
 cff-version: 1.2.0
 message: "If you use this corpus, please cite it as below."
-title: "AI Convention Lifecycle Corpus"
+title: "AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework"
 type: dataset
 authors:
   - family-names: "Andrés"
     given-names: "César"
     orcid: "https://orcid.org/0009-0001-8968-3404"
-    affiliation: "CRIA-BDHS Research Group, Higher Polytechnic School of Technology and Science, Universidad Camilo José Cela, Madrid, Spain"
+    affiliation: "CRIA-BDHS Research Group, Higher Polytechnic School of Technology and Science, Universidad Camilo José Cela, C/de Juan Hurtado de Mendoza, 4, 28036 Madrid, Spain"
     email: "cesar.andress@ucjc.edu"
-version: "1.0.1"
+  - family-names: "Moncunilla"
+    given-names: "David Martín"
+    orcid: "https://orcid.org/0000-0003-2422-9005"
+    affiliation: "CRIA-BDHS Research Group, Higher Polytechnic School of Technology and Science, Universidad Camilo José Cela, C/de Juan Hurtado de Mendoza, 4, 28036 Madrid, Spain"
+    email: "david.martinm@ucjc.edu"
+version: "2.0.0"
 date-released: "2026-06-11"
 doi: "10.5281/zenodo.20637986"
 repository-code: "https://github.com/cesar-andress/ai-convention-lifecycle-corpus"

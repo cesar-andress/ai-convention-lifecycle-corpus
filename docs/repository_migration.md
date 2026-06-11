@@ -5,7 +5,7 @@ Migration from internal study workspace (`../` relative to this corpus) to publi
 **Policy:** files were **copied**; nothing was deleted from the source workspace.
 
 **Date:** 2026-06-11  
-**Study:** Adoption Is Not Maintenance (adoption_maintenance v2)
+**Corpus:** AI Convention Lifecycle Corpus (`adoption_maintenance_v2` study ID)
 
 ---
 

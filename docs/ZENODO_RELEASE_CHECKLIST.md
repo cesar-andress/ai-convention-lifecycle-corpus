@@ -98,7 +98,7 @@ git push origin "$VERSION"
 
 1. Open **GitHub → Releases → Draft a new release**.
 2. **Choose tag:** the tag from § Git tag (e.g. `v2.1.0`).
-3. **Release title:** `AI Convention Lifecycle Corpus v2.1.0` (match tag).
+3. **Release title:** `AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework` (match tag and [`metadata/zenodo.json`](../metadata/zenodo.json)).
 4. **Description:** summarize cohort size, headline gap, and what changed vs. previous release.
 5. **Attach assets (optional):** source zip is auto-generated; do **not** attach `data/repos/`.
 6. Publish release.
@@ -144,7 +144,7 @@ ls -lh "${DEST}.zip"
 |--------------|-------|
 | Upload type | **Dataset** |
 | Publication date | release date |
-| Title | `AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (vX.Y.Z)` |
+| Title | `AI Convention Lifecycle Corpus vX.Y.Z — Expanded 209-Repository Dataset and Adoption–Maintenance Framework` (v2.0.0 uses this exact string) |
 | Version | semver without `v` prefix (e.g. `2.1.0`) |
 | License | **CC-BY 4.0** (note MIT code in description) |
 | Access | Open |
@@ -319,7 +319,7 @@ SHA-256:     (zip checksum)
 | Version | Date | DOI | Notes |
 |---------|------|-----|-------|
 | v1.0.1 | 2026-06-11 | `10.5281/zenodo.20637986` | Public Zenodo deposit; citation metadata |
-| v2.0.0 | 2026-06-11 | `10.5281/zenodo.20637986` | Initial public v2 cohort (209 analyzed repos) |
+| v2.0.0 | 2026-06-11 | `10.5281/zenodo.20637986` | Canonical public release: Expanded 209-Repository Dataset and Adoption–Maintenance Framework |
 | | | | |
 
 Append a row after each successful release.

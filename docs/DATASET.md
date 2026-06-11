@@ -1,6 +1,8 @@
 # AI Convention Lifecycle Corpus — dataset landing page
 
+**Release:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
 **Version:** 2.0.0  
+**DOI:** [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986)  
 **Primary maintenance window:** *T* = 180 days  
 **Citation:** [`CITATION.cff`](../CITATION.cff) · [`docs/CITING.md`](CITING.md)
 

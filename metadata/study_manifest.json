@@ -1,5 +1,9 @@
 {
-  "title": "Adoption Is Not Maintenance — AI Instructional Artifact Lifecycle Corpus (v2)",
+  "title": "AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework",
+  "corpus_name": "AI Convention Lifecycle Corpus",
+  "release_version": "2.0.0",
+  "doi": "10.5281/zenodo.20637986",
+  "doi_url": "https://doi.org/10.5281/zenodo.20637986",
   "study_id": "adoption-maintenance-v2",
   "protocol_files": [
     "protocol/lifecycle_v1.yaml",

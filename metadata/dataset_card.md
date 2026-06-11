@@ -1,6 +1,7 @@
 ---
 # Dataset card metadata (informational; not consumed by tooling)
 title: AI Convention Lifecycle Corpus
+release_title: AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework
 version: 2.0.0
 study_id: adoption-maintenance-v2
 license_code: MIT
@@ -20,6 +21,8 @@ tags:
 
 | Field | Value |
 |-------|-------|
+| **Corpus** | AI Convention Lifecycle Corpus |
+| **Release title** | AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework |
 | **Version** | 2.0.0 |
 | **Study ID** | `adoption-maintenance-v2` |
 | **Primary window** | *T* = 180 days |
@@ -27,7 +30,7 @@ tags:
 | **License (code)** | MIT |
 | **License (aggregated data)** | CC-BY 4.0 |
 | **Citation** | [`CITATION.cff`](../CITATION.cff) · [`docs/CITING.md`](../docs/CITING.md) |
-| **DOI** | `10.5281/zenodo.20637986` |
+| **DOI** | `10.5281/zenodo.20637986` · [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986) |
 
 This card describes the corpus as a **standalone research artifact**. No companion publication is required to understand scope, provenance, or appropriate use.
 
@@ -294,7 +297,7 @@ Semantic versioning on git tags (e.g. `v2.0.0`). Record each release on Zenodo w
 
 | Version | Date | Notes |
 |---------|------|-------|
-| v2.0.0 | 2026-06-11 | Initial public v2 cohort (209 analyzed repos) |
+| v2.0.0 | 2026-06-11 | Canonical public release (209 analyzed repos); DOI `10.5281/zenodo.20637986` |
 
 Release procedure: [`docs/ZENODO_RELEASE_CHECKLIST.md`](../docs/ZENODO_RELEASE_CHECKLIST.md).
 
@@ -305,7 +308,7 @@ Release procedure: [`docs/ZENODO_RELEASE_CHECKLIST.md`](../docs/ZENODO_RELEASE_C
 
 ### Contact and authorship
 
-Author metadata: [`CITATION.cff`](../CITATION.cff) (César Andrés; ORCID 0009-0001-8968-3404).
+Author metadata: [`CITATION.cff`](../CITATION.cff) (César Andrés; ORCID 0009-0001-8968-3404; David Martín Moncunilla; ORCID 0000-0003-2422-9005).
 
 ### Update policy
 
