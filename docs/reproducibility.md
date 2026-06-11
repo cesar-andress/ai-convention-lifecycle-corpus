@@ -12,11 +12,7 @@ make install
 
 Dependencies: `requirements.txt` (`pyyaml`, `pandas`, `pyarrow`, `numpy`).
 
-Confirm the import symlink exists:
-
-```bash
-test -L lifecycle && test lifecycle -ef scripts/lifecycle && echo "OK: lifecycle symlink"
-```
+Set `PYTHONPATH=./scripts` so the `lifecycle` Python package resolves from `scripts/lifecycle/`.
 
 ## 1. Full end-to-end pipeline
 
@@ -36,9 +32,9 @@ This executes, in order:
 Equivalent manual invocation:
 
 ```bash
-export PYTHONPATH=.
+export PYTHONPATH=./scripts
 
-python lifecycle/run_v2.py
+python scripts/lifecycle/run_v2.py
 ```
 
 ## 2. Step-by-step regeneration
@@ -50,9 +46,9 @@ Use these commands to regenerate each output class independently. Skip §2.1 if 
 Discover adopted repositories from all seed pools defined in `protocol/adoption_maintenance_v2.yaml`:
 
 ```bash
-export PYTHONPATH=.
+export PYTHONPATH=./scripts
 
-python lifecycle/discover_v2.py \
+python scripts/lifecycle/discover_v2.py \
   --v2-config protocol/adoption_maintenance_v2.yaml \
   --lifecycle-config protocol/lifecycle_v1.yaml \
   --out data/lifecycle/discovered_v2.csv \
@@ -68,7 +64,7 @@ python lifecycle/discover_v2.py \
 To append additional candidates while preserving existing rows (as `run_v2.py` does):
 
 ```bash
-python lifecycle/discover_v2.py \
+python scripts/lifecycle/discover_v2.py \
   --append \
   --v2-config protocol/adoption_maintenance_v2.yaml \
   --lifecycle-config protocol/lifecycle_v1.yaml \
@@ -88,7 +84,7 @@ Clone each discovered repository and extract per-path git touch history.
 **Fresh extract** (deletes stale parquets first):
 
 ```bash
-python lifecycle/extract_history.py \
+python scripts/lifecycle/extract_history.py \
   --config protocol/lifecycle_v1.yaml \
   --discovered data/lifecycle/discovered_v2.csv \
   --repos-dir data/repos \
@@ -101,7 +97,7 @@ python lifecycle/extract_history.py \
 **Incremental extract** (resume after interruption; used by `make lifecycle-v2`):
 
 ```bash
-python lifecycle/extract_history.py \
+python scripts/lifecycle/extract_history.py \
   --config protocol/lifecycle_v1.yaml \
   --discovered data/lifecycle/discovered_v2.csv \
   --repos-dir data/repos \
@@ -124,7 +120,7 @@ python lifecycle/extract_history.py \
 Aggregate touch rows into artifact-level tables:
 
 ```bash
-python lifecycle/build_dataset.py \
+python scripts/lifecycle/build_dataset.py \
   --config protocol/lifecycle_v1.yaml \
   --touch-history data/lifecycle/touch_history.parquet \
   --out data/lifecycle/artifacts.parquet
@@ -141,7 +137,7 @@ python lifecycle/build_dataset.py \
 Single step that regenerates **artifact states**, **bootstrap**, **leave-one-out**, **annotation sheet**, and **final JSON/CSV outputs**:
 
 ```bash
-python lifecycle/adoption_maintenance_v2.py \
+python scripts/lifecycle/adoption_maintenance_v2.py \
   --v2-config protocol/adoption_maintenance_v2.yaml \
   --lifecycle-config protocol/lifecycle_v1.yaml \
   --discovered data/lifecycle/discovered_v2.csv \
@@ -174,14 +170,14 @@ The summary JSON embeds bootstrap statistics and annotation metadata; `bootstrap
 After local clones exist under `data/repos/`, refresh heuristic label columns on an existing sheet:
 
 ```bash
-python lifecycle/fill_annotation.py \
+python scripts/lifecycle/fill_annotation.py \
   --sheet annotation/annotation_sheet.csv
 ```
 
 To overwrite existing label cells:
 
 ```bash
-python lifecycle/fill_annotation.py \
+python scripts/lifecycle/fill_annotation.py \
   --sheet annotation/annotation_sheet.csv \
   --overwrite
 ```

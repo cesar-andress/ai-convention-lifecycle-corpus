@@ -38,7 +38,7 @@ Repositories enter the study through **curated URL seed pools** declared in `pro
 
 | Seed pool | Source files | Intent |
 |-----------|--------------|--------|
-| `ai_adopter` | `seeds_stratified.txt`, `seeds.txt` | Repositories associated with AI tooling, agents, or AI-adjacent ecosystems |
+| `ai_adopter` | `seeds/seeds_stratified.txt`, `seeds/seeds.txt` | Repositories associated with AI tooling, agents, or AI-adjacent ecosystems |
 | `general_oss` | `seeds/wave2_general_oss.txt`, `seeds/wave2_s2_priority.txt`, `seeds/wave2_s0_candidates.txt`, `seeds/lifecycle_cached_clones.txt`, `seeds/lifecycle_gh_repo_search.txt` | Broader open-source candidates, including repository-search expansions |
 
 URLs are deduplicated across pools. Each adopted repository retains its originating `seed_pool` label in `data/lifecycle/discovered_v2.csv`.
@@ -88,7 +88,7 @@ Machine-readable summary: `metadata/study_manifest.json`.
 
 ## 3. Discovery funnel
 
-Discovery attrition is recorded in `results/lifecycle/discovery_funnel_v2.csv`. Stages are emitted by `lifecycle/discover_v2.py`:
+Discovery attrition is recorded in `results/lifecycle/discovery_funnel_v2.csv`. Stages are emitted by `scripts/lifecycle/discover_v2.py`:
 
 | Stage | Meaning |
 |-------|---------|
@@ -221,7 +221,7 @@ Adoption measures **HEAD presence** at observation end.
 
 **Ever introduced** includes paths seen in history that were later deleted (`present_in_head == false`). Deletion is an outcome distinct from git dormancy.
 
-At discovery time, “adopted repository” uses the same HEAD rule on a shallow clone. At analysis time, HEAD is re-checked against local full clones when available (`lifecycle/adoption_maintenance.py`); otherwise bundled `present_in_head` values from extraction are used.
+At discovery time, “adopted repository” uses the same HEAD rule on a shallow clone. At analysis time, HEAD is re-checked against local full clones when available (`scripts/lifecycle/adoption_maintenance.py`); otherwise bundled `present_in_head` values from extraction are used.
 
 ---
 
@@ -287,7 +287,7 @@ Automated git states are validated on a **small stratified sample** of artifact 
 
 ### 9.2 Selection
 
-Implemented in `lifecycle/adoption_maintenance_v2.py` (`build_annotation_sheet`):
+Implemented in `scripts/lifecycle/adoption_maintenance_v2.py` (`build_annotation_sheet`):
 
 | Parameter | Value |
 |-----------|-------|
@@ -315,7 +315,7 @@ Output: `annotation/annotation_sheet.csv`.
 ### 9.4 Labeling workflow
 
 1. **Sheet generation** — stratified sample written by the v2 analysis step.  
-2. **Heuristic pre-fill** — `lifecycle/fill_annotation.py` populates label columns from local clone content and git metadata when `data/repos/` is available; existing non-empty cells are preserved.  
+2. **Heuristic pre-fill** — `scripts/lifecycle/fill_annotation.py` populates label columns from local clone content and git metadata when `data/repos/` is available; existing non-empty cells are preserved.  
 3. **Human review** — expected for rigorous reuse; bundled labels mix heuristic pre-fills and empty cells.
 
 Pre-fill rules (abbreviated):

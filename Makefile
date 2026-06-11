@@ -1,6 +1,6 @@
 # AI convention lifecycle corpus — reproduction (v2 headline study)
 ROOT := $(CURDIR)
-export PYTHONPATH := $(ROOT)
+export PYTHONPATH := $(ROOT)/scripts
 
 ifeq ($(wildcard .venv/bin/python3),)
   PYTHON ?= python3
@@ -15,11 +15,11 @@ install:
 
 # Recompute analysis from frozen parquets (no network; no git clone)
 analyze:
-	$(PYTHON) lifecycle/adoption_maintenance_v2.py
+	$(PYTHON) scripts/lifecycle/adoption_maintenance_v2.py
 
 # Full v2 pipeline: discover → extract → build → analyze (requires git + network)
 lifecycle-v2:
-	$(PYTHON) lifecycle/run_v2.py
+	$(PYTHON) scripts/lifecycle/run_v2.py
 
 verify-headline:
 	@$(PYTHON) -c "import json; s=json.load(open('results/lifecycle/adoption_maintenance_v2.json')); h=s['headline_primary_180']; assert h['n_repos']==209; print('OK: n_repos=209 artifact_gap=', round(h['artifact_gap_mature'],3))"

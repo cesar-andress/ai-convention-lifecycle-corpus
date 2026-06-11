@@ -11,9 +11,13 @@ import tempfile
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+_SCRIPTS = Path(__file__).resolve().parents[1]
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+
+from lifecycle.corpus_paths import configure
+
+ROOT = configure()
 
 from lifecycle.detection import artifact_type, is_lifecycle_artifact, load_config
 from lifecycle.git_utils import clone_repo, list_head_files, parse_github_url

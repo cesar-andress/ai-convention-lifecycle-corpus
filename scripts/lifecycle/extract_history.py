@@ -12,9 +12,13 @@ from pathlib import Path
 
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+_SCRIPTS = Path(__file__).resolve().parents[1]
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+
+from lifecycle.corpus_paths import configure
+
+ROOT = configure()
 
 from lifecycle.detection import artifact_type, is_bot, is_ci_path, is_lifecycle_artifact, load_config
 from lifecycle.git_utils import (

@@ -72,7 +72,7 @@
 
 **Annotation:** `annotation/annotation_sheet.csv`.
 
-**Seeds:** `seeds.txt`, `seeds_stratified.txt`, and all wave-2 / cached-clone / repo-search pools listed in `adoption_maintenance_v2.yaml`.
+**Seeds:** `seeds/seeds.txt`, `seeds/seeds_stratified.txt`, and all wave-2 / cached-clone / repo-search pools listed in `adoption_maintenance_v2.yaml`.
 
 ---
 

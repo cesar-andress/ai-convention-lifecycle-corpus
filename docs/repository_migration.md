@@ -52,7 +52,7 @@ Migration from internal study workspace (`../` relative to this corpus) to publi
 
 **Removed after copy (corpus only):** `analyze.py`, `discover.py`, `run_pilot.py`, `robustness.py` — see `docs/legacy_removal_log.md`.
 
-**Compatibility:** symlink `lifecycle → scripts/lifecycle` at corpus root so `ROOT/lifecycle/` paths in scripts resolve without modification.
+**Compatibility:** set `PYTHONPATH=scripts` at the corpus root (see `Makefile`).
 
 ---
 
@@ -102,8 +102,8 @@ Migration from internal study workspace (`../` relative to this corpus) to publi
 
 | Source path | Destination path | Reason |
 |-------------|------------------|--------|
-| `seeds.txt` | `seeds.txt` | AI-adopter seed pool (protocol reference) |
-| `seeds_stratified.txt` | `seeds_stratified.txt` | Stratified AI-adopter seeds |
+| `seeds/seeds.txt` | `seeds/seeds.txt` | AI-adopter seed pool (protocol reference) |
+| `seeds/seeds_stratified.txt` | `seeds/seeds_stratified.txt` | Stratified AI-adopter seeds |
 | `seeds/lifecycle_gh_repo_search.txt` | `seeds/lifecycle_gh_repo_search.txt` | GitHub repo search expansion seeds |
 | `seeds/lifecycle_cached_clones.txt` | `seeds/lifecycle_cached_clones.txt` | Cached clone fast-path list |
 | `seeds/wave2_general_oss.txt` | `seeds/wave2_general_oss.txt` | General-OSS seed pool |

@@ -68,8 +68,8 @@ discovery:
   pilot_n: 50
   scale_n: 500
   seeds:
-    - seeds_stratified.txt
-    - seeds.txt
+    - seeds/seeds_stratified.txt
+    - seeds/seeds.txt
   clone_timeout_seconds: 120
   shallow_discover: true
 

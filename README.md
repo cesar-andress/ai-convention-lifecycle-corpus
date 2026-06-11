@@ -39,12 +39,9 @@ Operational definitions and state machine rules are frozen in `protocol/adoption
 ├── protocol/                    # Frozen YAML protocols (detection, extraction, analysis)
 ├── data/lifecycle/              # Discovery CSV, parquets, extraction/build metadata
 ├── results/lifecycle/           # Headline JSON/CSV outputs
-├── scripts/lifecycle/           # Python pipeline (import path: lifecycle/)
-├── lifecycle -> scripts/lifecycle   # Symlink for PYTHONPATH compatibility
+├── scripts/lifecycle/           # Python pipeline (`lifecycle` package; PYTHONPATH=scripts)
 ├── annotation/                  # Manual-validation sheet (40 rows)
-├── seeds/                       # GitHub URL seed pools
-├── seeds.txt                    # AI-adopter seed pool
-├── seeds_stratified.txt         # Stratified AI-adopter seed pool
+├── seeds/                       # GitHub URL seed pools (incl. ai_adopter lists)
 ├── metadata/study_manifest.json # Sample counts and headline checksums
 ├── docs/                        # Reproduction, migration, and legacy-removal notes
 ├── zenodo/                      # Zenodo deposit metadata
@@ -148,7 +145,7 @@ Bootstrap analysis (5,000 cluster replicates) is CPU-bound; expect several minut
 - **Seed-driven sample:** Repositories enter via curated GitHub URL seeds (AI-adopter and general-OSS pools), not a random sample of all open-source projects.
 - **HEAD presence as adoption:** A path present at observation end counts as adopted even if content is stale or placeholder text.
 - **No bundled clones:** Re-extraction requires cloning public repositories; some URLs may become unavailable, private, or renamed over time.
-- **Manual validation is partial:** The annotation sheet covers 40 stratified artifact instances; automated label columns are heuristic pre-fills (`lifecycle/fill_annotation.py`) and do not replace human adjudication for new runs.
+- **Manual validation is partial:** The annotation sheet covers 40 stratified artifact instances; automated label columns are heuristic pre-fills (`scripts/lifecycle/fill_annotation.py`) and do not replace human adjudication for new runs.
 - **Non-comparable strata:** Type and cohort breakdowns are reported only where minimum cell sizes in the protocol are met.
 
 ## Citation

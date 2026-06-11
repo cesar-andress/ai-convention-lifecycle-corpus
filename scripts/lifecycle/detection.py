@@ -8,7 +8,7 @@ from pathlib import Path
 
 import yaml
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[1].parent
 DEFAULT_CONFIG = ROOT / "protocol" / "lifecycle_v1.yaml"
 
 

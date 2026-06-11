@@ -8,14 +8,21 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+_SCRIPTS = Path(__file__).resolve().parents[1]
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+
+from lifecycle.corpus_paths import CORPUS_ROOT, SCRIPTS_DIR
+
+ROOT = CORPUS_ROOT
+LIFECYCLE = SCRIPTS_DIR / "lifecycle"
 DISCOVERED_V2 = ROOT / "data" / "lifecycle" / "discovered_v2.csv"
 EXTRACT_META = ROOT / "data" / "lifecycle" / "extract_meta.json"
 ARTIFACTS_META = ROOT / "data" / "lifecycle" / "artifacts_build_meta.json"
 
 
 def run(cmd: list[str]) -> int:
-    env = {**dict(__import__("os").environ), "PYTHONPATH": str(ROOT)}
+    env = {**dict(__import__("os").environ), "PYTHONPATH": str(SCRIPTS_DIR)}
     return subprocess.run(cmd, cwd=ROOT, env=env).returncode
 
 
@@ -26,7 +33,7 @@ def main() -> int:
     steps = [
         [
             py,
-            str(ROOT / "lifecycle" / "discover_v2.py"),
+            str(LIFECYCLE / "discover_v2.py"),
             "--append",
             "--only-seed-files",
             "seeds/wave2_s0_candidates.txt",
@@ -37,7 +44,7 @@ def main() -> int:
         ],
         [
             py,
-            str(ROOT / "lifecycle" / "extract_history.py"),
+            str(LIFECYCLE / "extract_history.py"),
             "--discovered",
             str(DISCOVERED_V2),
             "--resume",
@@ -46,10 +53,10 @@ def main() -> int:
             "--meta-out",
             str(EXTRACT_META),
         ],
-        [py, str(ROOT / "lifecycle" / "build_dataset.py")],
+        [py, str(LIFECYCLE / "build_dataset.py")],
         [
             py,
-            str(ROOT / "lifecycle" / "adoption_maintenance_v2.py"),
+            str(LIFECYCLE / "adoption_maintenance_v2.py"),
             "--discovered",
             str(DISCOVERED_V2),
         ],

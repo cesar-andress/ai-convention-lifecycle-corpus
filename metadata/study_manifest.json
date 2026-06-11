@@ -6,7 +6,7 @@
     "protocol/adoption_maintenance_v1.yaml",
     "protocol/adoption_maintenance_v2.yaml"
   ],
-  "primary_pipeline": "python lifecycle/run_v2.py",
+  "primary_pipeline": "python scripts/lifecycle/run_v2.py",
   "primary_results": "results/lifecycle/adoption_maintenance_v2.json",
   "sample": {
     "n_discovered_adopted": 220,

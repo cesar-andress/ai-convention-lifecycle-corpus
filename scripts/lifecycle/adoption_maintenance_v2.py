@@ -8,12 +8,15 @@ import json
 import sys
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+_SCRIPTS = Path(__file__).resolve().parents[1]
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+
+from lifecycle.corpus_paths import configure
+
+ROOT = configure()
 
 from lifecycle.adoption_maintenance import (
     BOOTSTRAP_N,
@@ -61,7 +64,7 @@ def validate_extract_scale(
         raise SystemExit(
             f"stale extract: {discovered_path.name} is newer than {touch_path.name} "
             f"({disc_n} discovered vs {touch_repos} repos in touch history). "
-            "Re-run lifecycle/extract_history.py --discovered "
+            "Re-run scripts/lifecycle/extract_history.py --discovered "
             f"{discovered_path} (or make lifecycle-v2)."
         )
 
@@ -88,7 +91,7 @@ def validate_extract_scale(
         if meta.get("complete") is False:
             raise SystemExit(
                 f"incomplete extract: {meta.get('n_extract_ok', '?')} repos ok of {n_discovered} discovered. "
-                "Re-run lifecycle/extract_history.py to finish."
+                "Re-run scripts/lifecycle/extract_history.py to finish."
             )
         return meta
 

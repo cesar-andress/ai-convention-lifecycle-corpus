@@ -11,8 +11,8 @@ scale:
 discovery:
   seed_pools:
     ai_adopter:
-      - seeds_stratified.txt
-      - seeds.txt
+      - seeds/seeds_stratified.txt
+      - seeds/seeds.txt
     general_oss:
       - seeds/wave2_general_oss.txt
       - seeds/wave2_s2_priority.txt

@@ -109,8 +109,7 @@ Manuscript-only protocol blocks (`deliverables`, `claims_allowed`, `claims_forbi
 | Path | Role |
 |------|------|
 | `scripts/lifecycle/*.py` | v2 pipeline and analysis |
-| `lifecycle` → `scripts/lifecycle` | Import-path symlink |
-| `seeds.txt`, `seeds_stratified.txt`, `seeds/*` | Discovery URL pools |
+| `seeds/seeds.txt`, `seeds/seeds_stratified.txt`, `seeds/*` | Discovery URL pools |
 | `annotation/annotation_sheet.csv` | Stratified validation sample (40 rows) |
 
 ### Documentation and release metadata

@@ -46,7 +46,6 @@ After each commit, record:
 If the repository is not initialized:
 
 ```bash
-cd ~/papers/ai-artifact-cochange/ai-convention-lifecycle-corpus
 git init
 git branch -M main
 ```
