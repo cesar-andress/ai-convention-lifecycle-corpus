@@ -1,17 +1,18 @@
 cff-version: 1.2.0
-title: "AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2)"
-message: "If you use this corpus or pipeline, please cite it."
+message: "If you use this corpus or pipeline, please cite it using the metadata below."
 type: dataset
-license: MIT
-authors:
-  - name: "Anonymous Author(s)"
-    affiliation: "Anonymous Institution"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
-repository-code: "https://github.com/PLACEHOLDER/ai-convention-lifecycle-corpus"
-url: "https://zenodo.org/records/PLACEHOLDER"
-doi: 10.5281/zenodo.PLACEHOLDER
+title: "AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2)"
 version: 2.0.0
 date-released: 2026-06-11
+license: CC-BY-4.0
+doi: 10.5281/zenodo.XXXXXXX
+url: "https://doi.org/10.5281/zenodo.XXXXXXX"
+repository-code: "https://github.com/cesar-andress/ai-convention-lifecycle-corpus"
+authors:
+  - family-names: "Anonymous"
+    given-names: "Author(s)"
+    affiliation: "Anonymous Institution"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
 keywords:
   - mining software repositories
   - GitHub
@@ -23,16 +24,18 @@ keywords:
   - software governance
   - replication package
 abstract: >
-  Frozen protocols, seed lists, Python pipeline, aggregated datasets, and headline
-  statistics for measuring the adoption–maintenance gap in AI instructional
-  artifacts on GitHub. The v2 cohort includes 220 discovered adopted repositories,
-  209 analyzed repositories, and 13,988 ever-introduced artifact instances.
-  Primary maintenance window T=180 days. Aggregated tabular files are CC-BY 4.0;
-  source code is MIT.
+  Frozen protocols, GitHub seed pools, Python pipeline, and aggregated datasets
+  for measuring the adoption–maintenance gap in AI instructional artifacts on
+  public GitHub. v2 cohort: 220 discovered adopted repositories, 209 analyzed,
+  13,988 ever-introduced artifact instances. Primary window T=180 days.
+  Headline mature-present artifact gap: 56.0%; repository-level gap: 7.2%.
+  Source code is MIT-licensed; aggregated tabular outputs are CC-BY 4.0.
 preferred-citation:
-  type: article
+  type: proceedings
   title: "Adoption Is Not Maintenance: The Adoption--Maintenance Gap in AI Instructional Artifacts on GitHub"
   authors:
-    - name: "Anonymous Author(s)"
+    - family-names: "Anonymous"
+      given-names: "Author(s)"
+  collection-title: "Proceedings of the 23rd International Conference on Mining Software Repositories"
   year: 2026
-  journal: "Proceedings of the 23rd International Conference on Mining Software Repositories (MSR '26)"
+  notes: "Companion MSR '26 paper; cite separately when referring to the empirical study narrative."
