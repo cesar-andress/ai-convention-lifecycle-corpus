@@ -64,3 +64,12 @@ def is_bot(author_name: str, author_email: str, cfg: dict | None = None) -> bool
     cfg = cfg or load_config()
     blob = f"{author_name} {author_email}"
     return re.search(cfg["bot_author_regex"], blob) is not None
+
+
+def is_conservative_automation_bot(author_name: str, author_email: str) -> bool:
+    """Conservative automation-account filter for bot-touch sensitivity only."""
+    blob = f"{author_name} {author_email}"
+    return re.search(
+        r"(?i)(dependabot|renovate|github-actions|pre-commit-ci|bot\[bot\]|bot@)",
+        blob,
+    ) is not None

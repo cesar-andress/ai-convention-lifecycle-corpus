@@ -171,6 +171,8 @@ def extract_repo(
                     "artifact_path": path,
                     "touch_index": i,
                     "commit": touch["commit"],
+                    "author": touch["author"],
+                    "email": touch["email"],
                     "committed_at": touch["committed_at"],
                     "observation_end": observation_end,
                 }

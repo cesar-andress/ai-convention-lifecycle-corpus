@@ -1,0 +1,63 @@
+{
+  "threshold_days": 180,
+  "bot_filter_rules": [
+    "dependabot",
+    "renovate",
+    "github-actions",
+    "pre-commit-ci",
+    "bot[bot]",
+    "bot@"
+  ],
+  "touch_stats": {
+    "n_touch_rows": 86845,
+    "n_touch_rows_with_author": 86616,
+    "author_lookup_coverage": 0.9973631181990903,
+    "n_bot_touch_rows": 801,
+    "bot_touch_share_among_known": 0.0092477140482128
+  },
+  "original": {
+    "artifact_gap_pct": 56.0,
+    "repo_gap_pct": 7.2
+  },
+  "bot_filtered": {
+    "artifact_gap_pct": 56.5,
+    "repo_gap_pct": 7.7
+  },
+  "absolute_difference_pp": {
+    "artifact_gap": 0.5,
+    "repo_gap": 0.5
+  },
+  "headline_180_original": {
+    "threshold_days": 180,
+    "artifact_gap_mature": 0.5597920277296361,
+    "artifact_maintenance_rate_mature": 0.44020797227036396,
+    "repo_gap": 0.07177033492822966,
+    "n_repos": 209,
+    "n_ever_introduced": 13988,
+    "n_present": 9994,
+    "n_mature_present": 577,
+    "n_dormant": 323,
+    "n_active": 254,
+    "deleted_rate_ever_introduced": 0.2855304546754361,
+    "dormant_present_rate_mature_present": 0.5597920277296361,
+    "n_deleted": 3994,
+    "n_dormant_mature_present": 323
+  },
+  "headline_180_bot_filtered": {
+    "threshold_days": 180,
+    "artifact_gap_mature": 0.5649913344887348,
+    "artifact_maintenance_rate_mature": 0.43500866551126516,
+    "repo_gap": 0.07655502392344497,
+    "n_repos": 209,
+    "n_ever_introduced": 13988,
+    "n_present": 9994,
+    "n_mature_present": 577,
+    "n_dormant": 326,
+    "n_active": 251,
+    "deleted_rate_ever_introduced": 0.2855304546754361,
+    "dormant_present_rate_mature_present": 0.5649913344887348,
+    "n_deleted": 3994,
+    "n_dormant_mature_present": 326
+  },
+  "substantively_unchanged": true
+}
