@@ -1,0 +1,37 @@
+{
+  "upload_type": "dataset",
+  "publication_date": "2026-06-11",
+  "title": "AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2)",
+  "version": "2.0.0",
+  "creators": [
+    {
+      "name": "Anonymous Author(s)",
+      "affiliation": "Anonymous Institution",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+  "description": "<p>Replication package for the empirical study <em>Adoption Is Not Maintenance: The Adoption–Maintenance Gap in AI Instructional Artifacts on GitHub</em>.</p><p>The deposit includes frozen YAML protocols, GitHub URL seed pools, a Python extraction and analysis pipeline, aggregated tabular datasets (Parquet/CSV/JSON), headline gap statistics, and a 40-row manual-validation sample.</p><p><strong>Primary cohort (v2):</strong> 220 discovered adopted repositories; 209 successfully extracted and analyzed; 13,988 ever-introduced AI instructional artifact instances. Primary maintenance window <em>T</em> = 180 days.</p><p><strong>Headline results:</strong> artifact-level mature-present gap 56.0%; repository-level gap 7.2%.</p><p><strong>Licensing:</strong> source code under MIT (<code>LICENSE</code>); aggregated data files under CC-BY 4.0 (see README). Full git repository clones are not included; re-extraction clones public URLs from <code>data/lifecycle/discovered_v2.csv</code>.</p><p><strong>Reproduction:</strong> see <code>README.md</code> and <code>docs/reproducibility.md</code>. Quick check: <code>make verify-headline</code>.</p>",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "keywords": [
+    "mining software repositories",
+    "GitHub",
+    "AI-assisted development",
+    "adoption",
+    "maintenance",
+    "instructional artifacts",
+    "AGENTS.md",
+    "software governance",
+    "replication package"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/PLACEHOLDER/ai-convention-lifecycle-corpus",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Replace PLACEHOLDER URLs and ORCID before deposit. Code is MIT-licensed; if Zenodo accepts only one license field, CC-BY-4.0 applies to aggregated data—note MIT code license in description and LICENSE file."
+}

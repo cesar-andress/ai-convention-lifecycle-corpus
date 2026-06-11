@@ -8,8 +8,9 @@ authors:
     affiliation: "Anonymous Institution"
     orcid: "https://orcid.org/0000-0000-0000-0000"
 repository-code: "https://github.com/PLACEHOLDER/ai-convention-lifecycle-corpus"
-url: "https://zenodo.org/PLACEHOLDER"
-version: "2.0.0"
+url: "https://zenodo.org/records/PLACEHOLDER"
+doi: 10.5281/zenodo.PLACEHOLDER
+version: 2.0.0
 date-released: 2026-06-11
 keywords:
   - mining software repositories
@@ -19,11 +20,19 @@ keywords:
   - maintenance
   - instructional artifacts
   - AGENTS.md
+  - software governance
+  - replication package
+abstract: >
+  Frozen protocols, seed lists, Python pipeline, aggregated datasets, and headline
+  statistics for measuring the adoption–maintenance gap in AI instructional
+  artifacts on GitHub. The v2 cohort includes 220 discovered adopted repositories,
+  209 analyzed repositories, and 13,988 ever-introduced artifact instances.
+  Primary maintenance window T=180 days. Aggregated tabular files are CC-BY 4.0;
+  source code is MIT.
 preferred-citation:
   type: article
   title: "Adoption Is Not Maintenance: The Adoption--Maintenance Gap in AI Instructional Artifacts on GitHub"
   authors:
     - name: "Anonymous Author(s)"
-  collection-title: "Proceedings of the 23rd International Conference on Mining Software Repositories (MSR '26)"
   year: 2026
-  notes: "Replace with published MSR citation when available."
+  journal: "Proceedings of the 23rd International Conference on Mining Software Repositories (MSR '26)"
