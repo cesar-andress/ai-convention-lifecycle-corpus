@@ -1,0 +1,43 @@
+{
+  "upload_type": "dataset",
+  "publication_date": "2026-06-11",
+  "title": "AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2)",
+  "version": "2.0.0",
+  "creators": [
+    {
+      "name": "Anonymous Author(s)",
+      "affiliation": "Anonymous Institution",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+  "description": "<p>Self-contained replication package for an MSR study of AI instructional artifacts on GitHub (e.g. <code>AGENTS.md</code>, <code>CLAUDE.md</code>, Copilot/Cursor rule paths, <code>prompts/</code> trees).</p><p><strong>Research question:</strong> Does snapshot adoption of these paths at <code>HEAD</code> reflect git-based maintenance within a lookback window?</p><p><strong>v2 cohort:</strong> 220 discovered adopted repositories; 209 extracted and analyzed; 13,988 ever-introduced artifact instances. Primary maintenance window <em>T</em> = 180 days.</p><p><strong>Headline results:</strong> artifact-level mature-present gap 56.0%; repository-level gap 7.2%.</p><p><strong>Contents:</strong> frozen YAML protocols, seed URL lists, Python discovery/extraction/analysis pipeline, Parquet/CSV/JSON aggregates, bootstrap and sensitivity outputs, 40-row annotation sample.</p><p><strong>Not included:</strong> full git clones (<code>data/repos/</code>); re-extraction clones public URLs from <code>data/lifecycle/discovered_v2.csv</code>.</p><p><strong>Reproduction:</strong> <code>make verify-headline</code> (offline check); <code>make analyze</code> (offline recompute); <code>make lifecycle-v2</code> (full pipeline). See <code>README.md</code>, <code>metadata/replication_package.md</code>, and <code>docs/reproducibility.md</code>.</p><p><strong>Licensing:</strong> aggregated data CC-BY 4.0; source code MIT (<code>LICENSE</code>).</p>",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "keywords": [
+    "mining software repositories",
+    "GitHub",
+    "AI-assisted development",
+    "adoption",
+    "maintenance",
+    "instructional artifacts",
+    "AGENTS.md",
+    "software governance",
+    "replication package"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/cesar-andress/ai-convention-lifecycle-corpus",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.XXXXXXX",
+      "relation": "isVersionOf",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Replace XXXXXXX, ORCID, and author names before publishing. Code is MIT-licensed; note dual licensing in deposit description. Tag release v2.0.0 when uploading."
+}
