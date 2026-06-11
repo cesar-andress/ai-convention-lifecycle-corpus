@@ -207,5 +207,25 @@ def main() -> int:
     return 0
 
 
+def load_artifact_frame(artifacts_path: Path, touch_path: Path) -> pd.DataFrame:
+    """Load artifact table for adoption--maintenance analysis."""
+    full_path = artifacts_path.with_name("artifacts_full.parquet")
+    if full_path.exists():
+        df = pd.read_parquet(full_path)
+    elif artifacts_path.exists() and touch_path.exists():
+        touch_df = pd.read_parquet(touch_path)
+        for col in ("committed_at", "observation_end"):
+            if col in touch_df.columns:
+                touch_df[col] = pd.to_datetime(touch_df[col], utc=True)
+        df = build_artifacts(touch_df, STASIS_THRESHOLDS)
+    else:
+        raise FileNotFoundError(f"missing artifacts: {artifacts_path}")
+
+    for col in ("introduced_at", "last_touch_at", "observation_end", "first_touch_after_intro"):
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], utc=True)
+    return df
+
+
 if __name__ == "__main__":
     sys.exit(main())

@@ -32,7 +32,6 @@ def main() -> int:
             "seeds/wave2_s0_candidates.txt",
             "seeds/lifecycle_cached_clones.txt",
             "seeds/lifecycle_gh_repo_search.txt",
-            "--also-write-legacy-discovered",
             "--local-repos-dir",
             str(ROOT / "data" / "repos"),
         ],

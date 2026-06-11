@@ -149,7 +149,6 @@ def main() -> int:
     parser.add_argument("--lifecycle-config", type=Path, default=DEFAULT_LC)
     parser.add_argument("--out", type=Path, default=None)
     parser.add_argument("--funnel-out", type=Path, default=None)
-    parser.add_argument("--also-write-legacy-discovered", action="store_true")
     parser.add_argument(
         "--append",
         action="store_true",
@@ -230,23 +229,6 @@ def main() -> int:
         w = csv.DictWriter(f, fieldnames=["stage", "seed_pool", "count"])
         w.writeheader()
         w.writerows(funnel)
-
-    if args.also_write_legacy_discovered:
-        legacy = ROOT / cfg["outputs"]["discovered"]
-        legacy_fields = [
-            "repo_url",
-            "repo_id",
-            "owner",
-            "repo",
-            "seed_pool",
-            "n_artifacts_head",
-            "artifact_types_head",
-        ]
-        with legacy.open("w", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=legacy_fields)
-            w.writeheader()
-            for r in rows:
-                w.writerow({k: r.get(k, "") for k in legacy_fields})
 
     summary = {
         "target_adopted_repos": target,

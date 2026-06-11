@@ -3,9 +3,6 @@
 
 from __future__ import annotations
 
-import argparse
-import json
-import subprocess
 import sys
 from pathlib import Path
 
@@ -16,12 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from lifecycle.analyze import load_artifact_frame
-from lifecycle.detection import load_config
-from lifecycle.git_utils import GIT_ENV, list_head_files
+from lifecycle.git_utils import list_head_files
 
-DEFAULT_PROTOCOL = ROOT / "protocol" / "adoption_maintenance_v1.yaml"
-DEFAULT_LIFECYCLE = ROOT / "protocol" / "lifecycle_v1.yaml"
 THRESHOLDS = [90, 180, 365]
 BOOTSTRAP_N = 5000
 
@@ -284,45 +277,3 @@ def compute_all(
         "leave_one_repo_out_gap_mature": leave_one_repo_out(df, primary),
         "adoption_repo_rate": float(df.groupby("repo_id")["present_in_head"].any().mean()),
     }
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--protocol", type=Path, default=DEFAULT_PROTOCOL)
-    parser.add_argument("--lifecycle-config", type=Path, default=DEFAULT_LIFECYCLE)
-    parser.add_argument("--repos-dir", type=Path, default=ROOT / "data" / "repos")
-    parser.add_argument("--out-dir", type=Path, default=ROOT / "results" / "lifecycle")
-    args = parser.parse_args()
-
-    am_cfg = load_am_config(args.protocol)
-    lc_cfg = load_config(str(args.lifecycle_config))
-    primary = int(am_cfg["maintenance_windows_days"]["primary"])
-    min_type = int(am_cfg["gap"]["by_artifact_type"]["min_mature_present_T"])
-
-    artifacts_path = ROOT / lc_cfg["outputs"]["artifacts"]
-    touch_path = ROOT / lc_cfg["outputs"]["touch_history"]
-    df = load_artifact_frame(artifacts_path, touch_path)
-    df = enrich_present_in_head(df, args.repos_dir)
-
-    results = compute_all(df, THRESHOLDS, primary=primary, min_type=min_type)
-    df_out = add_states_and_flags(df, THRESHOLDS)
-
-    out_dir = args.out_dir
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    states_path = ROOT / am_cfg["outputs"]["artifact_states"]
-    states_path.parent.mkdir(parents=True, exist_ok=True)
-    df_out.to_parquet(states_path, index=False)
-
-    (out_dir / "adoption_maintenance.json").write_text(json.dumps(results, indent=2, default=str) + "\n")
-    table_by_type(df_out, primary, min_type).to_csv(out_dir / "table_gap_by_type.csv", index=False)
-    table_by_cohort(df_out, primary).to_csv(out_dir / "table_gap_by_cohort.csv", index=False)
-    table_repo_summary(df_out, primary).to_csv(out_dir / "table_repo_summary.csv", index=False)
-    build_funnel(df_out, THRESHOLDS).to_csv(out_dir / "funnel_adoption_maintenance.csv", index=False)
-
-    print(json.dumps(results, indent=2, default=str))
-    return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())

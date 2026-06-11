@@ -1,8 +1,0 @@
-stage,threshold_days,count
-total_artifacts,all,650
-eligible,90,371
-stasis_events,90,235
-eligible,180,225
-stasis_events,180,134
-eligible,365,84
-stasis_events,365,55
