@@ -1,76 +1,100 @@
 # AI Convention Lifecycle Corpus
 
-Replication package for the empirical study **Adoption Is Not Maintenance: The Adoption–Maintenance Gap in AI Instructional Artifacts on GitHub**.
+**Replication package (v2.0.0)** for measuring the adoption–maintenance gap in AI instructional artifacts on public GitHub repositories.
 
-The corpus bundles frozen protocols, seed lists, extraction and analysis code, aggregated tabular datasets, headline statistics, and a manual-validation sample for the v2 cohort: **220** adopted repositories discovered, **209** successfully extracted and analyzed, **13,988** ever-introduced artifact instances.
+This deposit is **self-contained**: a researcher can understand, cite, and reproduce the empirical study from this README and the bundled files alone. Start with **[`docs/DATASET.md`](docs/DATASET.md)** for a standalone introduction. The companion LaTeX manuscript lives in a separate repository/directory and is **not** included here.
 
-The companion LaTeX manuscript is in **`../paper/`** (sibling directory) and is not part of this deposit.
+---
 
-## 1. Dataset overview
+## 1. What this dataset is
 
-This deposit supports reproduction of a mining-software-repositories study that measures the gap between **adoption** (an AI instructional artifact path present in `git` HEAD at observation time) and **maintenance** (at least one qualifying git touch within the last *T* days before observation end).
+The **AI Convention Lifecycle Corpus** is a frozen mining-software-repositories (MSR) dataset and analysis pipeline. It captures:
 
-**Primary analysis window:** *T* = 180 days.
+- Which open-source repositories **adopt** AI-facing instruction paths at observation-time `HEAD` (e.g. `AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`, `.cursor/rules/*`, `prompts/` trees).
+- Whether those paths show **maintenance**—qualifying git commits touching the path within a lookback window *T* days before observation end.
 
-**Artifact scope** (frozen in `protocol/lifecycle_v1.yaml`): paths matching AI agent-governance conventions such as `AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`, `.cursor/rules/*`, prompt directories, and related patterns. Generic documentation files (for example `README.md`, `CONTRIBUTING.md`) are excluded.
+**Bundled release (v2 cohort):**
 
-**Units of analysis:** artifact instance (primary), repository (secondary), artifact type and introduction cohort (exploratory strata where sample size permits).
+| Quantity | Value |
+|----------|------:|
+| Discovered adopted repositories | 220 |
+| Successfully extracted & analyzed | 209 |
+| Ever-introduced artifact instances | 13,988 |
+| Mature-present artifacts (*T* = 180 d) | 577 |
+| Primary maintenance window | 180 days |
 
-**Bundled aggregates** (CC-BY 4.0): discovery list, per-commit touch history, artifact-level tables, covariates, state-enriched artifacts, JSON/CSV results, and a 40-row annotation sheet.
+**Headline gap at *T* = 180 days (mature-present artifacts):** **56.0%** artifact-level; **7.2%** repository-level.
 
-**Not bundled:** full git clones under `data/repos/` (large; per-repository licenses). Re-extraction clones public URLs from `data/lifecycle/discovered_v2.csv`.
+**Included:** YAML protocols, GitHub URL seed pools, Python extraction/analysis code, aggregated Parquet/CSV/JSON tables, bootstrap and sensitivity outputs, and a 40-row manual-validation sample.
 
-**Code license:** MIT (`LICENSE`).
+**Not included:** full git clones (`data/repos/`). Re-extraction clones public URLs listed in `data/lifecycle/discovered_v2.csv`.
 
-## 2. Research questions
+---
 
-1. **Adoption vs. maintenance:** To what extent does HEAD presence of AI instructional artifacts reflect git-based maintenance of those same paths?
-2. **Magnitude of the gap:** How large is the adoption–maintenance gap among mature-present artifacts at *T* ∈ {90, 180, 365} days, and at the primary window (*T* = 180)?
-3. **Level aggregation:** Does repository-level maintenance mask artifact-level git dormancy?
-4. **Heterogeneity:** How does gap magnitude vary by artifact type and introduction cohort when denominators are sufficient?
-5. **Outcome distinction:** How do deletion (path removed from HEAD) and git dormancy (present but untouchéd) compare among ever-introduced artifacts?
+## 2. Research objective
 
-Operational definitions and state machine rules are frozen in `protocol/adoption_maintenance_v1.yaml` and scale parameters in `protocol/adoption_maintenance_v2.yaml`.
+**Central question:** To what extent does snapshot presence of AI instructional artifacts on GitHub reflect ongoing git-based maintenance of those same paths?
 
-## 3. Repository structure
+**Operational contrast:**
+
+- **Adoption** — artifact path present in `HEAD` at observation end.
+- **Maintenance** — at least one qualifying commit touching the path within the last *T* days (primary *T* = 180).
+
+**Secondary objectives** (frozen in protocols; see `metadata/replication_package.md`):
+
+1. Quantify the adoption–maintenance gap at *T* ∈ {90, 180, 365} days.
+2. Compare artifact-level vs. repository-level aggregation.
+3. Report heterogeneity by artifact type and introduction cohort where cell sizes permit.
+4. Distinguish **deletion** (path removed from `HEAD`) from **git dormancy** (present but untouched).
+
+Definitions, detection patterns, maturity rules, and state machine are specified in `protocol/` and documented in `docs/dataset_description.md`.
+
+---
+
+## 3. Corpus contents
+
+| Category | Location | Description |
+|----------|----------|-------------|
+| **Protocols** | `protocol/*.yaml` | Frozen detection, extraction, and analysis specifications |
+| **Seeds** | `seeds/*.txt` | Curated GitHub URL pools used for discovery |
+| **Scripts** | `scripts/lifecycle/` | Discovery, extraction, build, and analysis pipeline |
+| **Datasets** | `data/lifecycle/` | Discovery list, touch history, artifact tables, covariates, metadata |
+| **Results** | `results/lifecycle/` | Headline statistics, funnels, bootstrap CIs, sensitivity tables |
+| **Annotation** | `annotation/` | Stratified 40-row manual-validation sheet |
+| **Metadata** | `metadata/` | Study manifest, Zenodo deposit template, package inventory |
+| **Documentation** | `docs/` | Reproducibility, dataset description, release audits |
+
+Full file-level inventory: **`metadata/replication_package.md`**.
+
+---
+
+## 4. Directory structure
 
 ```
 .
-├── protocol/                    # Frozen YAML protocols (detection, extraction, analysis)
-├── data/lifecycle/              # Discovery CSV, parquets, extraction/build metadata
-├── results/lifecycle/           # Headline JSON/CSV outputs
-├── scripts/lifecycle/           # Python pipeline (`lifecycle` package; PYTHONPATH=scripts)
-├── annotation/                  # Manual-validation sheet (40 rows)
-├── seeds/                       # GitHub URL seed pools (incl. ai_adopter lists)
-├── metadata/study_manifest.json # Sample counts and headline checksums
-├── docs/                        # Reproduction, migration, and legacy-removal notes
-├── zenodo/                      # Zenodo deposit metadata
-├── Makefile                     # install, analyze, lifecycle-v2, verify-headline
-├── requirements.txt             # Python dependencies
-├── CITATION.cff                 # Citation metadata
-└── LICENSE                      # MIT (code)
+├── README.md                    # This file
+├── CITATION.cff                 # Machine-readable citation metadata
+├── LICENSE                      # MIT (source code)
+├── Makefile                     # install | analyze | lifecycle-v2 | verify-headline
+├── requirements.txt
+├── protocol/                    # Frozen YAML protocols
+├── seeds/                       # GitHub URL seed pools
+├── scripts/lifecycle/           # Python pipeline (set PYTHONPATH=scripts)
+├── data/lifecycle/              # Aggregated tabular datasets + build/extract metadata
+├── results/lifecycle/           # Analysis outputs (JSON/CSV)
+├── annotation/                  # Manual-validation sample
+├── metadata/                    # study_manifest.json, zenodo.json, replication_package.md
+├── docs/                        # Supporting technical documentation
+└── zenodo/                      # Deposit checklist (points to metadata/zenodo.json)
 ```
 
-| Path | Role |
-|------|------|
-| `protocol/lifecycle_v1.yaml` | Artifact patterns, extraction outputs, build rules |
-| `protocol/adoption_maintenance_v1.yaml` | Adoption, maintenance, maturity, gap definitions |
-| `protocol/adoption_maintenance_v2.yaml` | v2 scale, seeds, bootstrap, output paths |
-| `data/lifecycle/discovered_v2.csv` | Adopted repository list (220 rows) |
-| `data/lifecycle/touch_history.parquet` | Per-commit touch events |
-| `data/lifecycle/artifacts.parquet` | Artifact-level export table |
-| `data/lifecycle/artifacts_full.parquet` | Extended artifact fields for analysis |
-| `data/lifecycle/artifact_states_v2.parquet` | State-enriched artifact table |
-| `results/lifecycle/adoption_maintenance_v2.json` | Primary summary statistics |
-| `annotation/annotation_sheet.csv` | Stratified manual validation sample |
+---
 
-See `docs/reproducibility.md` for step-by-step commands.
+## 5. Reproduction workflow
 
-## 4. Reproduction instructions
+### A. Quick verification (offline, ~1 min)
 
-### Quick verification (offline, bundled data)
-
-From the corpus root:
+Confirms bundled headline statistics without network access:
 
 ```bash
 python3 -m venv .venv
@@ -79,86 +103,114 @@ make install
 make verify-headline
 ```
 
-`make verify-headline` checks that `results/lifecycle/adoption_maintenance_v2.json` reports **209** analyzed repositories and artifact-level mature-present gap ≈ **56.0%** at *T* = 180.
+Expected output: `OK: n_repos=209 artifact_gap= 0.56`
 
-### Recompute analysis from frozen parquets (offline)
+### B. Recompute analysis from frozen parquets (offline)
 
-Requires no network or local clones if `artifacts_full.parquet` is present:
+Requires `data/lifecycle/artifacts_full.parquet` (bundled):
 
 ```bash
 make analyze
 ```
 
-### Full pipeline from GitHub (network + git required)
+Runs `scripts/lifecycle/adoption_maintenance_v2.py` and refreshes `results/lifecycle/*`.
 
-Clone repositories into `data/repos/` and rerun discovery → extraction → build → analysis:
+### C. Full pipeline from GitHub (network + git)
+
+Clones repositories into `data/repos/` and reruns discovery → extraction → build → analysis:
 
 ```bash
 make lifecycle-v2
 ```
 
-Detailed commands, flags, and output paths: **`docs/reproducibility.md`**.
+Equivalent: `python scripts/lifecycle/run_v2.py` with `PYTHONPATH=./scripts`.
 
-## 5. Expected outputs
+**Step-by-step commands, flags, and output paths:** `docs/reproducibility.md`.
 
-After a successful full run (`make lifecycle-v2`) or offline analysis (`make analyze`), the following v2 outputs should exist:
+### Hardware (full re-extraction)
 
-| Output | Description |
-|--------|-------------|
-| `data/lifecycle/artifact_states_v2.parquet` | Per-artifact states (DELETED, TOO_YOUNG, ACTIVE, DORMANT) at 90/180/365 days |
-| `results/lifecycle/bootstrap_v2.json` | Cluster-bootstrap confidence intervals (5,000 replicates) |
-| `results/lifecycle/loo_v2.csv` | Leave-one-repository-out sensitivity |
-| `annotation/annotation_sheet.csv` | Stratified validation sample (20 git-dormant + 20 active at *T* = 180) |
-| `results/lifecycle/adoption_maintenance_v2.json` | Headline gaps, bootstrap summary, annotation metadata, threshold breakdown |
-| `results/lifecycle/funnel_v2.csv` | Analysis funnel by maintenance window |
-| `results/lifecycle/discovery_funnel_v2.csv` | Discovery attrition (after discovery step) |
-| `results/lifecycle/extract_attrition_v2.csv` | Extraction skip log (after extraction step) |
-| `results/lifecycle/cohort_gap_v2.csv` | Gap by introduction quarter |
-| `results/lifecycle/type_gap_age_adjusted.csv` | Age-adjusted gap comparison by artifact type |
-
-**Headline values** (primary, *T* = 180, bundled release):
-
-| Metric | Value |
-|--------|-------|
-| Analyzed repositories | 209 |
-| Ever-introduced artifacts | 13,988 |
-| Mature-present artifacts | 577 |
-| Artifact-level mature-present gap | 56.0% |
-| Repository-level gap | 7.2% |
-
-## 6. Hardware requirements
-
-| Resource | Minimum | Recommended (full re-extraction) |
-|----------|---------|--------------------------------|
+| Resource | Minimum | Recommended |
+|----------|---------|-------------|
 | CPU | 2 cores | 4+ cores |
 | RAM | 4 GB | 8–16 GB |
-| Disk | 2 GB (bundled aggregates only) | 50–100 GB free (`data/repos/` clones for ~220 repositories) |
-| Network | Not required for `make analyze` | Stable broadband for `make lifecycle-v2` |
-| Software | Python ≥ 3.10, `git` | Same; Linux or macOS tested |
+| Disk (aggregates only) | 2 GB | — |
+| Disk (with clones) | — | 50–100 GB |
+| Software | Python ≥ 3.10, git | Linux or macOS tested |
 
-Bootstrap analysis (5,000 cluster replicates) is CPU-bound; expect several minutes on a laptop. Full git extraction time depends on clone sizes and GitHub rate limits; resume mode (`--resume` on extraction) supports interrupted runs.
+---
 
-## 7. Limitations
+## 6. Citation
 
-- **Observation end is extraction-time HEAD:** Metrics describe git history up to each repository’s last commit at extraction, not a fixed calendar date across repos.
-- **Git touches only:** Maintenance is operationalized as qualifying commits touching the artifact path; semantic relevance, reading, or out-of-band edits are not observed.
-- **Seed-driven sample:** Repositories enter via curated GitHub URL seeds (AI-adopter and general-OSS pools), not a random sample of all open-source projects.
-- **HEAD presence as adoption:** A path present at observation end counts as adopted even if content is stale or placeholder text.
-- **No bundled clones:** Re-extraction requires cloning public repositories; some URLs may become unavailable, private, or renamed over time.
-- **Manual validation is partial:** The annotation sheet covers 40 stratified artifact instances; automated label columns are heuristic pre-fills (`scripts/lifecycle/fill_annotation.py`) and do not replace human adjudication for new runs.
-- **Non-comparable strata:** Type and cohort breakdowns are reported only where minimum cell sizes in the protocol are met.
+**Full guide:** [`docs/CITING.md`](docs/CITING.md) — BibTeX examples for Zenodo, GitHub, and versioned dataset releases.
 
-## Citation
+| Use case | Cite |
+|----------|------|
+| Data, seeds, headline statistics, bundled outputs | **Zenodo** (preferred) |
+| Pipeline code or repository history | **GitHub** + version tag |
+| Reproducible numbers | **Version `v2.0.0`** + Zenodo DOI |
 
-Cite this corpus via `CITATION.cff`. After Zenodo registration, use the assigned DOI.
+### Zenodo (preferred)
 
-## Further documentation
+```bibtex
+@dataset{ai_convention_lifecycle_corpus_v2,
+  author       = {Anonymous Author(s)},
+  title        = {{AI Convention Lifecycle Corpus} --- Adoption Is Not Maintenance (v2)},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {2.0.0},
+  doi          = {10.5281/zenodo.XXXXXXX},
+  url          = {https://doi.org/10.5281/zenodo.XXXXXXX}
+}
+```
 
-- `docs/reproducibility.md` — exact reproduction commands
-- `docs/dataset_description.md` — sampling, definitions, funnels, validity (standalone reference)
-- `docs/repository_migration.md` — layout mapping from the internal study workspace
-- `docs/separation_audit.md` — paper/corpus boundary and verification
-- `docs/legacy_removal_log.md` — removed pilot artifacts (corpus copy only)
-- `docs/public_release_audit.md` — leakage audit for Zenodo release
-- `docs/commit_policy.md` — required git commit workflow for this repository
-- `metadata/study_manifest.json` — machine-readable sample summary
+### GitHub (code)
+
+Repository: `https://github.com/cesar-andress/ai-convention-lifecycle-corpus` — see [`docs/CITING.md`](docs/CITING.md) for a `@software` BibTeX block.
+
+### Dataset version
+
+Always report **`v2.0.0`** when citing headline values (209 repos, 13,988 artifacts, 56.0% artifact-level gap at *T* = 180 d).
+
+Machine-readable metadata: **`CITATION.cff`**. After Zenodo registration, replace `XXXXXXX` in `CITATION.cff`, `metadata/zenodo.json`, `docs/CITING.md`, and this README.
+
+---
+
+## 7. License
+
+| Component | License | Notes |
+|-----------|---------|-------|
+| **Source code** (`scripts/`, `Makefile`, etc.) | [MIT](LICENSE) | See root `LICENSE` |
+| **Aggregated data** (`data/lifecycle/*`, `results/lifecycle/*`, `annotation/*`, `seeds/*`) | **CC-BY 4.0** | Redistributable study outputs |
+| **Third-party git content** | Per-repository | Not redistributed; clone from GitHub at reproduction time |
+
+When in doubt, treat **tabular outputs and seed lists as CC-BY 4.0** and **code as MIT**.
+
+---
+
+## 8. Zenodo DOI placeholder
+
+| Field | Value |
+|-------|-------|
+| **DOI (pending)** | `10.5281/zenodo.XXXXXXX` |
+| **URL (pending)** | `https://doi.org/10.5281/zenodo.XXXXXXX` |
+| **Version** | 2.0.0 |
+| **Upload metadata template** | `metadata/zenodo.json` |
+| **Deposit checklist** | `zenodo/README.md` |
+
+Replace `XXXXXXX` after creating the Zenodo record.
+
+---
+
+## Further reading (optional)
+
+| Document | Purpose |
+|----------|---------|
+| `docs/DATASET.md` | **Dataset landing page** — standalone introduction for new researchers |
+| `metadata/dataset_card.md` | Academic dataset card (standard sections) |
+| `docs/CITING.md` | How to cite Zenodo, GitHub, and dataset version (BibTeX) |
+| `docs/ZENODO_RELEASE_CHECKLIST.md` | Step-by-step Zenodo release procedure |
+| `metadata/replication_package.md` | Complete file inventory |
+| `docs/reproducibility.md` | Exact reproduction commands |
+| `docs/dataset_description.md` | Sampling, definitions, validity threats |
+| `docs/public_release_audit.md` | Leakage audit for public release |
+| `metadata/study_manifest.json` | Machine-readable sample summary |
