@@ -158,8 +158,8 @@ Equivalent: `python scripts/lifecycle/run_v2.py` with `PYTHONPATH=./scripts`.
   year         = {2026},
   publisher    = {Zenodo},
   version      = {2.0.0},
-  doi          = {10.5281/zenodo.XXXXXXX},
-  url          = {https://doi.org/10.5281/zenodo.XXXXXXX}
+  doi          = {10.5281/zenodo.20637986},
+  url          = {https://doi.org/10.5281/zenodo.20637986}
 }
 ```
 
@@ -171,7 +171,7 @@ Repository: `https://github.com/cesar-andress/ai-convention-lifecycle-corpus` â€
 
 Always report **`v2.0.0`** when citing headline values (209 repos, 13,988 artifacts, 56.0% artifact-level gap at *T* = 180 d).
 
-Machine-readable metadata: **`CITATION.cff`**. After Zenodo registration, replace `XXXXXXX` in `CITATION.cff`, `metadata/zenodo.json`, `docs/CITING.md`, and this README.
+Machine-readable metadata: **`CITATION.cff`**.
 
 ---
 
@@ -187,17 +187,15 @@ When in doubt, treat **tabular outputs and seed lists as CC-BY 4.0** and **code 
 
 ---
 
-## 8. Zenodo DOI placeholder
+## 8. Zenodo DOI
 
 | Field | Value |
 |-------|-------|
-| **DOI (pending)** | `10.5281/zenodo.XXXXXXX` |
-| **URL (pending)** | `https://doi.org/10.5281/zenodo.XXXXXXX` |
+| **DOI** | `10.5281/zenodo.20637986` |
+| **URL** | `https://doi.org/10.5281/zenodo.20637986` |
 | **Version** | 2.0.0 |
 | **Upload metadata template** | `metadata/zenodo.json` |
 | **Deposit checklist** | `zenodo/README.md` |
-
-Replace `XXXXXXX` after creating the Zenodo record.
 
 ---
 

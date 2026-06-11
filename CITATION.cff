@@ -10,8 +10,9 @@ authors:
     email: "cesar.andress@ucjc.edu"
 version: "1.0.1"
 date-released: "2026-06-11"
+doi: "10.5281/zenodo.20637986"
 repository-code: "https://github.com/cesar-andress/ai-convention-lifecycle-corpus"
-url: "https://github.com/cesar-andress/ai-convention-lifecycle-corpus"
+url: "https://doi.org/10.5281/zenodo.20637986"
 license: "MIT"
 abstract: "Replication package and research corpus for studying the lifecycle of AI instructional artifacts in public GitHub repositories."
 keywords:

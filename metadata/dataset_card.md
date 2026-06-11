@@ -7,7 +7,7 @@ license_code: MIT
 license_data: CC-BY-4.0
 language: en
 homepage: https://github.com/cesar-andress/ai-convention-lifecycle-corpus
-doi: 10.5281/zenodo.XXXXXXX
+doi: 10.5281/zenodo.20637986
 tags:
   - mining-software-repositories
   - github
@@ -27,7 +27,7 @@ tags:
 | **License (code)** | MIT |
 | **License (aggregated data)** | CC-BY 4.0 |
 | **Citation** | [`CITATION.cff`](../CITATION.cff) · [`docs/CITING.md`](../docs/CITING.md) |
-| **DOI (pending)** | `10.5281/zenodo.XXXXXXX` |
+| **DOI** | `10.5281/zenodo.20637986` |
 
 This card describes the corpus as a **standalone research artifact**. No companion publication is required to understand scope, provenance, or appropriate use.
 

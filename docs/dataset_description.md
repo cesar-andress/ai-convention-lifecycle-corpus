@@ -416,7 +416,7 @@ Bootstrap 95% intervals and leave-one-out ranges: `results/lifecycle/bootstrap_v
 ## 14. How to cite
 
 ```text
-César Andrés. (2026). AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.PLACEHOLDER
+César Andrés. (2026). AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20637986
 ```
 
 Update author names and DOI after deposit. Full metadata: `CITATION.cff`.

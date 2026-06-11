@@ -168,13 +168,13 @@ Copy description HTML from [`metadata/zenodo.json`](../metadata/zenodo.json) and
 
 After Zenodo assigns a DOI:
 
-1. Copy DOI: `10.5281/zenodo.________`
-2. Resolve in browser: `https://doi.org/10.5281/zenodo.________`
+1. Copy DOI: `10.5281/zenodo.20637986`
+2. Resolve in browser: `https://doi.org/10.5281/zenodo.20637986`
 3. Confirm landing page shows correct **version**, **files**, and **title**.
 
 ```bash
 # Quick HTTP check (expect 200 or 302 to Zenodo record)
-DOI=10.5281/zenodo.________
+DOI=10.5281/zenodo.20637986
 curl -sI "https://doi.org/${DOI}" | head -5
 ```
 
@@ -186,24 +186,22 @@ curl -sI "https://doi.org/${DOI}" | head -5
 
 ## Citation update
 
-Replace **`XXXXXXX`** with the numeric Zenodo record ID in **all** of:
+For the **first public deposit**, the assigned DOI is `10.5281/zenodo.20637986` (record ID `20637986`). It is recorded in:
 
-| File | What to replace |
-|------|-----------------|
+| File | Fields |
+|------|--------|
 | [`CITATION.cff`](../CITATION.cff) | `doi`, `url` |
 | [`metadata/zenodo.json`](../metadata/zenodo.json) | `related_identifiers[].identifier` |
 | [`README.md`](../README.md) | §6 BibTeX, §8 DOI table |
-| [`docs/CITING.md`](CITING.md) | all `10.5281/zenodo.XXXXXXX` and prose examples |
+| [`docs/CITING.md`](CITING.md) | BibTeX and prose examples |
 
-Search for leftovers:
+For **subsequent versioned deposits**, replace the record ID in those files and search for leftovers:
 
 ```bash
-rg 'XXXXXXX|zenodo\.PLACEHOLDER' .
+rg 'XXXXXXX|zenodo\.PLACEHOLDER|zenodo\.________' .
 ```
 
-Commit citation fixes on `main` **after** DOI is known; optionally tag a **patch** release (`v2.1.1`) if the tag was already cut without DOI strings.
-
-- [ ] No `XXXXXXX` placeholders remain in citation files
+- [x] No Zenodo DOI placeholders remain in citation files (first deposit: `20637986`)
 - [ ] [`CITATION.cff`](../CITATION.cff) validates (optional: [cff-validator](https://github.com/citation-file-format/cff-validator))
 - [ ] GitHub release description updated with DOI link
 
@@ -307,7 +305,7 @@ sha256sum corpus.zip
 Release:     vX.Y.Z
 Git tag:     vX.Y.Z
 GitHub:      https://github.com/cesar-andress/ai-convention-lifecycle-corpus/releases/tag/vX.Y.Z
-Zenodo DOI:  https://doi.org/10.5281/zenodo.________
+Zenodo DOI:  https://doi.org/10.5281/zenodo.20637986
 Cohort:      ___ discovered / ___ analyzed repos; ___ ever-introduced artifacts
 Headline:    ___% artifact-level gap (T=180 d); ___% repo-level gap
 Verified:    make verify-headline OK on YYYY-MM-DD
@@ -320,7 +318,8 @@ SHA-256:     (zip checksum)
 
 | Version | Date | DOI | Notes |
 |---------|------|-----|-------|
-| v2.0.0 | 2026-06-11 | `10.5281/zenodo.XXXXXXX` (pending) | Initial public v2 cohort (209 analyzed repos) |
+| v1.0.1 | 2026-06-11 | `10.5281/zenodo.20637986` | Public Zenodo deposit; citation metadata |
+| v2.0.0 | 2026-06-11 | `10.5281/zenodo.20637986` | Initial public v2 cohort (209 analyzed repos) |
 | | | | |
 
 Append a row after each successful release.

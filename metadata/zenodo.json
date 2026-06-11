@@ -33,11 +33,11 @@
       "scheme": "url"
     },
     {
-      "identifier": "10.5281/zenodo.XXXXXXX",
+      "identifier": "10.5281/zenodo.20637986",
       "relation": "isVersionOf",
       "resource_type": "dataset",
       "scheme": "doi"
     }
   ],
-  "notes": "Replace XXXXXXX with the assigned Zenodo record ID before publishing. Code is MIT-licensed; note dual licensing in deposit description."
+  "notes": "Code is MIT-licensed; note dual licensing in deposit description."
 }

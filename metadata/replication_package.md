@@ -170,4 +170,4 @@ Technical notes for reproduction and release auditing. **No manuscript content.*
 
 ## Citation
 
-Dataset DOI (pending): `10.5281/zenodo.XXXXXXX` — see `CITATION.cff` and `README.md` §6.
+Dataset DOI: `10.5281/zenodo.20637986` — see `CITATION.cff` and `README.md` §6.
