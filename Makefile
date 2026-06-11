@@ -16,6 +16,7 @@ install:
 # Recompute analysis from frozen parquets (no network; no git clone)
 analyze:
 	$(PYTHON) scripts/lifecycle/adoption_maintenance_v2.py
+	$(PYTHON) scripts/lifecycle/maturity_gap_v2.py
 
 # Full v2 pipeline: discover → extract → build → analyze (requires git + network)
 lifecycle-v2:

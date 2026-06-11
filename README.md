@@ -1,11 +1,35 @@
 # AI Convention Lifecycle Corpus
 
-**Canonical public release (v2.0.0):** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
+**Release title:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
 **DOI:** [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986)
 
 Replication package for measuring the adoption–maintenance gap in AI instructional artifacts on public GitHub repositories.
 
-This deposit is **self-contained**: a researcher can understand, cite, and reproduce the empirical study from this README and the bundled files alone. Start with **[`docs/DATASET.md`](docs/DATASET.md)** for a standalone introduction. The companion LaTeX manuscript lives in a separate repository/directory and is **not** included here.
+This deposit is **self-contained**: a researcher can understand, cite, and reproduce the empirical study from this README and the bundled files alone. Start with the [dataset landing page](docs/DATASET.md) for a standalone introduction. The companion LaTeX manuscript lives in a separate repository and is **not** included here.
+
+---
+
+## Repository structure
+
+| Component | Path | Purpose |
+|-----------|------|---------|
+| Protocol specifications | `protocol/` | Frozen detection rules, extraction settings, and measurement thresholds |
+| Seed pools | `seeds/` | Curated GitHub URL pools used for repository discovery |
+| Analysis scripts | `scripts/lifecycle/` | Discovery, extraction, dataset build, and gap analyses |
+| Build automation | `Makefile` | Package-level reproduction targets (`install`, `verify-headline`, `analyze`, `lifecycle-v2`) |
+| Processed data | `data/lifecycle/` | Discovery tables, touch history, and extracted parquet datasets |
+| Results | `results/lifecycle/` | Headline gaps, bootstrap intervals, LOO sensitivity, and robustness outputs |
+| Headline gap bundle | `results/lifecycle/adoption_maintenance_v2.json` | Offline verification of reported headline statistics |
+| Annotation sample | `annotation/annotation_sheet.csv` | Stratified 40-row manual-validation sample |
+| Package metadata | `metadata/` | Study manifest, Zenodo deposit template, and file inventory |
+| Replication inventory | `metadata/replication_package.md` | Complete file-level manifest with checksums |
+| Documentation | `docs/` | Reproducibility guide, dataset description, and release audits |
+| Citation metadata | `CITATION.cff` | Dataset version and preferred citation string |
+| Zenodo checklist | `zenodo/` | Deposit checklist (see `metadata/zenodo.json`) |
+
+**Not bundled:** full git clones under `data/repos/`. Full re-extraction clones public URLs listed in the discovery table.
+
+**File-level detail:** see [metadata/replication_package.md](metadata/replication_package.md).
 
 ---
 
@@ -30,8 +54,6 @@ The **AI Convention Lifecycle Corpus** is a frozen mining-software-repositories 
 
 **Included:** YAML protocols, GitHub URL seed pools, Python extraction/analysis code, aggregated Parquet/CSV/JSON tables, bootstrap and sensitivity outputs, and a 40-row manual-validation sample.
 
-**Not included:** full git clones (`data/repos/`). Re-extraction clones public URLs listed in `data/lifecycle/discovered_v2.csv`.
-
 ---
 
 ## 2. Research objective
@@ -43,57 +65,18 @@ The **AI Convention Lifecycle Corpus** is a frozen mining-software-repositories 
 - **Adoption** — artifact path present in `HEAD` at observation end.
 - **Maintenance** — at least one qualifying commit touching the path within the last *T* days (primary *T* = 180).
 
-**Secondary objectives** (frozen in protocols; see `metadata/replication_package.md`):
+**Secondary objectives** (frozen in protocols; see the replication inventory):
 
 1. Quantify the adoption–maintenance gap at *T* ∈ {90, 180, 365} days.
 2. Compare artifact-level vs. repository-level aggregation.
 3. Report heterogeneity by artifact type and introduction cohort where cell sizes permit.
 4. Distinguish **deletion** (path removed from `HEAD`) from **git dormancy** (present but untouched).
 
-Definitions, detection patterns, maturity rules, and state machine are specified in `protocol/` and documented in `docs/dataset_description.md`.
+Definitions, detection patterns, maturity rules, and state machine are specified in the protocol directory and documented in [docs/dataset_description.md](docs/dataset_description.md).
 
 ---
 
-## 3. Corpus contents
-
-| Category | Location | Description |
-|----------|----------|-------------|
-| **Protocols** | `protocol/*.yaml` | Frozen detection, extraction, and analysis specifications |
-| **Seeds** | `seeds/*.txt` | Curated GitHub URL pools used for discovery |
-| **Scripts** | `scripts/lifecycle/` | Discovery, extraction, build, and analysis pipeline |
-| **Datasets** | `data/lifecycle/` | Discovery list, touch history, artifact tables, covariates, metadata |
-| **Results** | `results/lifecycle/` | Headline statistics, funnels, bootstrap CIs, sensitivity tables |
-| **Annotation** | `annotation/` | Stratified 40-row manual-validation sheet |
-| **Metadata** | `metadata/` | Study manifest, Zenodo deposit template, package inventory |
-| **Documentation** | `docs/` | Reproducibility, dataset description, release audits |
-
-Full file-level inventory: **`metadata/replication_package.md`**.
-
----
-
-## 4. Directory structure
-
-```
-.
-├── README.md                    # This file
-├── CITATION.cff                 # Machine-readable citation metadata
-├── LICENSE                      # MIT (source code)
-├── Makefile                     # install | analyze | lifecycle-v2 | verify-headline
-├── requirements.txt
-├── protocol/                    # Frozen YAML protocols
-├── seeds/                       # GitHub URL seed pools
-├── scripts/lifecycle/           # Python pipeline (set PYTHONPATH=scripts)
-├── data/lifecycle/              # Aggregated tabular datasets + build/extract metadata
-├── results/lifecycle/           # Analysis outputs (JSON/CSV)
-├── annotation/                  # Manual-validation sample
-├── metadata/                    # study_manifest.json, zenodo.json, replication_package.md
-├── docs/                        # Supporting technical documentation
-└── zenodo/                      # Deposit checklist (points to metadata/zenodo.json)
-```
-
----
-
-## 5. Reproduction workflow
+## 3. Reproduction workflow
 
 ### A. Quick verification (offline, ~1 min)
 
@@ -110,13 +93,13 @@ Expected output: `OK: n_repos=209 artifact_gap= 0.56`
 
 ### B. Recompute analysis from frozen parquets (offline)
 
-Requires `data/lifecycle/artifacts_full.parquet` (bundled):
+Requires the bundled artifact parquet table (see **Processed data** in the repository structure table):
 
 ```bash
 make analyze
 ```
 
-Runs `scripts/lifecycle/adoption_maintenance_v2.py` and refreshes `results/lifecycle/*`.
+Runs the primary v2 analysis script and refreshes outputs under the results directory.
 
 ### C. Full pipeline from GitHub (network + git)
 
@@ -128,7 +111,7 @@ make lifecycle-v2
 
 Equivalent: `python scripts/lifecycle/run_v2.py` with `PYTHONPATH=./scripts`.
 
-**Step-by-step commands, flags, and output paths:** `docs/reproducibility.md`.
+**Step-by-step commands, flags, and output paths:** [docs/reproducibility.md](docs/reproducibility.md).
 
 ### Hardware (full re-extraction)
 
@@ -142,9 +125,9 @@ Equivalent: `python scripts/lifecycle/run_v2.py` with `PYTHONPATH=./scripts`.
 
 ---
 
-## 6. Citation
+## 4. Citation
 
-**Full guide:** [`docs/CITING.md`](docs/CITING.md) — BibTeX examples for Zenodo, GitHub, and versioned dataset releases.
+**Full guide:** [docs/CITING.md](docs/CITING.md) — BibTeX examples for Zenodo, GitHub, and versioned dataset releases.
 
 | Use case | Cite |
 |----------|------|
@@ -168,7 +151,7 @@ Equivalent: `python scripts/lifecycle/run_v2.py` with `PYTHONPATH=./scripts`.
 
 ### GitHub (code)
 
-Repository: `https://github.com/cesar-andress/ai-convention-lifecycle-corpus` — see [`docs/CITING.md`](docs/CITING.md) for a `@software` BibTeX block.
+Repository: `https://github.com/cesar-andress/ai-convention-lifecycle-corpus` — see [docs/CITING.md](docs/CITING.md) for a `@software` BibTeX block.
 
 ### Dataset version
 
@@ -178,19 +161,19 @@ Machine-readable metadata: **`CITATION.cff`**.
 
 ---
 
-## 7. License
+## 5. License
 
 | Component | License | Notes |
 |-----------|---------|-------|
 | **Source code** (`scripts/`, `Makefile`, etc.) | [MIT](LICENSE) | See root `LICENSE` |
-| **Aggregated data** (`data/lifecycle/*`, `results/lifecycle/*`, `annotation/*`, `seeds/*`) | **CC-BY 4.0** | Redistributable study outputs |
+| **Aggregated data** (processed data, results, annotation, seeds) | **CC-BY 4.0** | Redistributable study outputs |
 | **Third-party git content** | Per-repository | Not redistributed; clone from GitHub at reproduction time |
 
 When in doubt, treat **tabular outputs and seed lists as CC-BY 4.0** and **code as MIT**.
 
 ---
 
-## 8. Zenodo DOI
+## 6. Zenodo release
 
 | Field | Value |
 |-------|-------|
@@ -203,16 +186,16 @@ When in doubt, treat **tabular outputs and seed lists as CC-BY 4.0** and **code 
 
 ---
 
-## Further reading (optional)
+## Further reading
 
 | Document | Purpose |
 |----------|---------|
-| `docs/DATASET.md` | **Dataset landing page** — standalone introduction for new researchers |
-| `metadata/dataset_card.md` | Academic dataset card (standard sections) |
-| `docs/CITING.md` | How to cite Zenodo, GitHub, and dataset version (BibTeX) |
-| `docs/ZENODO_RELEASE_CHECKLIST.md` | Step-by-step Zenodo release procedure |
-| `metadata/replication_package.md` | Complete file inventory |
-| `docs/reproducibility.md` | Exact reproduction commands |
-| `docs/dataset_description.md` | Sampling, definitions, validity threats |
-| `docs/public_release_audit.md` | Leakage audit for public release |
-| `metadata/study_manifest.json` | Machine-readable sample summary |
+| [docs/DATASET.md](docs/DATASET.md) | Standalone dataset landing page for new researchers |
+| [metadata/dataset_card.md](metadata/dataset_card.md) | Academic dataset card |
+| [docs/CITING.md](docs/CITING.md) | How to cite Zenodo, GitHub, and dataset version (BibTeX) |
+| [docs/ZENODO_RELEASE_CHECKLIST.md](docs/ZENODO_RELEASE_CHECKLIST.md) | Step-by-step Zenodo release procedure |
+| [metadata/replication_package.md](metadata/replication_package.md) | Complete file inventory |
+| [docs/reproducibility.md](docs/reproducibility.md) | Exact reproduction commands |
+| [docs/dataset_description.md](docs/dataset_description.md) | Sampling, definitions, validity threats |
+| [docs/public_release_audit.md](docs/public_release_audit.md) | Leakage audit for public release |
+| [metadata/study_manifest.json](metadata/study_manifest.json) | Machine-readable sample summary |

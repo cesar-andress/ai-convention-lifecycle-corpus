@@ -1,0 +1,186 @@
+{
+  "threshold_days": 180,
+  "score_components": [
+    "commit_volume (full extracted history)",
+    "n_repo_files at HEAD at extract",
+    "ci_present (ci_rate > 0 from full-repo commit file touches)"
+  ],
+  "omitted_components": [
+    "repository_age (first-commit date not retained in frozen extract)",
+    "contributor_count",
+    "release_activity",
+    "governance_files (CONTRIBUTING, CODEOWNERS, SECURITY)"
+  ],
+  "omitted_reason": "Not retained in frozen v2 extract; composite uses offline covariates only.",
+  "tiers": {
+    "Low": {
+      "n_repos": 70,
+      "artifact": {
+        "n_mature_present": 166,
+        "n_active": 105,
+        "n_dormant": 61,
+        "gap_rate": 0.3674698795180723,
+        "maintenance_rate": 0.6325301204819277
+      },
+      "repo": {
+        "n_repos_adopted": 70,
+        "n_repos_maintained": 62,
+        "n_repos_dormant_only": 8,
+        "gap_rate": 0.11428571428571428,
+        "dormant_only_rate": 0.11428571428571428
+      },
+      "bootstrap": {
+        "artifact_gap_mature": {
+          "observed": 0.3674698795180723,
+          "ci_95": {
+            "low": 0.09978733713793475,
+            "high": 0.7571428571428571
+          },
+          "n_bootstrap": 5000
+        },
+        "repo_gap": {
+          "observed": 0.11428571428571428,
+          "ci_95": {
+            "low": 0.05,
+            "high": 0.16666666666666666
+          },
+          "n_bootstrap": 5000
+        }
+      },
+      "tier_stable": true
+    },
+    "Medium": {
+      "n_repos": 69,
+      "artifact": {
+        "n_mature_present": 132,
+        "n_active": 44,
+        "n_dormant": 88,
+        "gap_rate": 0.6666666666666666,
+        "maintenance_rate": 0.3333333333333333
+      },
+      "repo": {
+        "n_repos_adopted": 69,
+        "n_repos_maintained": 64,
+        "n_repos_dormant_only": 5,
+        "gap_rate": 0.07246376811594203,
+        "dormant_only_rate": 0.07246376811594203
+      },
+      "bootstrap": {
+        "artifact_gap_mature": {
+          "observed": 0.6666666666666666,
+          "ci_95": {
+            "low": 0.4374599358974359,
+            "high": 0.8
+          },
+          "n_bootstrap": 5000
+        },
+        "repo_gap": {
+          "observed": 0.07246376811594203,
+          "ci_95": {
+            "low": 0.022727272727272728,
+            "high": 0.11627906976744186
+          },
+          "n_bootstrap": 5000
+        }
+      },
+      "tier_stable": true
+    },
+    "High": {
+      "n_repos": 70,
+      "artifact": {
+        "n_mature_present": 279,
+        "n_active": 105,
+        "n_dormant": 174,
+        "gap_rate": 0.6236559139784946,
+        "maintenance_rate": 0.3763440860215054
+      },
+      "repo": {
+        "n_repos_adopted": 70,
+        "n_repos_maintained": 68,
+        "n_repos_dormant_only": 2,
+        "gap_rate": 0.02857142857142857,
+        "dormant_only_rate": 0.02857142857142857
+      },
+      "bootstrap": {
+        "artifact_gap_mature": {
+          "observed": 0.6236559139784946,
+          "ci_95": {
+            "low": 0.13043478260869565,
+            "high": 0.8673100828729282
+          },
+          "n_bootstrap": 5000
+        },
+        "repo_gap": {
+          "observed": 0.02857142857142857,
+          "ci_95": {
+            "low": 0.0,
+            "high": 0.04878048780487805
+          },
+          "n_bootstrap": 5000
+        }
+      },
+      "tier_stable": true
+    }
+  },
+  "stability": {
+    "all_tiers_meet_minima": true,
+    "min_repos_per_tier": 20,
+    "min_mature_present_per_tier": 30,
+    "artifact_gap_range_pp": 29.9,
+    "repo_gap_range_pp": 8.6
+  },
+  "tier_table": [
+    {
+      "maturity_tier": "Low",
+      "n_repos": 70,
+      "n_mature_present": 166,
+      "n_active": 105,
+      "n_dormant": 61,
+      "artifact_gap_mature": 0.3674698795180723,
+      "repo_gap": 0.11428571428571428,
+      "artifact_gap_ci_95_low": 0.09978733713793475,
+      "artifact_gap_ci_95_high": 0.7571428571428571,
+      "repo_gap_ci_95_low": 0.05,
+      "repo_gap_ci_95_high": 0.16666666666666666,
+      "tier_stable": true
+    },
+    {
+      "maturity_tier": "Medium",
+      "n_repos": 69,
+      "n_mature_present": 132,
+      "n_active": 44,
+      "n_dormant": 88,
+      "artifact_gap_mature": 0.6666666666666666,
+      "repo_gap": 0.07246376811594203,
+      "artifact_gap_ci_95_low": 0.4374599358974359,
+      "artifact_gap_ci_95_high": 0.8,
+      "repo_gap_ci_95_low": 0.022727272727272728,
+      "repo_gap_ci_95_high": 0.11627906976744186,
+      "tier_stable": true
+    },
+    {
+      "maturity_tier": "High",
+      "n_repos": 70,
+      "n_mature_present": 279,
+      "n_active": 105,
+      "n_dormant": 174,
+      "artifact_gap_mature": 0.6236559139784946,
+      "repo_gap": 0.02857142857142857,
+      "artifact_gap_ci_95_low": 0.13043478260869565,
+      "artifact_gap_ci_95_high": 0.8673100828729282,
+      "repo_gap_ci_95_low": 0.0,
+      "repo_gap_ci_95_high": 0.04878048780487805,
+      "tier_stable": true
+    }
+  ],
+  "loo_max_artifact_gap_shift_pp": {
+    "Low": 21.3,
+    "Medium": 6.0,
+    "High": 40.7
+  },
+  "maturity_score_summary": {
+    "mean": 0.5023923444976076,
+    "min": 0.14035087719298245,
+    "max": 0.9657097288676236
+  }
+}

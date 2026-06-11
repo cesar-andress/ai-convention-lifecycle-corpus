@@ -1,6 +1,7 @@
 # Replication package inventory
 
-Explicit manifest of bundled files for **AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework**.
+**Release title:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
+**DOI:** [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986)
 
 This document describes **data, code, and protocols only**. It does not reproduce manuscript text, figures, or paper-specific claims.
 
@@ -8,19 +9,47 @@ Machine-readable summary: `metadata/study_manifest.json`.
 
 ---
 
-## Protocols (`protocol/`)
+## Repository structure
+
+Top-level layout for Zenodo users and replicators. Detailed file lists follow in later sections.
+
+| Component | Path | Purpose |
+|-----------|------|---------|
+| Protocol specifications | `protocol/` | Frozen detection rules, extraction settings, and measurement thresholds |
+| Seed pools | `seeds/` | Curated GitHub URL pools used for repository discovery |
+| Analysis scripts | `scripts/lifecycle/` | Discovery, extraction, dataset build, and gap analyses |
+| Build automation | `Makefile` | Package-level reproduction targets |
+| Processed data | `data/lifecycle/` | Discovery tables, touch history, and extracted parquet datasets |
+| Results | `results/lifecycle/` | Headline gaps, bootstrap intervals, LOO sensitivity, and robustness outputs |
+| Headline gap bundle | `results/lifecycle/adoption_maintenance_v2.json` | Offline verification of reported headline statistics |
+| Annotation sample | `annotation/annotation_sheet.csv` | Stratified 40-row manual-validation sample |
+| Package metadata | `metadata/` | Study manifest, Zenodo deposit template, and this inventory |
+| Documentation | `docs/` | Reproducibility guide, dataset description, and release audits |
+| Citation metadata | `CITATION.cff` | Dataset version and preferred citation string |
+| Root overview | `README.md` | Standalone package overview and reproduction guide |
+| Zenodo checklist | `zenodo/` | Deposit checklist (see `metadata/zenodo.json`) |
+
+**Not bundled:** full git clones under `data/repos/` (per-repository licenses; clone at reproduction time).
+
+---
+
+## Protocols
+
+Location: `protocol/`
 
 Frozen YAML specifications. Do not edit for reproduction; copy and version if extending the study.
 
 | File | Role |
 |------|------|
-| `protocol/lifecycle_v1.yaml` | Artifact path patterns, extraction outputs, dataset build rules |
-| `protocol/adoption_maintenance_v1.yaml` | Adoption, maintenance, maturity, gap, and state-machine definitions |
-| `protocol/adoption_maintenance_v2.yaml` | v2 scale parameters, seed file references, bootstrap settings, output paths |
+| `lifecycle_v1.yaml` | Artifact path patterns, extraction outputs, dataset build rules |
+| `adoption_maintenance_v1.yaml` | Adoption, maintenance, maturity, gap, and state-machine definitions |
+| `adoption_maintenance_v2.yaml` | v2 scale parameters, seed file references, bootstrap settings, output paths |
 
 ---
 
-## Scripts (`scripts/lifecycle/`)
+## Scripts
+
+Location: `scripts/lifecycle/`
 
 Python pipeline. Run with `PYTHONPATH=./scripts` (set automatically by `Makefile`).
 
@@ -38,38 +67,44 @@ Python pipeline. Run with `PYTHONPATH=./scripts` (set automatically by `Makefile
 | `git_utils.py` | Git subprocess helpers |
 | `__init__.py` | Package marker |
 
-**Build targets (`Makefile`):**
+### Build targets
+
+Defined in `Makefile`:
 
 | Target | Command | Network | Produces |
 |--------|---------|---------|----------|
 | `install` | `pip install -r requirements.txt` | optional | Python deps |
 | `verify-headline` | checks bundled JSON | no | stdout OK line |
-| `analyze` | `adoption_maintenance_v2.py` | no | `results/lifecycle/*` |
+| `analyze` | `adoption_maintenance_v2.py` | no | refreshed results under `results/lifecycle/` |
 | `lifecycle-v2` | `run_v2.py` | yes | full data + results refresh |
 
 Dependencies: `requirements.txt` (`pyyaml`, `pandas`, `pyarrow`, `numpy`).
 
 ---
 
-## Seed lists (`seeds/`)
+## Seed lists
+
+Location: `seeds/`
 
 Curated GitHub URL pools referenced by `protocol/adoption_maintenance_v2.yaml`.
 
 | File | Role |
 |------|------|
-| `seeds/seeds.txt` | Primary seed pool |
-| `seeds/seeds_stratified.txt` | Stratified seed pool |
-| `seeds/wave2_s0_candidates.txt` | Wave-2 candidate URLs |
-| `seeds/wave2_s2_priority.txt` | Wave-2 priority URLs |
-| `seeds/wave2_general_oss.txt` | General open-source expansion pool |
-| `seeds/lifecycle_cached_clones.txt` | Previously cloned repository URLs |
-| `seeds/lifecycle_gh_repo_search.txt` | GitHub search-derived candidates |
+| `seeds.txt` | Primary seed pool |
+| `seeds_stratified.txt` | Stratified seed pool |
+| `wave2_s0_candidates.txt` | Wave-2 candidate URLs |
+| `wave2_s2_priority.txt` | Wave-2 priority URLs |
+| `wave2_general_oss.txt` | General open-source expansion pool |
+| `lifecycle_cached_clones.txt` | Previously cloned repository URLs |
+| `lifecycle_gh_repo_search.txt` | GitHub search-derived candidates |
 
 ---
 
-## Datasets (`data/lifecycle/`)
+## Datasets
 
-Aggregated tabular outputs (CC-BY 4.0). Not included: `data/repos/` git clones.
+Location: `data/lifecycle/`
+
+Aggregated tabular outputs (CC-BY 4.0). Git clones are **not** included.
 
 | File | Format | Description |
 |------|--------|-------------|
@@ -84,7 +119,9 @@ Aggregated tabular outputs (CC-BY 4.0). Not included: `data/repos/` git clones.
 
 ---
 
-## Analysis outputs (`results/lifecycle/`)
+## Analysis outputs
+
+Location: `results/lifecycle/`
 
 | File | Format | Description |
 |------|--------|-------------|
@@ -97,7 +134,9 @@ Aggregated tabular outputs (CC-BY 4.0). Not included: `data/repos/` git clones.
 | `cohort_gap_v2.csv` | CSV | Gap by introduction quarter |
 | `type_gap_age_adjusted.csv` | CSV | Age-adjusted gap by artifact type |
 
-**Headline values** (`adoption_maintenance_v2.json`, *T* = 180 d):
+### Headline values
+
+Source: `adoption_maintenance_v2.json` at *T* = 180 d.
 
 | Metric | Value |
 |--------|------:|
@@ -109,7 +148,9 @@ Aggregated tabular outputs (CC-BY 4.0). Not included: `data/repos/` git clones.
 
 ---
 
-## Annotation (`annotation/`)
+## Annotation
+
+Location: `annotation/`
 
 | File | Format | Description |
 |------|--------|-------------|
@@ -117,7 +158,9 @@ Aggregated tabular outputs (CC-BY 4.0). Not included: `data/repos/` git clones.
 
 ---
 
-## Package metadata (`metadata/`)
+## Package metadata
+
+Location: `metadata/`
 
 | File | Description |
 |------|-------------|
@@ -140,7 +183,9 @@ Aggregated tabular outputs (CC-BY 4.0). Not included: `data/repos/` git clones.
 
 ---
 
-## Supporting documentation (`docs/`)
+## Supporting documentation
+
+Location: `docs/`
 
 Technical notes for reproduction and release auditing. **No manuscript content.**
 
@@ -170,5 +215,7 @@ Technical notes for reproduction and release auditing. **No manuscript content.*
 
 ## Citation
 
-**Release:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
-Dataset DOI: [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986) — see `CITATION.cff` and `README.md` §6.
+**Release title:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
+**Dataset DOI:** [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986)
+
+See also `CITATION.cff` and `README.md` (Citation section).
