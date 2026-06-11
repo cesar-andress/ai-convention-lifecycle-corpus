@@ -1,41 +1,19 @@
 cff-version: 1.2.0
-message: "If you use this corpus or pipeline, please cite it using the metadata below."
+message: "If you use this corpus, please cite it as below."
+title: "AI Convention Lifecycle Corpus"
 type: dataset
-title: "AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2)"
-version: 2.0.0
-date-released: 2026-06-11
-license: CC-BY-4.0
-doi: 10.5281/zenodo.XXXXXXX
-url: "https://doi.org/10.5281/zenodo.XXXXXXX"
-repository-code: "https://github.com/cesar-andress/ai-convention-lifecycle-corpus"
 authors:
-  - family-names: "Anonymous"
-    given-names: "Author(s)"
-    affiliation: "Anonymous Institution"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Sánchez"
+    given-names: "Cesar Andrés"
+version: "1.0.1"
+date-released: "2026-06-11"
+repository-code: "https://github.com/cesar-andress/ai-convention-lifecycle-corpus"
+url: "https://github.com/cesar-andress/ai-convention-lifecycle-corpus"
+license: "MIT"
+abstract: "Replication package and research corpus for studying the lifecycle of AI instructional artifacts in public GitHub repositories."
 keywords:
   - mining software repositories
-  - GitHub
+  - empirical software engineering
   - AI-assisted development
-  - adoption
-  - maintenance
-  - instructional artifacts
-  - AGENTS.md
-  - software governance
-  - replication package
-abstract: >
-  Frozen protocols, GitHub seed pools, Python pipeline, and aggregated datasets
-  for measuring the adoption–maintenance gap in AI instructional artifacts on
-  public GitHub. v2 cohort: 220 discovered adopted repositories, 209 analyzed,
-  13,988 ever-introduced artifact instances. Primary window T=180 days.
-  Headline mature-present artifact gap: 56.0%; repository-level gap: 7.2%.
-  Source code is MIT-licensed; aggregated tabular outputs are CC-BY 4.0.
-preferred-citation:
-  type: proceedings
-  title: "Adoption Is Not Maintenance: The Adoption--Maintenance Gap in AI Instructional Artifacts on GitHub"
-  authors:
-    - family-names: "Anonymous"
-      given-names: "Author(s)"
-  collection-title: "Proceedings of the 23rd International Conference on Mining Software Repositories"
-  year: 2026
-  notes: "Companion MSR '26 paper; cite separately when referring to the empirical study narrative."
+  - GitHub
+  - research dataset
