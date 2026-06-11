@@ -1,0 +1,10 @@
+{
+  "discovered_path": "data/lifecycle/discovered_v2.csv",
+  "n_discovered": 220,
+  "n_extract_ok": 209,
+  "n_extract_skipped": 11,
+  "n_repos_in_touch_history": 209,
+  "n_touch_rows": 86845,
+  "attrition_out": "results/lifecycle/extract_attrition_v2.csv",
+  "complete": true
+}

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: "AI Convention Lifecycle Corpus — Adoption Is Not Maintenance (v2)"
+message: "If you use this corpus or pipeline, please cite it."
+type: dataset
+license: MIT
+authors:
+  - name: "Anonymous Author(s)"
+    affiliation: "Anonymous Institution"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/PLACEHOLDER/ai-convention-lifecycle-corpus"
+url: "https://zenodo.org/PLACEHOLDER"
+version: "2.0.0"
+date-released: 2026-06-11
+keywords:
+  - mining software repositories
+  - GitHub
+  - AI-assisted development
+  - adoption
+  - maintenance
+  - instructional artifacts
+  - AGENTS.md
+preferred-citation:
+  type: article
+  title: "Adoption Is Not Maintenance: The Adoption--Maintenance Gap in AI Instructional Artifacts on GitHub"
+  authors:
+    - name: "Anonymous Author(s)"
+  collection-title: "Proceedings of the 23rd International Conference on Mining Software Repositories (MSR '26)"
+  year: 2026
+  notes: "Replace with published MSR citation when available."

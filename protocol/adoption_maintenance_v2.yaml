@@ -1,0 +1,51 @@
+# adoption_maintenance v2 — MSR submission prep (extends v1)
+
+extends: protocol/adoption_maintenance_v1.yaml
+
+scale:
+  target_adopted_repos: 220
+  max_candidates: 1500
+  min_mature_present_type: 30
+  min_cohort_type_per_quarter: 10
+
+discovery:
+  seed_pools:
+    ai_adopter:
+      - seeds_stratified.txt
+      - seeds.txt
+    general_oss:
+      - seeds/wave2_general_oss.txt
+      - seeds/wave2_s2_priority.txt
+      - seeds/wave2_s0_candidates.txt
+      - seeds/lifecycle_cached_clones.txt
+      - seeds/lifecycle_gh_repo_search.txt
+  clone_timeout_seconds: 120
+  shallow_discover: true
+  outputs:
+    discovered: data/lifecycle/discovered_v2.csv
+    funnel: results/lifecycle/discovery_funnel_v2.csv
+
+analysis:
+  primary_threshold_days: 180
+  bootstrap_replicates: 5000
+  exclude_top_prompt_repos: 3
+  manual_validation:
+    n_dormant: 20
+    n_active: 20
+    seed: 42
+
+outputs:
+  summary: results/lifecycle/adoption_maintenance_v2.json
+  funnel: results/lifecycle/funnel_v2.csv
+  loo: results/lifecycle/loo_v2.csv
+  bootstrap: results/lifecycle/bootstrap_v2.json
+  cohort_gap: results/lifecycle/cohort_gap_v2.csv
+  type_gap_age_adjusted: results/lifecycle/type_gap_age_adjusted.csv
+  annotation_sheet: annotation/annotation_sheet.csv
+
+submission_readiness:
+  min_repos: 200
+  require_bootstrap: true
+  require_loo: true
+  require_annotation_sheet: true
+  require_age_adjusted_type_comparison: true

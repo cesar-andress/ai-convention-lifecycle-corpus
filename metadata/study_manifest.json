@@ -1,0 +1,25 @@
+{
+  "title": "Adoption Is Not Maintenance — AI Instructional Artifact Lifecycle Corpus (v2)",
+  "paper_title": "Adoption Is Not Maintenance: The Adoption--Maintenance Gap in AI Instructional Artifacts on GitHub",
+  "study_id": "adoption-maintenance-v2",
+  "protocol_files": [
+    "protocol/lifecycle_v1.yaml",
+    "protocol/adoption_maintenance_v1.yaml",
+    "protocol/adoption_maintenance_v2.yaml"
+  ],
+  "primary_pipeline": "python lifecycle/run_v2.py",
+  "primary_results": "results/lifecycle/adoption_maintenance_v2.json",
+  "sample": {
+    "n_discovered_adopted": 220,
+    "n_analyzed_repos": 209,
+    "n_ever_introduced_artifacts": 13988,
+    "n_mature_present_180d": 577,
+    "primary_threshold_days": 180
+  },
+  "headline_primary_180": {
+    "artifact_gap_mature": 0.5597920277296361,
+    "repo_gap": 0.07177033492822966
+  },
+  "extraction_complete": true,
+  "note": "Aggregated parquets and CSVs are redistributable study outputs. Full git clones under data/repos/ are not included; re-extraction requires cloning public GitHub URLs from data/lifecycle/discovered_v2.csv."
+}

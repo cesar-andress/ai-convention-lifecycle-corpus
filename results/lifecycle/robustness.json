@@ -1,0 +1,692 @@
+{
+  "n_repositories": 55,
+  "n_artifacts": 650,
+  "n_eligible_180": 225,
+  "n_stasis_events_180": 134,
+  "primary_threshold_days": 180,
+  "cluster_bootstrap": {
+    "method": "cluster_bootstrap_by_repo_id",
+    "n_replicates_requested": 5000,
+    "n_repos": 55,
+    "threshold_days": 180,
+    "stasis_rate_eligible": {
+      "observed": 0.5955555555555555,
+      "bootstrap_mean": 0.5831033980605972,
+      "ci_95": {
+        "low": 0.3862424740010947,
+        "high": 0.7436852940298952
+      },
+      "n_successful_replicates": 5000
+    },
+    "median_survival_pooled": {
+      "observed": 229.0,
+      "bootstrap_mean": 298.0828,
+      "ci_95": {
+        "low": 183.0,
+        "high": 584.0
+      },
+      "n_successful_replicates": 5000
+    }
+  },
+  "leave_one_repo_out": {
+    "threshold_days": 180,
+    "full_sample": {
+      "stasis_180_rate_eligible": 0.5955555555555555,
+      "median_survival_pooled": 229.0
+    },
+    "by_repo": [
+      {
+        "repo_id": "All-Hands-AI/OpenHands",
+        "n_artifacts_removed": 6,
+        "n_eligible_180_removed": 6,
+        "stasis_180_rate_eligible": 0.6073059360730594,
+        "delta_rate_vs_full": 0.011750380517503878,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "Significant-Gravitas/AutoGPT",
+        "n_artifacts_removed": 22,
+        "n_eligible_180_removed": 5,
+        "stasis_180_rate_eligible": 0.6090909090909091,
+        "delta_rate_vs_full": 0.013535353535353623,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "TabbyML/tabby",
+        "n_artifacts_removed": 23,
+        "n_eligible_180_removed": 23,
+        "stasis_180_rate_eligible": 0.5495049504950495,
+        "delta_rate_vs_full": -0.046050605060505956,
+        "median_survival_pooled": 283.0,
+        "delta_median_vs_full": 54.0
+      },
+      {
+        "repo_id": "TransformerOptimus/SuperAGI",
+        "n_artifacts_removed": 27,
+        "n_eligible_180_removed": 27,
+        "stasis_180_rate_eligible": 0.5404040404040404,
+        "delta_rate_vs_full": -0.05515151515151506,
+        "median_survival_pooled": 361.0,
+        "delta_median_vs_full": 132.0
+      },
+      {
+        "repo_id": "anthropics/claude-code",
+        "n_artifacts_removed": 10,
+        "n_eligible_180_removed": 10,
+        "stasis_180_rate_eligible": 0.5767441860465117,
+        "delta_rate_vs_full": -0.01881136950904383,
+        "median_survival_pooled": 271.0,
+        "delta_median_vs_full": 42.0
+      },
+      {
+        "repo_id": "apache/airflow",
+        "n_artifacts_removed": 18,
+        "n_eligible_180_removed": 1,
+        "stasis_180_rate_eligible": 0.5982142857142857,
+        "delta_rate_vs_full": 0.0026587301587301937,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "apache/spark",
+        "n_artifacts_removed": 2,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "astral-sh/ruff",
+        "n_artifacts_removed": 2,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "astral-sh/uv",
+        "n_artifacts_removed": 2,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "biomejs/biome",
+        "n_artifacts_removed": 2,
+        "n_eligible_180_removed": 2,
+        "stasis_180_rate_eligible": 0.5964125560538116,
+        "delta_rate_vs_full": 0.0008570004982560997,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "block/goose",
+        "n_artifacts_removed": 34,
+        "n_eligible_180_removed": 16,
+        "stasis_180_rate_eligible": 0.6124401913875598,
+        "delta_rate_vs_full": 0.01688463583200428,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "browser-use/browser-use",
+        "n_artifacts_removed": 8,
+        "n_eligible_180_removed": 2,
+        "stasis_180_rate_eligible": 0.5964125560538116,
+        "delta_rate_vs_full": 0.0008570004982560997,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "caddyserver/caddy",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "chroma-core/chroma",
+        "n_artifacts_removed": 4,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "continuedev/continue",
+        "n_artifacts_removed": 4,
+        "n_eligible_180_removed": 2,
+        "stasis_180_rate_eligible": 0.5964125560538116,
+        "delta_rate_vs_full": 0.0008570004982560997,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "crewAIInc/crewAI",
+        "n_artifacts_removed": 5,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "dagster-io/dagster",
+        "n_artifacts_removed": 19,
+        "n_eligible_180_removed": 18,
+        "stasis_180_rate_eligible": 0.5797101449275363,
+        "delta_rate_vs_full": -0.015845410628019252,
+        "median_survival_pooled": 271.0,
+        "delta_median_vs_full": 42.0
+      },
+      {
+        "repo_id": "docker/compose",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "e2b-dev/E2B",
+        "n_artifacts_removed": 3,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "elastic/elasticsearch",
+        "n_artifacts_removed": 5,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "facebook/react",
+        "n_artifacts_removed": 9,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "grafana/grafana",
+        "n_artifacts_removed": 9,
+        "n_eligible_180_removed": 3,
+        "stasis_180_rate_eligible": 0.6036036036036037,
+        "delta_rate_vs_full": 0.008048048048048151,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "helm/helm",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 1,
+        "stasis_180_rate_eligible": 0.5982142857142857,
+        "delta_rate_vs_full": 0.0026587301587301937,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "huggingface/transformers",
+        "n_artifacts_removed": 2,
+        "n_eligible_180_removed": 1,
+        "stasis_180_rate_eligible": 0.5982142857142857,
+        "delta_rate_vs_full": 0.0026587301587301937,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "infiniflow/ragflow",
+        "n_artifacts_removed": 69,
+        "n_eligible_180_removed": 32,
+        "stasis_180_rate_eligible": 0.5699481865284974,
+        "delta_rate_vs_full": -0.02560736902705807,
+        "median_survival_pooled": 283.0,
+        "delta_median_vs_full": 54.0
+      },
+      {
+        "repo_id": "invoke-ai/InvokeAI",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 1,
+        "stasis_180_rate_eligible": 0.59375,
+        "delta_rate_vs_full": -0.0018055555555555047,
+        "median_survival_pooled": 247.0,
+        "delta_median_vs_full": 18.0
+      },
+      {
+        "repo_id": "jestjs/jest",
+        "n_artifacts_removed": 14,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "kubernetes/kubernetes",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "langchain-ai/langchain",
+        "n_artifacts_removed": 10,
+        "n_eligible_180_removed": 10,
+        "stasis_180_rate_eligible": 0.586046511627907,
+        "delta_rate_vs_full": -0.009509043927648508,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "langgenius/dify",
+        "n_artifacts_removed": 10,
+        "n_eligible_180_removed": 6,
+        "stasis_180_rate_eligible": 0.6073059360730594,
+        "delta_rate_vs_full": 0.011750380517503878,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "mem0ai/mem0",
+        "n_artifacts_removed": 67,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "microsoft/autogen",
+        "n_artifacts_removed": 4,
+        "n_eligible_180_removed": 4,
+        "stasis_180_rate_eligible": 0.5882352941176471,
+        "delta_rate_vs_full": -0.007320261437908426,
+        "median_survival_pooled": 247.0,
+        "delta_median_vs_full": 18.0
+      },
+      {
+        "repo_id": "microsoft/vscode",
+        "n_artifacts_removed": 75,
+        "n_eligible_180_removed": 3,
+        "stasis_180_rate_eligible": 0.5990990990990991,
+        "delta_rate_vs_full": 0.0035435435435435814,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "mlflow/mlflow",
+        "n_artifacts_removed": 8,
+        "n_eligible_180_removed": 3,
+        "stasis_180_rate_eligible": 0.5990990990990991,
+        "delta_rate_vs_full": 0.0035435435435435814,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "modelcontextprotocol/servers",
+        "n_artifacts_removed": 4,
+        "n_eligible_180_removed": 3,
+        "stasis_180_rate_eligible": 0.5990990990990991,
+        "delta_rate_vs_full": 0.0035435435435435814,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "n8n-io/n8n",
+        "n_artifacts_removed": 32,
+        "n_eligible_180_removed": 10,
+        "stasis_180_rate_eligible": 0.6093023255813953,
+        "delta_rate_vs_full": 0.013746770025839794,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "neovim/neovim",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "ollama/ollama",
+        "n_artifacts_removed": 2,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "pandas-dev/pandas",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 1,
+        "stasis_180_rate_eligible": 0.59375,
+        "delta_rate_vs_full": -0.0018055555555555047,
+        "median_survival_pooled": 247.0,
+        "delta_median_vs_full": 18.0
+      },
+      {
+        "repo_id": "prefecthq/prefect",
+        "n_artifacts_removed": 41,
+        "n_eligible_180_removed": 14,
+        "stasis_180_rate_eligible": 0.6208530805687204,
+        "delta_rate_vs_full": 0.025297525013164845,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "prometheus/prometheus",
+        "n_artifacts_removed": 2,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "pydantic/pydantic-ai",
+        "n_artifacts_removed": 34,
+        "n_eligible_180_removed": 9,
+        "stasis_180_rate_eligible": 0.6203703703703703,
+        "delta_rate_vs_full": 0.024814814814814845,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "rails/rails",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 1,
+        "stasis_180_rate_eligible": 0.5982142857142857,
+        "delta_rate_vs_full": 0.0026587301587301937,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "ray-project/ray",
+        "n_artifacts_removed": 9,
+        "n_eligible_180_removed": 1,
+        "stasis_180_rate_eligible": 0.59375,
+        "delta_rate_vs_full": -0.0018055555555555047,
+        "median_survival_pooled": 247.0,
+        "delta_median_vs_full": 18.0
+      },
+      {
+        "repo_id": "run-llama/llama_parse",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "rust-lang/rust",
+        "n_artifacts_removed": 2,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "scikit-learn/scikit-learn",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 1,
+        "stasis_180_rate_eligible": 0.5982142857142857,
+        "delta_rate_vs_full": 0.0026587301587301937,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "supabase/supabase",
+        "n_artifacts_removed": 8,
+        "n_eligible_180_removed": 8,
+        "stasis_180_rate_eligible": 0.6129032258064516,
+        "delta_rate_vs_full": 0.01734767025089612,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "tiangolo/fastapi",
+        "n_artifacts_removed": 4,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "traefik/traefik",
+        "n_artifacts_removed": 2,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "upstash/context7",
+        "n_artifacts_removed": 12,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "vercel/next.js",
+        "n_artifacts_removed": 7,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "wandb/wandb",
+        "n_artifacts_removed": 5,
+        "n_eligible_180_removed": 1,
+        "stasis_180_rate_eligible": 0.5982142857142857,
+        "delta_rate_vs_full": 0.0026587301587301937,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "weaviate/weaviate",
+        "n_artifacts_removed": 1,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      },
+      {
+        "repo_id": "webpack/webpack",
+        "n_artifacts_removed": 2,
+        "n_eligible_180_removed": 0,
+        "stasis_180_rate_eligible": 0.5955555555555555,
+        "delta_rate_vs_full": 0.0,
+        "median_survival_pooled": 229.0,
+        "delta_median_vs_full": 0.0
+      }
+    ],
+    "influential_by_rate": [
+      {
+        "repo_id": "TransformerOptimus/SuperAGI",
+        "n_artifacts_removed": 27,
+        "n_eligible_180_removed": 27,
+        "stasis_180_rate_eligible": 0.5404040404040404,
+        "delta_rate_vs_full": -0.05515151515151506,
+        "median_survival_pooled": 361.0,
+        "delta_median_vs_full": 132.0
+      },
+      {
+        "repo_id": "TabbyML/tabby",
+        "n_artifacts_removed": 23,
+        "n_eligible_180_removed": 23,
+        "stasis_180_rate_eligible": 0.5495049504950495,
+        "delta_rate_vs_full": -0.046050605060505956,
+        "median_survival_pooled": 283.0,
+        "delta_median_vs_full": 54.0
+      },
+      {
+        "repo_id": "infiniflow/ragflow",
+        "n_artifacts_removed": 69,
+        "n_eligible_180_removed": 32,
+        "stasis_180_rate_eligible": 0.5699481865284974,
+        "delta_rate_vs_full": -0.02560736902705807,
+        "median_survival_pooled": 283.0,
+        "delta_median_vs_full": 54.0
+      },
+      {
+        "repo_id": "prefecthq/prefect",
+        "n_artifacts_removed": 41,
+        "n_eligible_180_removed": 14,
+        "stasis_180_rate_eligible": 0.6208530805687204,
+        "delta_rate_vs_full": 0.025297525013164845,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      },
+      {
+        "repo_id": "pydantic/pydantic-ai",
+        "n_artifacts_removed": 34,
+        "n_eligible_180_removed": 9,
+        "stasis_180_rate_eligible": 0.6203703703703703,
+        "delta_rate_vs_full": 0.024814814814814845,
+        "median_survival_pooled": 223.0,
+        "delta_median_vs_full": -6.0
+      }
+    ],
+    "influential_by_median": [
+      {
+        "repo_id": "TransformerOptimus/SuperAGI",
+        "n_artifacts_removed": 27,
+        "n_eligible_180_removed": 27,
+        "stasis_180_rate_eligible": 0.5404040404040404,
+        "delta_rate_vs_full": -0.05515151515151506,
+        "median_survival_pooled": 361.0,
+        "delta_median_vs_full": 132.0
+      },
+      {
+        "repo_id": "TabbyML/tabby",
+        "n_artifacts_removed": 23,
+        "n_eligible_180_removed": 23,
+        "stasis_180_rate_eligible": 0.5495049504950495,
+        "delta_rate_vs_full": -0.046050605060505956,
+        "median_survival_pooled": 283.0,
+        "delta_median_vs_full": 54.0
+      },
+      {
+        "repo_id": "infiniflow/ragflow",
+        "n_artifacts_removed": 69,
+        "n_eligible_180_removed": 32,
+        "stasis_180_rate_eligible": 0.5699481865284974,
+        "delta_rate_vs_full": -0.02560736902705807,
+        "median_survival_pooled": 283.0,
+        "delta_median_vs_full": 54.0
+      },
+      {
+        "repo_id": "dagster-io/dagster",
+        "n_artifacts_removed": 19,
+        "n_eligible_180_removed": 18,
+        "stasis_180_rate_eligible": 0.5797101449275363,
+        "delta_rate_vs_full": -0.015845410628019252,
+        "median_survival_pooled": 271.0,
+        "delta_median_vs_full": 42.0
+      },
+      {
+        "repo_id": "anthropics/claude-code",
+        "n_artifacts_removed": 10,
+        "n_eligible_180_removed": 10,
+        "stasis_180_rate_eligible": 0.5767441860465117,
+        "delta_rate_vs_full": -0.01881136950904383,
+        "median_survival_pooled": 271.0,
+        "delta_median_vs_full": 42.0
+      }
+    ]
+  },
+  "eligibility_funnel": [
+    {
+      "stage": "total_artifacts",
+      "threshold_days": "all",
+      "count": 650
+    },
+    {
+      "stage": "eligible",
+      "threshold_days": 90,
+      "count": 371
+    },
+    {
+      "stage": "stasis_events",
+      "threshold_days": 90,
+      "count": 235
+    },
+    {
+      "stage": "eligible",
+      "threshold_days": 180,
+      "count": 225
+    },
+    {
+      "stage": "stasis_events",
+      "threshold_days": 180,
+      "count": 134
+    },
+    {
+      "stage": "eligible",
+      "threshold_days": 365,
+      "count": 84
+    },
+    {
+      "stage": "stasis_events",
+      "threshold_days": 365,
+      "count": 55
+    }
+  ],
+  "artifact_types_included_min_eligible_30": [
+    {
+      "artifact_type": "prompts",
+      "n_total": 183,
+      "n_eligible_180": 129,
+      "n_stasis_events_180": 100,
+      "stasis_180_rate_eligible": 0.7751937984496124,
+      "median_survival_days": 191.0
+    },
+    {
+      "artifact_type": "agents_md",
+      "n_total": 158,
+      "n_eligible_180": 47,
+      "n_stasis_events_180": 10,
+      "stasis_180_rate_eligible": 0.2127659574468085,
+      "median_survival_days": 218.0
+    },
+    {
+      "artifact_type": "claude_md",
+      "n_total": 106,
+      "n_eligible_180": 36,
+      "n_stasis_events_180": 12,
+      "stasis_180_rate_eligible": 0.3333333333333333,
+      "median_survival_days": 290.0
+    }
+  ]
+}

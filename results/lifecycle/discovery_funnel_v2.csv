@@ -1,0 +1,9 @@
+stage,seed_pool,count
+candidates_processed,ALL,81
+duplicate_skip,ALL,0
+parse_fail,ALL,0
+clone_fail,ALL,0
+no_artifacts,ALL,20
+adopted,ALL,220
+adopted,ai_adopter,57
+adopted,general_oss,163

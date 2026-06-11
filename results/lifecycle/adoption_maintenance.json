@@ -1,0 +1,440 @@
+{
+  "n_repos": 55,
+  "n_artifacts_ever_introduced": 650,
+  "n_artifacts_present_in_head": 529,
+  "n_artifacts_deleted": 121,
+  "primary_threshold_days": 180,
+  "state_counts_180": {
+    "TOO_YOUNG": 360,
+    "DELETED": 121,
+    "DORMANT": 96,
+    "ACTIVE": 73
+  },
+  "by_threshold": {
+    "90": {
+      "artifact": {
+        "n_mature_present": 289,
+        "n_active": 118,
+        "n_dormant": 171,
+        "gap_rate": 0.5916955017301038,
+        "maintenance_rate": 0.4083044982698962
+      },
+      "repo": {
+        "n_repos_adopted": 55,
+        "n_repos_maintained": 44,
+        "n_repos_dormant_only": 11,
+        "gap_rate": 0.2,
+        "dormant_only_rate": 0.2
+      }
+    },
+    "180": {
+      "artifact": {
+        "n_mature_present": 169,
+        "n_active": 73,
+        "n_dormant": 96,
+        "gap_rate": 0.5680473372781065,
+        "maintenance_rate": 0.4319526627218935
+      },
+      "repo": {
+        "n_repos_adopted": 55,
+        "n_repos_maintained": 49,
+        "n_repos_dormant_only": 6,
+        "gap_rate": 0.10909090909090909,
+        "dormant_only_rate": 0.10909090909090909
+      }
+    },
+    "365": {
+      "artifact": {
+        "n_mature_present": 49,
+        "n_active": 16,
+        "n_dormant": 33,
+        "gap_rate": 0.673469387755102,
+        "maintenance_rate": 0.32653061224489793
+      },
+      "repo": {
+        "n_repos_adopted": 55,
+        "n_repos_maintained": 53,
+        "n_repos_dormant_only": 2,
+        "gap_rate": 0.03636363636363636,
+        "dormant_only_rate": 0.03636363636363636
+      }
+    }
+  },
+  "cluster_bootstrap": {
+    "90": {
+      "threshold_days": 90,
+      "observed_gap_rate_mature": 0.5916955017301038,
+      "observed_maintenance_rate_mature": 0.4083044982698962,
+      "gap_rate_ci_95": {
+        "low": 0.40968870090917614,
+        "high": 0.7415889486583694
+      },
+      "maintenance_rate_ci_95": {
+        "low": 0.25841105134163034,
+        "high": 0.5903112990908239
+      },
+      "n_bootstrap": 5000
+    },
+    "180": {
+      "threshold_days": 180,
+      "observed_gap_rate_mature": 0.5680473372781065,
+      "observed_maintenance_rate_mature": 0.4319526627218935,
+      "gap_rate_ci_95": {
+        "low": 0.35051326108027137,
+        "high": 0.7232190349544072
+      },
+      "maintenance_rate_ci_95": {
+        "low": 0.27678096504559274,
+        "high": 0.6494867389197286
+      },
+      "n_bootstrap": 5000
+    },
+    "365": {
+      "threshold_days": 365,
+      "observed_gap_rate_mature": 0.673469387755102,
+      "observed_maintenance_rate_mature": 0.32653061224489793,
+      "gap_rate_ci_95": {
+        "low": 0.058823529411764705,
+        "high": 0.9285714285714286
+      },
+      "maintenance_rate_ci_95": {
+        "low": 0.07142857142857142,
+        "high": 0.9411764705882353
+      },
+      "n_bootstrap": 5000
+    }
+  },
+  "leave_one_repo_out_gap_mature": [
+    {
+      "repo_id": "All-Hands-AI/OpenHands",
+      "gap_rate_mature": 0.5714285714285714,
+      "delta_gap_vs_full": 0.0033812341504648735,
+      "maintenance_rate_mature": 0.42857142857142855
+    },
+    {
+      "repo_id": "Significant-Gravitas/AutoGPT",
+      "gap_rate_mature": 0.5783132530120482,
+      "delta_gap_vs_full": 0.010265915733941644,
+      "maintenance_rate_mature": 0.42168674698795183
+    },
+    {
+      "repo_id": "TabbyML/tabby",
+      "gap_rate_mature": 0.5408805031446541,
+      "delta_gap_vs_full": -0.027166834133452444,
+      "maintenance_rate_mature": 0.4591194968553459
+    },
+    {
+      "repo_id": "TransformerOptimus/SuperAGI",
+      "gap_rate_mature": 0.5100671140939598,
+      "delta_gap_vs_full": -0.05798022318414675,
+      "maintenance_rate_mature": 0.4899328859060403
+    },
+    {
+      "repo_id": "anthropics/claude-code",
+      "gap_rate_mature": 0.5408805031446541,
+      "delta_gap_vs_full": -0.027166834133452444,
+      "maintenance_rate_mature": 0.4591194968553459
+    },
+    {
+      "repo_id": "apache/airflow",
+      "gap_rate_mature": 0.5714285714285714,
+      "delta_gap_vs_full": 0.0033812341504648735,
+      "maintenance_rate_mature": 0.42857142857142855
+    },
+    {
+      "repo_id": "apache/spark",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "astral-sh/ruff",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "astral-sh/uv",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "biomejs/biome",
+      "gap_rate_mature": 0.5688622754491018,
+      "delta_gap_vs_full": 0.0008149381709953163,
+      "maintenance_rate_mature": 0.4311377245508982
+    },
+    {
+      "repo_id": "block/goose",
+      "gap_rate_mature": 0.5714285714285714,
+      "delta_gap_vs_full": 0.0033812341504648735,
+      "maintenance_rate_mature": 0.42857142857142855
+    },
+    {
+      "repo_id": "browser-use/browser-use",
+      "gap_rate_mature": 0.5688622754491018,
+      "delta_gap_vs_full": 0.0008149381709953163,
+      "maintenance_rate_mature": 0.4311377245508982
+    },
+    {
+      "repo_id": "caddyserver/caddy",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "chroma-core/chroma",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "continuedev/continue",
+      "gap_rate_mature": 0.5714285714285714,
+      "delta_gap_vs_full": 0.0033812341504648735,
+      "maintenance_rate_mature": 0.42857142857142855
+    },
+    {
+      "repo_id": "crewAIInc/crewAI",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "dagster-io/dagster",
+      "gap_rate_mature": 0.5590062111801242,
+      "delta_gap_vs_full": -0.009041126097982355,
+      "maintenance_rate_mature": 0.4409937888198758
+    },
+    {
+      "repo_id": "docker/compose",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "e2b-dev/E2B",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "elastic/elasticsearch",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "facebook/react",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "grafana/grafana",
+      "gap_rate_mature": 0.5748502994011976,
+      "delta_gap_vs_full": 0.006802962123091061,
+      "maintenance_rate_mature": 0.4251497005988024
+    },
+    {
+      "repo_id": "helm/helm",
+      "gap_rate_mature": 0.5714285714285714,
+      "delta_gap_vs_full": 0.0033812341504648735,
+      "maintenance_rate_mature": 0.42857142857142855
+    },
+    {
+      "repo_id": "huggingface/transformers",
+      "gap_rate_mature": 0.5714285714285714,
+      "delta_gap_vs_full": 0.0033812341504648735,
+      "maintenance_rate_mature": 0.42857142857142855
+    },
+    {
+      "repo_id": "infiniflow/ragflow",
+      "gap_rate_mature": 0.5255474452554745,
+      "delta_gap_vs_full": -0.042499892022632046,
+      "maintenance_rate_mature": 0.4744525547445255
+    },
+    {
+      "repo_id": "invoke-ai/InvokeAI",
+      "gap_rate_mature": 0.5654761904761905,
+      "delta_gap_vs_full": -0.0025711468019160577,
+      "maintenance_rate_mature": 0.43452380952380953
+    },
+    {
+      "repo_id": "jestjs/jest",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "kubernetes/kubernetes",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "langchain-ai/langchain",
+      "gap_rate_mature": 0.5644171779141104,
+      "delta_gap_vs_full": -0.0036301593639961327,
+      "maintenance_rate_mature": 0.43558282208588955
+    },
+    {
+      "repo_id": "langgenius/dify",
+      "gap_rate_mature": 0.5828220858895705,
+      "delta_gap_vs_full": 0.014774748611463995,
+      "maintenance_rate_mature": 0.4171779141104294
+    },
+    {
+      "repo_id": "mem0ai/mem0",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "microsoft/autogen",
+      "gap_rate_mature": 0.5602409638554217,
+      "delta_gap_vs_full": -0.007806373422684865,
+      "maintenance_rate_mature": 0.4397590361445783
+    },
+    {
+      "repo_id": "microsoft/vscode",
+      "gap_rate_mature": 0.5688622754491018,
+      "delta_gap_vs_full": 0.0008149381709953163,
+      "maintenance_rate_mature": 0.4311377245508982
+    },
+    {
+      "repo_id": "mlflow/mlflow",
+      "gap_rate_mature": 0.572289156626506,
+      "delta_gap_vs_full": 0.0042418193483995115,
+      "maintenance_rate_mature": 0.42771084337349397
+    },
+    {
+      "repo_id": "modelcontextprotocol/servers",
+      "gap_rate_mature": 0.5714285714285714,
+      "delta_gap_vs_full": 0.0033812341504648735,
+      "maintenance_rate_mature": 0.42857142857142855
+    },
+    {
+      "repo_id": "n8n-io/n8n",
+      "gap_rate_mature": 0.5849056603773585,
+      "delta_gap_vs_full": 0.01685832309925195,
+      "maintenance_rate_mature": 0.41509433962264153
+    },
+    {
+      "repo_id": "neovim/neovim",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "ollama/ollama",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "pandas-dev/pandas",
+      "gap_rate_mature": 0.5654761904761905,
+      "delta_gap_vs_full": -0.0025711468019160577,
+      "maintenance_rate_mature": 0.43452380952380953
+    },
+    {
+      "repo_id": "prefecthq/prefect",
+      "gap_rate_mature": 0.6,
+      "delta_gap_vs_full": 0.031952662721893454,
+      "maintenance_rate_mature": 0.4
+    },
+    {
+      "repo_id": "prometheus/prometheus",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "pydantic/pydantic-ai",
+      "gap_rate_mature": 0.5962732919254659,
+      "delta_gap_vs_full": 0.02822595464735933,
+      "maintenance_rate_mature": 0.40372670807453415
+    },
+    {
+      "repo_id": "rails/rails",
+      "gap_rate_mature": 0.5714285714285714,
+      "delta_gap_vs_full": 0.0033812341504648735,
+      "maintenance_rate_mature": 0.42857142857142855
+    },
+    {
+      "repo_id": "ray-project/ray",
+      "gap_rate_mature": 0.5654761904761905,
+      "delta_gap_vs_full": -0.0025711468019160577,
+      "maintenance_rate_mature": 0.43452380952380953
+    },
+    {
+      "repo_id": "run-llama/llama_parse",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "rust-lang/rust",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "scikit-learn/scikit-learn",
+      "gap_rate_mature": 0.5714285714285714,
+      "delta_gap_vs_full": 0.0033812341504648735,
+      "maintenance_rate_mature": 0.42857142857142855
+    },
+    {
+      "repo_id": "supabase/supabase",
+      "gap_rate_mature": 0.5900621118012422,
+      "delta_gap_vs_full": 0.022014774523135716,
+      "maintenance_rate_mature": 0.40993788819875776
+    },
+    {
+      "repo_id": "tiangolo/fastapi",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "traefik/traefik",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "upstash/context7",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "vercel/next.js",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "wandb/wandb",
+      "gap_rate_mature": 0.5714285714285714,
+      "delta_gap_vs_full": 0.0033812341504648735,
+      "maintenance_rate_mature": 0.42857142857142855
+    },
+    {
+      "repo_id": "weaviate/weaviate",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    },
+    {
+      "repo_id": "webpack/webpack",
+      "gap_rate_mature": 0.5680473372781065,
+      "delta_gap_vs_full": 0.0,
+      "maintenance_rate_mature": 0.4319526627218935
+    }
+  ],
+  "adoption_repo_rate": 1.0
+}

@@ -1,0 +1,119 @@
+# instruction-lifecycle v1 — frozen protocol (mining + survival readiness)
+
+project: instruction-lifecycle
+
+research_question: >
+  How long do AI-related instructional artifacts remain actively maintained
+  after their introduction into open-source repositories?
+
+hypothesis: >
+  Most instructional artifacts enter a maintenance stasis phase shortly after introduction.
+
+unit_of_analysis: artifact_instance
+
+observation_end: null  # null = last commit timestamp in repository at extraction time
+
+stasis_thresholds_days:
+  primary: 180
+  sensitivity:
+    - 90
+    - 365
+
+# Artifact scope: AI instructional / agent-governance only (no CONTRIBUTING, no co-change study).
+artifact_patterns:
+  - id: agents_md
+    regex: '(^|/)AGENTS\.md$'
+  - id: claude_md
+    regex: '(^|/)CLAUDE\.md$'
+  - id: copilot_instructions
+    regex: '(^|/)\.github/copilot-instructions\.md$'
+  - id: cursor_rules
+    regex: '(^|/)\.cursor/rules/.*\.(md|mdc)$'
+  - id: windsurf_rules
+    regex: '(^|/)\.windsurf/.*\.(md|mdc|yaml|yml)$'
+  - id: agents_dir
+    regex: '(^|/)\.agents/.*\.(md|yaml|yml)$'
+  - id: skill_md
+    regex: '(^|/)SKILL\.md$'
+  - id: prompts
+    regex: '(^|/)prompts/.*\.(md|txt|yaml|yml)$'
+
+exclude_path_prefixes:
+  - node_modules/
+  - vendor/
+  - dist/
+  - build/
+  - target/
+  - coverage/
+  - .git/
+
+exclude_basenames:
+  - README.md
+  - CHANGELOG.md
+  - LICENSE
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+
+exclude_path_regex:
+  - '(^|/)docs/api/'
+  - '(^|/)docs/reference/'
+  - '(^|/)docs/.*/prompts/'
+
+bot_author_regex: '(?i)(bot|dependabot|renovate|github-actions|noreply|\[bot\])'
+
+ci_path_regex:
+  - '(^|/)\.github/workflows/.*\.ya?ml$'
+
+discovery:
+  pilot_n: 50
+  scale_n: 500
+  seeds:
+    - seeds_stratified.txt
+    - seeds.txt
+  clone_timeout_seconds: 120
+  shallow_discover: true
+
+extraction:
+  repos_dir: data/repos
+  clone_timeout_seconds: 180
+  min_repo_commits: 20
+
+outputs:
+  discovered: data/lifecycle/discovered.csv
+  touch_history: data/lifecycle/touch_history.parquet
+  repo_covariates: data/lifecycle/repo_covariates.parquet
+  artifacts: data/lifecycle/artifacts.parquet
+  analysis: results/lifecycle/analysis.json
+
+metrics:
+  # Per artifact instance (artifacts.parquet columns)
+  columns:
+    - repo_id
+    - artifact_type
+    - artifact_path
+    - introduced_at
+    - last_touch_at
+    - touch_count
+    - active_days
+    - stasis_180
+    - stasis_90
+    - stasis_365
+
+analysis:
+  primary_threshold_days: 180
+  kaplan_meier_strata: artifact_type
+  cox_covariates:
+    - log_repo_files
+    - log_commit_volume
+    - log_stars
+    - bot_rate
+    - ci_rate
+
+decision_criteria:
+  proceed_scale_n500:
+    description: ">=50% of artifacts reach stasis within 180 days of introduction"
+    min_fraction_stasis_180_within_window: 0.50
+  hypothesis_unsupported:
+    description: "<20% of artifacts reach stasis within 180 days of introduction"
+    max_fraction_stasis_180_within_window: 0.20
+  otherwise: inconclusive_pilot

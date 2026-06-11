@@ -1,0 +1,50 @@
+{
+  "n_artifacts": 13988,
+  "n_repos": 209,
+  "by_type": {
+    "skill_md": 11762,
+    "prompts": 666,
+    "agents_md": 661,
+    "claude_md": 489,
+    "cursor_rules": 265,
+    "agents_dir": 118,
+    "windsurf_rules": 26,
+    "copilot_instructions": 1
+  },
+  "stasis_180_rate_all": 0.04818415784958536,
+  "stasis_180_rate_eligible": 0.5383386581469649,
+  "n_eligible_180": 1252,
+  "eligibility_by_threshold": {
+    "90": {
+      "stasis_T_rate_all": 0.32227623677437806,
+      "stasis_T_rate_eligible": 0.4451026856240126,
+      "n_eligible_T": 10128,
+      "n_event_stasis_T": 4508,
+      "censoring_rate_T": 0.5548973143759874
+    },
+    "180": {
+      "stasis_T_rate_all": 0.04818415784958536,
+      "stasis_T_rate_eligible": 0.5383386581469649,
+      "n_eligible_T": 1252,
+      "n_event_stasis_T": 674,
+      "censoring_rate_T": 0.4616613418530351
+    },
+    "365": {
+      "stasis_T_rate_all": 0.01973119816985988,
+      "stasis_T_rate_eligible": 0.75,
+      "n_eligible_T": 368,
+      "n_event_stasis_T": 276,
+      "censoring_rate_T": 0.25
+    }
+  },
+  "extract_meta": {
+    "discovered_path": "data/lifecycle/discovered_v2.csv",
+    "n_discovered": 220,
+    "n_extract_ok": 209,
+    "n_extract_skipped": 11,
+    "n_repos_in_touch_history": 209,
+    "n_touch_rows": 86845,
+    "attrition_out": "results/lifecycle/extract_attrition_v2.csv",
+    "complete": false
+  }
+}

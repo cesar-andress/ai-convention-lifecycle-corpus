@@ -1,0 +1,16 @@
+stage,threshold_days,count
+ever_introduced,all,650
+present_in_head,all,529
+deleted,all,121
+mature_present,90,289
+active,90,118
+dormant,90,171
+too_young,90,240
+mature_present,180,169
+active,180,73
+dormant,180,96
+too_young,180,360
+mature_present,365,49
+active,365,16
+dormant,365,33
+too_young,365,480

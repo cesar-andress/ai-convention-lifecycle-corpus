@@ -1,0 +1,4 @@
+artifact_type,n_total,n_eligible_180,n_stasis_events_180,stasis_180_rate_eligible,median_survival_days
+prompts,183,129,100,0.7751937984496124,191.0
+agents_md,158,47,10,0.2127659574468085,218.0
+claude_md,106,36,12,0.3333333333333333,290.0
