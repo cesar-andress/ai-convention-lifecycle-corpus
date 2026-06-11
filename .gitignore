@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 .Python
+.ipynb_checkpoints/
 data/repos/
 *.log
 .DS_Store
