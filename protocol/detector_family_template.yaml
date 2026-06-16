@@ -1,0 +1,71 @@
+# detector_family_template.yaml — copy and customize for a new artifact family
+# Does NOT replace lifecycle_v1.yaml; v2 results depend on the frozen AI-convention config.
+
+family_id: example_family_v1
+family_label: "Example artifact family (template only)"
+
+extends: protocol/adoption_maintenance_v1.yaml
+
+# --- Inclusion: first matching rule assigns artifact_type id ---
+artifact_patterns:
+  - id: example_config
+    regex: '(^|/)example/config\.ya?ml$'
+  - id: example_dir
+    regex: '(^|/)examples/.*\.(md|yaml|yml)$'
+
+# --- Exclusion: evaluated BEFORE inclusion (see detection.py) ---
+exclude_path_prefixes:
+  - node_modules/
+  - vendor/
+  - dist/
+  - build/
+  - target/
+  - coverage/
+  - .git/
+
+exclude_basenames:
+  - README.md
+  - CHANGELOG.md
+  - LICENSE
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+
+exclude_path_regex: []
+  # - '(^|/)docs/api/'
+
+# --- Discovery (override v2 scale as needed) ---
+discovery:
+  seed_pools:
+    pilot:
+      - seeds/example_family_pilot.txt
+  clone_timeout_seconds: 120
+  shallow_discover: true
+
+scale:
+  target_adopted_repos: 100
+  max_candidates: 500
+
+maintenance_windows_days:
+  primary: 180
+  sensitivity:
+    - 90
+    - 365
+
+analysis:
+  primary_threshold_days: 180
+  bootstrap_replicates: 5000
+  exclude_top_prompt_repos: 0  # rename/parametrize per family in future driver
+  manual_validation:
+    n_dormant: 20
+    n_active: 20
+    seed: 42
+
+outputs:
+  discovered: data/lifecycle/discovered_example_family.csv
+  summary: results/lifecycle/adoption_maintenance_example_family.json
+  bootstrap: results/lifecycle/bootstrap_example_family.json
+  loo: results/lifecycle/loo_example_family.csv
+
+notes: >
+  Template for multi-family replication design (docs/multi_family_replication_design.md).
+  Not executed in release v2.0.0.
