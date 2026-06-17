@@ -7,3 +7,4 @@ __pycache__/
 data/repos/
 *.log
 .DS_Store
+data/lifecycle/commit_authors.parquet
