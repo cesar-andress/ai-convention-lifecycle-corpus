@@ -1,0 +1,21 @@
+{
+  "source_stale_references": "/home/cesar/papers/ai-artifact-cochange/ai-convention-lifecycle-corpus/results/misguidance/pilot_v2/stale_references.csv",
+  "n_candidates": 38,
+  "by_repo": {
+    "cheat/cheat": 2,
+    "electron/electron": 2,
+    "dagster-io/dagster": 2,
+    "apache/airflow": 11,
+    "BerriAI/litellm": 1,
+    "payloadcms/payload": 17,
+    "prefecthq/prefect": 1,
+    "grafana/grafana": 2
+  },
+  "by_category": {
+    "unknown": 17,
+    "documentation_reference": 3,
+    "deleted_directory": 8,
+    "config_reference": 4,
+    "source_code_reference": 6
+  }
+}

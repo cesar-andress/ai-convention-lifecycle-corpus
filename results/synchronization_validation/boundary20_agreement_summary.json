@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-06-17T07:50:19.255658+00:00",
+  "total_units": 20,
+  "units_with_any_annotation": 0,
+  "units_annotated_by_all_three": 0,
+  "raw_agreement_all_three": null,
+  "fleiss_kappa": null,
+  "krippendorff_alpha_nominal": null,
+  "ambiguous_rate": null,
+  "pairwise": {},
+  "by_artifact_family": [],
+  "disagreement_table": [],
+  "adjudication_rows": 0
+}

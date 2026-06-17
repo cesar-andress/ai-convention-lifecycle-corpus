@@ -1,0 +1,3 @@
+repo_id,instruction_file,reference_type,raw_reference,raw_text,resolved_path,exists_in_head,used_for_scope,extraction_rule,confidence,parser_version
+apache/airflow,airflow-core/src/airflow/_shared/AGENTS.md,markdown_link,[shared folder](../../../../shared),[shared folder](../../../../shared),shared/,True,True,markdown_link,medium,v2
+apache/airflow,airflow-core/src/airflow/_shared/AGENTS.md,explicit_path,../../../../shared,../../../../shared,shared/,True,True,explicit_path,high,v2

@@ -1,0 +1,21 @@
+repo_id,instruction_file,reference_type,raw_reference,resolved_path,exists_in_head,used_for_scope,extraction_rule
+dagster-io/dagster,docs/CLAUDE.md,directory_token,docusaurus.io/,docusaurus.io/,False,False,trailing_slash_token
+dagster-io/dagster,docs/CLAUDE.md,path_token,yarn install,yarn install,False,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,path_token,yarn start,yarn start,False,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,path_token,http://localhost:3050,,False,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,path_token,yarn build-api-docs,yarn build-api-docs,False,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,path_token,yarn build,yarn build,False,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,command,make dev_install,make dev_install,False,False,make_target
+dagster-io/dagster,docs/CLAUDE.md,path_token,make dev_install,make dev_install,False,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,path_token,yarn format,yarn format,False,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,path_token,uv run scripts/check-frontmatter.py,uv run scripts/check-frontmatter.py,False,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,path_token,scripts/check-frontmatter.py,scripts/check-frontmatter.py,False,False,inline_slash_token
+dagster-io/dagster,docs/CLAUDE.md,path_token,check-frontmatter.py,check-frontmatter.py,False,False,filename_ext
+dagster-io/dagster,docs/CLAUDE.md,directory_token,scripts/,scripts/,True,True,trailing_slash_token
+dagster-io/dagster,docs/CLAUDE.md,path_token,docs/partials/_KindsTags.md,docs/partials/_KindsTags.md,False,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,path_token,yarn build-kinds-tags,yarn build-kinds-tags,False,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,path_token,_KindsTags.md,_KindsTags.md,False,False,filename_ext
+dagster-io/dagster,docs/CLAUDE.md,directory_token,docs/,docs/,True,True,trailing_slash_token
+dagster-io/dagster,docs/CLAUDE.md,directory_token,partials/,partials/,False,False,trailing_slash_token
+dagster-io/dagster,docs/CLAUDE.md,path_token,README.md,README.md,True,False,backtick
+dagster-io/dagster,docs/CLAUDE.md,known_root_file,README.md,README.md,True,True,known_config_filename

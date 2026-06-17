@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-06-16T23:39:40.707348+00:00",
+  "n_pilot_repos": 25,
+  "n_metric_rows": 140,
+  "n_repos_with_metrics": 25,
+  "calibration_index": [
+    {
+      "spectrum_group": "configuration",
+      "synchronization_index": 0.9166666666666666,
+      "n_metrics": 6
+    },
+    {
+      "spectrum_group": "instructions",
+      "synchronization_index": 0.15121965672074908,
+      "n_metrics": 6
+    },
+    {
+      "spectrum_group": "documentation",
+      "synchronization_index": 0.25319909459015,
+      "n_metrics": 6
+    }
+  ],
+  "calibration_detail": [
+    {
+      "metric": "median_co_change_rate",
+      "configuration_raw": 0.009289051476822493,
+      "configuration_norm": 1.0,
+      "instructions_raw": 0.0006751235357253156,
+      "instructions_norm": 0.0,
+      "documentation_raw": 0.0014102345025540687,
+      "documentation_norm": 0.0853398091852531
+    },
+    {
+      "metric": "median_sync_7",
+      "configuration_raw": 0.20368036555496363,
+      "configuration_norm": 1.0,
+      "instructions_raw": 0.023513180028981697,
+      "instructions_norm": 0.0,
+      "documentation_raw": 0.06685574085816126,
+      "documentation_norm": 0.24056856248625322
+    },
+    {
+      "metric": "median_sync_30",
+      "configuration_raw": 0.39955794174153847,
+      "configuration_norm": 1.0,
+      "instructions_raw": 0.04882281881419738,
+      "instructions_norm": 0.0,
+      "documentation_raw": 0.22105355496778317,
+      "documentation_norm": 0.4910564266164624
+    },
+    {
+      "metric": "median_update_frequency_per_year",
+      "configuration_raw": 16.123874999999998,
+      "configuration_norm": 1.0,
+      "instructions_raw": 1.8062500000000001,
+      "instructions_norm": 0.0,
+      "documentation_raw": 4.7017,
+      "documentation_norm": 0.20222976925293126
+    },
+    {
+      "metric": "median_lifecycle_persistence_rate",
+      "configuration_raw": 1.0,
+      "configuration_norm": 0.5,
+      "instructions_raw": 1.0,
+      "instructions_norm": 0.5,
+      "documentation_raw": 1.0,
+      "documentation_norm": 0.5
+    },
+    {
+      "metric": "median_median_update_lag_days_30",
+      "configuration_raw": 8.100151909722221,
+      "configuration_norm": 1.0,
+      "instructions_raw": 9.718457754629629,
+      "instructions_norm": 0.40731794032449437,
+      "documentation_raw": 10.830630787037038,
+      "documentation_norm": 0.0
+    }
+  ]
+}

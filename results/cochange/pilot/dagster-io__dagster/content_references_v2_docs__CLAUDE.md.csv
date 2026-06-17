@@ -1,0 +1,7 @@
+repo_id,instruction_file,reference_type,raw_reference,raw_text,resolved_path,exists_in_head,used_for_scope,extraction_rule,confidence,parser_version
+dagster-io/dagster,docs/CLAUDE.md,directory_mention,docs,docs,docs/,True,True,common_directory_name,medium,v2
+dagster-io/dagster,docs/CLAUDE.md,command,make dev_install,make dev_install,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,docs/CLAUDE.md,explicit_path,scripts/check-frontmatter.py,scripts/check-frontmatter.py,docs/scripts/check-frontmatter.py,True,True,explicit_path,high,v2
+dagster-io/dagster,docs/CLAUDE.md,code_span,docs/partials/_KindsTags.md,docs/partials/_KindsTags.md,docs/docs/partials/_KindsTags.md,True,True,code_span,medium,v2
+dagster-io/dagster,docs/CLAUDE.md,explicit_path,docs/partials/_KindsTags.md,docs/partials/_KindsTags.md,docs/docs/partials/_KindsTags.md,True,True,explicit_path,high,v2
+dagster-io/dagster,docs/CLAUDE.md,code_span,README.md,README.md,README.md,True,False,code_span,low,v2

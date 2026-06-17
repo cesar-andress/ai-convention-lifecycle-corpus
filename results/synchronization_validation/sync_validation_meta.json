@@ -1,0 +1,136 @@
+{
+  "n_pilot_repos": 25,
+  "n_repos_with_manifest": 25,
+  "repo_commit_tertiles": {
+    "small_max": 2413,
+    "medium_max": 13980
+  },
+  "pool_size_before_sample": 10837,
+  "target_n": 100,
+  "sampled_n": 100,
+  "stratum_shortages": {},
+  "balance": [
+    {
+      "artifact_family": "configuration",
+      "metric_label": "not_synchronized",
+      "repo_size_class": "large",
+      "count": 6
+    },
+    {
+      "artifact_family": "configuration",
+      "metric_label": "not_synchronized",
+      "repo_size_class": "medium",
+      "count": 6
+    },
+    {
+      "artifact_family": "configuration",
+      "metric_label": "not_synchronized",
+      "repo_size_class": "small",
+      "count": 5
+    },
+    {
+      "artifact_family": "configuration",
+      "metric_label": "synchronized",
+      "repo_size_class": "large",
+      "count": 7
+    },
+    {
+      "artifact_family": "configuration",
+      "metric_label": "synchronized",
+      "repo_size_class": "medium",
+      "count": 5
+    },
+    {
+      "artifact_family": "configuration",
+      "metric_label": "synchronized",
+      "repo_size_class": "small",
+      "count": 5
+    },
+    {
+      "artifact_family": "documentation",
+      "metric_label": "not_synchronized",
+      "repo_size_class": "large",
+      "count": 7
+    },
+    {
+      "artifact_family": "documentation",
+      "metric_label": "not_synchronized",
+      "repo_size_class": "medium",
+      "count": 5
+    },
+    {
+      "artifact_family": "documentation",
+      "metric_label": "not_synchronized",
+      "repo_size_class": "small",
+      "count": 6
+    },
+    {
+      "artifact_family": "documentation",
+      "metric_label": "synchronized",
+      "repo_size_class": "large",
+      "count": 6
+    },
+    {
+      "artifact_family": "documentation",
+      "metric_label": "synchronized",
+      "repo_size_class": "medium",
+      "count": 6
+    },
+    {
+      "artifact_family": "documentation",
+      "metric_label": "synchronized",
+      "repo_size_class": "small",
+      "count": 5
+    },
+    {
+      "artifact_family": "instructions",
+      "metric_label": "not_synchronized",
+      "repo_size_class": "large",
+      "count": 5
+    },
+    {
+      "artifact_family": "instructions",
+      "metric_label": "not_synchronized",
+      "repo_size_class": "medium",
+      "count": 5
+    },
+    {
+      "artifact_family": "instructions",
+      "metric_label": "not_synchronized",
+      "repo_size_class": "small",
+      "count": 5
+    },
+    {
+      "artifact_family": "instructions",
+      "metric_label": "synchronized",
+      "repo_size_class": "large",
+      "count": 6
+    },
+    {
+      "artifact_family": "instructions",
+      "metric_label": "synchronized",
+      "repo_size_class": "medium",
+      "count": 5
+    },
+    {
+      "artifact_family": "instructions",
+      "metric_label": "synchronized",
+      "repo_size_class": "small",
+      "count": 5
+    }
+  ],
+  "balance_by_family": {
+    "configuration": 34,
+    "documentation": 35,
+    "instructions": 31
+  },
+  "balance_by_metric_label": {
+    "not_synchronized": 50,
+    "synchronized": 50
+  },
+  "balance_by_repo_size": {
+    "large": 37,
+    "medium": 32,
+    "small": 31
+  }
+}

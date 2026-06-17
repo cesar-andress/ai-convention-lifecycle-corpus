@@ -1,0 +1,16 @@
+repo_id,instruction_file,raw_text,resolved_path,extraction_rule,confidence,exists_in_head,used_for_scope
+cheat/cheat,CLAUDE.md,internal/config,internal/config/,explicit_path,high,True,True
+cheat/cheat,CLAUDE.md,mocks,mocks/,code_span,low,True,False
+electron/electron,CLAUDE.md,script/lint.js,script/lint.js,explicit_path,high,True,True
+electron/electron,CLAUDE.md,BUILD.gn,BUILD.gn,code_span,low,True,False
+dagster-io/dagster,CLAUDE.md,.claude/python_packages.md,claude/python_packages.md,explicit_path,high,True,True
+dagster-io/dagster,docs/CLAUDE.md,README.md,README.md,code_span,low,True,False
+apache/airflow,CLAUDE.md,AGENTS.md,AGENTS.md,include_directive,high,True,True
+apache/airflow,CLAUDE.md,airflow-core,airflow-core/,code_span,low,True,False
+BerriAI/litellm,CLAUDE.md,tests/test_litellm/,tests/test_litellm/,explicit_path,high,True,True
+payloadcms/payload,CLAUDE.md,packages/payload,packages/payload/,explicit_path,high,True,True
+payloadcms/payload,CLAUDE.md,test,test/,code_span,low,True,False
+prefecthq/prefect,AGENTS.md,src/prefect/,src/prefect/,explicit_path,high,True,True
+prefecthq/prefect,AGENTS.md,.gitignore,gitignore,code_span,low,True,False
+grafana/grafana,CLAUDE.md,@AGENTS.md,AGENTS.md,include_directive,high,True,True
+grafana/grafana,CLAUDE.md,go.work,go.work,code_span,low,True,False

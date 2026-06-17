@@ -1,0 +1,405 @@
+repo_id,instruction_file,reference,reference_type,extraction_rule,confidence,resolved_path,exists_in_head,status,misguidance_category,historical_existence,counts_toward_primary_misguidance,parser_version
+cheat/cheat,CLAUDE.md,make build,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,make build-release,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,make install,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,make test,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal,directory_mention,common_directory_name,medium,internal/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,make coverage,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,make lint,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,make vet,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,make fmt,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,make check,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,make setup,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,make vendor-update,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/config,code_span,code_span,medium,internal/config/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/config,explicit_path,explicit_path,high,internal/config/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/cheatpath,code_span,code_span,medium,internal/cheatpath/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/cheatpath,explicit_path,explicit_path,high,internal/cheatpath/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/sheet,code_span,code_span,medium,internal/sheet/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/sheet,explicit_path,explicit_path,high,internal/sheet/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/sheets,code_span,code_span,medium,internal/sheets/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/sheets,explicit_path,explicit_path,high,internal/sheets/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/display,code_span,code_span,medium,internal/display/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/display,explicit_path,explicit_path,high,internal/display/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/installer,code_span,code_span,medium,internal/installer/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/installer,explicit_path,explicit_path,high,internal/installer/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/repo,code_span,code_span,medium,internal/repo/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/repo,explicit_path,explicit_path,high,internal/repo/,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/config/paths.go,code_span,code_span,medium,internal/config/paths.go,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,internal/config/paths.go,explicit_path,explicit_path,high,internal/config/paths.go,True,valid,,,False,v2
+cheat/cheat,CLAUDE.md,mocks,code_span,code_span,low,mocks/,True,valid,,,False,v2
+electron/electron,CLAUDE.md,script/lint.js,code_span,code_span,medium,script/lint.js,True,valid,,,False,v2
+electron/electron,CLAUDE.md,script/lint.js,explicit_path,explicit_path,high,script/lint.js,True,valid,,,False,v2
+electron/electron,CLAUDE.md,lib,directory_mention,common_directory_name,medium,lib/,True,valid,,,False,v2
+electron/electron,CLAUDE.md,docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+electron/electron,CLAUDE.md,patches/config.json,code_span,code_span,medium,patches/config.json,True,valid,,,False,v2
+electron/electron,CLAUDE.md,patches/config.json,explicit_path,explicit_path,high,patches/config.json,True,valid,,,False,v2
+electron/electron,CLAUDE.md,spec/,code_span,code_span,medium,spec/,True,valid,,,False,v2
+electron/electron,CLAUDE.md,build/args/,code_span,code_span,medium,build/args/,True,valid,,,False,v2
+electron/electron,CLAUDE.md,build/args/,explicit_path,explicit_path,high,build/args/,True,valid,,,False,v2
+electron/electron,CLAUDE.md,BUILD.gn,code_span,code_span,low,BUILD.gn,True,valid,,,False,v2
+electron/electron,CLAUDE.md,buildflags/buildflags.gni,code_span,code_span,medium,buildflags/buildflags.gni,True,valid,,,False,v2
+electron/electron,CLAUDE.md,buildflags/buildflags.gni,explicit_path,explicit_path,high,buildflags/buildflags.gni,True,valid,,,False,v2
+electron/electron,CLAUDE.md,.oxlintrc.json,code_span,code_span,low,oxlintrc.json,True,valid,,,False,v2
+electron/electron,CLAUDE.md,filenames.gni,code_span,code_span,low,filenames.gni,True,valid,,,False,v2
+electron/electron,CLAUDE.md,package.json,code_span,code_span,high,package.json,True,valid,,,False,v2
+electron/electron,CLAUDE.md,package.json,config_file,known_config_filename,high,package.json,True,valid,,,False,v2
+electron/electron,CLAUDE.md,.github/workflows/,code_span,code_span,medium,github/workflows/,True,valid,,,False,v2
+electron/electron,CLAUDE.md,.github/workflows/,explicit_path,explicit_path,high,github/workflows/,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,docs/development/api-history-migration-guide.md,code_span,code_span,medium,docs/development/api-history-migration-guide.md,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,docs/development/api-history-migration-guide.md,explicit_path,explicit_path,high,docs/development/api-history-migration-guide.md,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,api,directory_mention,common_directory_name,medium,docs/api/,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,docs/development/style-guide.md,code_span,code_span,medium,docs/development/style-guide.md,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,docs/development/style-guide.md,explicit_path,explicit_path,high,docs/development/style-guide.md,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,API,directory_mention,common_directory_name,medium,docs/api/,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,docs/api-history.schema.json,code_span,code_span,medium,docs/api-history.schema.json,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,docs/api-history.schema.json,explicit_path,explicit_path,high,docs/api-history.schema.json,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,docs/breaking-changes.md,code_span,code_span,medium,docs/breaking-changes.md,True,valid,,,False,v2
+electron/electron,docs/CLAUDE.md,docs/breaking-changes.md,explicit_path,explicit_path,high,docs/breaking-changes.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,[.claude/python_packages.md](./.claude/python_packages.md),markdown_link,markdown_link,medium,claude/python_packages.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,.claude/python_packages.md,explicit_path,explicit_path,high,claude/python_packages.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,./.claude/python_packages.md,explicit_path,explicit_path,high,claude/python_packages.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,[.claude/dev_workflow.md](./.claude/dev_workflow.md),markdown_link,markdown_link,medium,claude/dev_workflow.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,.claude/dev_workflow.md,explicit_path,explicit_path,high,claude/dev_workflow.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,./.claude/dev_workflow.md,explicit_path,explicit_path,high,claude/dev_workflow.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,[.claude/ui_workflow.md](./.claude/ui_workflow.md),markdown_link,markdown_link,medium,claude/ui_workflow.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,.claude/ui_workflow.md,explicit_path,explicit_path,high,claude/ui_workflow.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,./.claude/ui_workflow.md,explicit_path,explicit_path,high,claude/ui_workflow.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,[.claude/coding_conventions.md](./.claude/coding_conventions.md),markdown_link,markdown_link,medium,claude/coding_conventions.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,.claude/coding_conventions.md,explicit_path,explicit_path,high,claude/coding_conventions.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,./.claude/coding_conventions.md,explicit_path,explicit_path,high,claude/coding_conventions.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,make ruff,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,[docs/docs/about/contributing.md](docs/docs/about/contributing.md),markdown_link,markdown_link,medium,docs/docs/about/contributing.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,docs/docs/about/contributing.md,explicit_path,explicit_path,high,docs/docs/about/contributing.md,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,make dev_install,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,make pyright,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,make quick_pyright,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,python_modules/dagster/dagster_tests/,explicit_path,explicit_path,high,python_modules/dagster/dagster_tests/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,python_modules,directory_mention,common_directory_name,medium,python_modules/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,make generate-graphql,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,make rebuild_ui,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,make graphql_codegen,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,make sanity_check,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,python_modules/dagster/,code_span,code_span,medium,python_modules/dagster/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,python_modules/libraries/,code_span,code_span,medium,python_modules/libraries/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,python_modules/dagster/,explicit_path,explicit_path,high,python_modules/dagster/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,python_modules/libraries/,explicit_path,explicit_path,high,python_modules/libraries/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,js_modules/,code_span,code_span,medium,js_modules/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,docs/,code_span,code_span,medium,docs/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,Docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,examples,directory_mention,common_directory_name,medium,examples/,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,make dev_webapp,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,make command,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,CLAUDE.md,Makefile,config_file,known_config_filename,high,Makefile,True,valid,,,False,v2
+dagster-io/dagster,docs/CLAUDE.md,docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+dagster-io/dagster,docs/CLAUDE.md,make dev_install,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+dagster-io/dagster,docs/CLAUDE.md,scripts/check-frontmatter.py,explicit_path,explicit_path,high,docs/scripts/check-frontmatter.py,True,valid,,,False,v2
+dagster-io/dagster,docs/CLAUDE.md,docs/partials/_KindsTags.md,code_span,code_span,medium,docs/docs/partials/_KindsTags.md,True,valid,,,False,v2
+dagster-io/dagster,docs/CLAUDE.md,docs/partials/_KindsTags.md,explicit_path,explicit_path,high,docs/docs/partials/_KindsTags.md,True,valid,,,False,v2
+dagster-io/dagster,docs/CLAUDE.md,README.md,code_span,code_span,low,README.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,AGENTS.md,include_directive,include_directive,high,AGENTS.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[ADR 0017](dev/breeze/doc/adr/0017-use-uvx-to-run-breeze-from-local-sources.md),markdown_link,markdown_link,medium,dev/breeze/doc/adr/0017-use-uvx-to-run-breeze-from-local-sources.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,scripts/tools/setup_breeze,code_span,code_span,medium,scripts/tools/setup_breeze,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/breeze,code_span,code_span,medium,dev/breeze/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,scripts/tools/setup_breeze,explicit_path,explicit_path,high,scripts/tools/setup_breeze,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/breeze,explicit_path,explicit_path,high,dev/breeze/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/breeze/doc/adr/0017-use-uvx-to-run-breeze-from-local-sources.md,explicit_path,explicit_path,high,dev/breeze/doc/adr/0017-use-uvx-to-run-breeze-from-local-sources.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev,directory_mention,common_directory_name,medium,dev/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/,code_span,code_span,medium,dev/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core,code_span,code_span,low,airflow-core/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,providers/amazon,code_span,code_span,medium,providers/amazon/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,providers/amazon,explicit_path,explicit_path,high,providers/amazon/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-ctl-tests,code_span,code_span,low,airflow-ctl-tests/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,scripts/tests/,explicit_path,explicit_path,high,scripts/tests/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,uv.lock,code_span,code_span,low,uv.lock,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev,code_span,code_span,low,dev/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,pyproject.toml,config_file,known_config_filename,high,pyproject.toml,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core/src/airflow/,code_span,scope_section:code_span,high,airflow-core/src/airflow/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core/src/airflow/,explicit_path,explicit_path,high,airflow-core/src/airflow/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,task-sdk/,code_span,scope_section:code_span,high,task-sdk/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,providers/,code_span,scope_section:code_span,high,providers/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,pyproject.toml,code_span,scope_section:code_span,high,pyproject.toml,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-ctl/,code_span,scope_section:code_span,high,airflow-ctl/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,chart/,code_span,scope_section:code_span,high,chart/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/,code_span,scope_section:code_span,high,dev/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,scripts/,code_span,scope_section:code_span,high,scripts/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,uv.lock,code_span,scope_section:code_span,low,uv.lock,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,shared,code_span,scope_section:code_span,low,shared/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`airflow-core/docs/security/security_model.rst`](airflow-core/docs/security/security_model.rst),markdown_link,markdown_link,medium,airflow-core/docs/security/security_model.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core/docs/security/security_model.rst,code_span,code_span,medium,airflow-core/docs/security/security_model.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core/docs/security/security_model.rst,explicit_path,explicit_path,high,airflow-core/docs/security/security_model.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`airflow-core/docs/security/jwt_token_authentication.rst`](airflow-core/docs/security/jwt_token_authentication.rst),markdown_link,markdown_link,medium,airflow-core/docs/security/jwt_token_authentication.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core/docs/security/jwt_token_authentication.rst,code_span,code_span,medium,airflow-core/docs/security/jwt_token_authentication.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core/docs/security/jwt_token_authentication.rst,explicit_path,explicit_path,high,airflow-core/docs/security/jwt_token_authentication.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,shared,code_span,code_span,low,shared/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,task-sdk,code_span,code_span,low,task-sdk/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core/src/airflow/utils/db_cleanup.py,code_span,code_span,medium,airflow-core/src/airflow/utils/db_cleanup.py,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core/src/airflow/utils/db_cleanup.py,explicit_path,explicit_path,high,airflow-core/src/airflow/utils/db_cleanup.py,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`dev/breeze/doc/ci/04_selective_checks.md`](dev/breeze/doc/ci/04_selective_checks.md),markdown_link,markdown_link,medium,dev/breeze/doc/ci/04_selective_checks.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/breeze/src/airflow_breeze/utils/selective_checks.py,code_span,code_span,medium,dev/breeze/src/airflow_breeze/utils/selective_checks.py,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/breeze/doc/ci/04_selective_checks.md,code_span,code_span,medium,dev/breeze/doc/ci/04_selective_checks.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/breeze/tests/test_selective_checks.py,code_span,code_span,medium,dev/breeze/tests/test_selective_checks.py,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/breeze/src/airflow_breeze/utils/selective_checks.py,explicit_path,explicit_path,high,dev/breeze/src/airflow_breeze/utils/selective_checks.py,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/breeze/doc/ci/04_selective_checks.md,explicit_path,explicit_path,high,dev/breeze/doc/ci/04_selective_checks.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/breeze/tests/test_selective_checks.py,explicit_path,explicit_path,high,dev/breeze/tests/test_selective_checks.py,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core/newsfragments/,code_span,code_span,medium,airflow-core/newsfragments/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,chart/newsfragments/,code_span,code_span,medium,chart/newsfragments/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/mypy/newsfragments/,code_span,code_span,medium,dev/mypy/newsfragments/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,providers/,code_span,code_span,medium,providers/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-ctl/,code_span,code_span,medium,airflow-ctl/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/README_RELEASE_PROVIDERS.md,code_span,code_span,medium,dev/README_RELEASE_PROVIDERS.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/README_RELEASE_AIRFLOWCTL.md,code_span,code_span,medium,dev/README_RELEASE_AIRFLOWCTL.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-ctl/RELEASE_NOTES.rst,code_span,code_span,medium,airflow-ctl/RELEASE_NOTES.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,task-sdk/,code_span,code_span,medium,task-sdk/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-core/newsfragments/,explicit_path,explicit_path,high,airflow-core/newsfragments/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,chart/newsfragments/,explicit_path,explicit_path,high,chart/newsfragments/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/mypy/newsfragments/,explicit_path,explicit_path,high,dev/mypy/newsfragments/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/README_RELEASE_PROVIDERS.md,explicit_path,explicit_path,high,dev/README_RELEASE_PROVIDERS.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/README_RELEASE_AIRFLOWCTL.md,explicit_path,explicit_path,high,dev/README_RELEASE_AIRFLOWCTL.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,airflow-ctl/RELEASE_NOTES.rst,explicit_path,explicit_path,high,airflow-ctl/RELEASE_NOTES.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,devel-common/src/tests_common/pytest_plugin.py,code_span,code_span,medium,devel-common/src/tests_common/pytest_plugin.py,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,devel-common/src/tests_common/pytest_plugin.py,explicit_path,explicit_path,high,devel-common/src/tests_common/pytest_plugin.py,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,chart/,code_span,code_span,medium,chart/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/mypy/,code_span,code_span,medium,dev/mypy/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,dev/mypy/,explicit_path,explicit_path,high,dev/mypy/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,providers/AGENTS.md,code_span,code_span,medium,providers/AGENTS.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,providers/AGENTS.md,explicit_path,explicit_path,high,providers/AGENTS.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/04_how_to_contribute.rst,code_span,code_span,medium,contributing-docs/04_how_to_contribute.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/04_how_to_contribute.rst,explicit_path,explicit_path,high,contributing-docs/04_how_to_contribute.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`contributing-docs/05_pull_requests.rst`](contributing-docs/05_pull_requests.rst),markdown_link,markdown_link,medium,contributing-docs/05_pull_requests.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/05_pull_requests.rst,code_span,code_span,medium,contributing-docs/05_pull_requests.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/05_pull_requests.rst,explicit_path,explicit_path,high,contributing-docs/05_pull_requests.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`.github/instructions/code-review.instructions.md`](.github/instructions/code-review.instructions.md),markdown_link,markdown_link,medium,github/instructions/code-review.instructions.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,.github/instructions/code-review.instructions.md,code_span,code_span,medium,github/instructions/code-review.instructions.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,.github/instructions/code-review.instructions.md,explicit_path,explicit_path,high,github/instructions/code-review.instructions.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`.claude/skills/magpie-setup/`](.claude/skills/magpie-setup/),markdown_link,markdown_link,low,claude/skills/magpie-setup/,False,ambiguous,,,False,v2
+apache/airflow,CLAUDE.md,[`.apache-magpie.lock`](.apache-magpie.lock),markdown_link,markdown_link,medium,apache-magpie.lock,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,.apache-magpie.lock,code_span,code_span,low,apache-magpie.lock,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[Agent-assisted contribution section of `README.md`](README.md#agent-assisted-contribution-apache-steward),markdown_link,markdown_link,low,README.md#agent-assisted-contribution-apache-steward,False,ambiguous,,,False,v2
+apache/airflow,CLAUDE.md,README.md,code_span,code_span,low,README.md,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`.apache-magpie-overrides/`](.apache-magpie-overrides/),markdown_link,markdown_link,medium,apache-magpie-overrides/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,.apache-magpie-overrides/,code_span,code_span,medium,apache-magpie-overrides/,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`contributing-docs/03a_contributors_quick_start_beginners.rst`](contributing-docs/03a_contributors_quick_start_beginners.rst),markdown_link,markdown_link,medium,contributing-docs/03a_contributors_quick_start_beginners.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/03a_contributors_quick_start_beginners.rst,code_span,code_span,medium,contributing-docs/03a_contributors_quick_start_beginners.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/03a_contributors_quick_start_beginners.rst,explicit_path,explicit_path,high,contributing-docs/03a_contributors_quick_start_beginners.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`contributing-docs/07_local_virtualenv.rst`](contributing-docs/07_local_virtualenv.rst),markdown_link,markdown_link,medium,contributing-docs/07_local_virtualenv.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/07_local_virtualenv.rst,code_span,code_span,medium,contributing-docs/07_local_virtualenv.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/07_local_virtualenv.rst,explicit_path,explicit_path,high,contributing-docs/07_local_virtualenv.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`contributing-docs/08_static_code_checks.rst`](contributing-docs/08_static_code_checks.rst),markdown_link,markdown_link,medium,contributing-docs/08_static_code_checks.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/08_static_code_checks.rst,code_span,code_span,medium,contributing-docs/08_static_code_checks.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/08_static_code_checks.rst,explicit_path,explicit_path,high,contributing-docs/08_static_code_checks.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`contributing-docs/12_provider_distributions.rst`](contributing-docs/12_provider_distributions.rst),markdown_link,markdown_link,medium,contributing-docs/12_provider_distributions.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/12_provider_distributions.rst,code_span,code_span,medium,contributing-docs/12_provider_distributions.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/12_provider_distributions.rst,explicit_path,explicit_path,high,contributing-docs/12_provider_distributions.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,[`contributing-docs/19_execution_api_versioning.rst`](contributing-docs/19_execution_api_versioning.rst),markdown_link,markdown_link,medium,contributing-docs/19_execution_api_versioning.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/19_execution_api_versioning.rst,code_span,code_span,medium,contributing-docs/19_execution_api_versioning.rst,True,valid,,,False,v2
+apache/airflow,CLAUDE.md,contributing-docs/19_execution_api_versioning.rst,explicit_path,explicit_path,high,contributing-docs/19_execution_api_versioning.rst,True,valid,,,False,v2
+apache/airflow,airflow-core/src/airflow/_shared/AGENTS.md,[shared folder](../../../../shared),markdown_link,markdown_link,medium,shared/,True,valid,,,False,v2
+apache/airflow,airflow-core/src/airflow/_shared/AGENTS.md,../../../../shared,explicit_path,explicit_path,high,shared/,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,make new,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,make the,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,make it,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,tests/test_litellm/,code_span,code_span,medium,tests/test_litellm/,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,litellm/,code_span,code_span,medium,litellm/,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,tests/test_litellm/readme.md,code_span,code_span,medium,tests/test_litellm/readme.md,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,tests/test_litellm/,explicit_path,explicit_path,high,tests/test_litellm/,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,tests/test_litellm/readme.md,explicit_path,explicit_path,high,tests/test_litellm/readme.md,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,.github/pull_request_template.md,explicit_path,explicit_path,high,github/pull_request_template.md,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,litellm/proxy/proxy_cli.py,explicit_path,explicit_path,high,litellm/proxy/proxy_cli.py,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,make public-facing,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+BerriAI/litellm,CLAUDE.md,make sure,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/,code_span,code_span,medium,packages/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages,directory_mention,common_directory_name,medium,packages/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/payload,code_span,code_span,medium,packages/payload/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/payload,explicit_path,explicit_path,high,packages/payload/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/ui,code_span,code_span,medium,packages/ui/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/ui,explicit_path,explicit_path,high,packages/ui/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/next,code_span,code_span,medium,packages/next/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/next,explicit_path,explicit_path,high,packages/next/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/drizzle,code_span,code_span,medium,packages/drizzle/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/drizzle,explicit_path,explicit_path,high,packages/drizzle/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/kv-redis,code_span,code_span,medium,packages/kv-redis/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/kv-redis,explicit_path,explicit_path,high,packages/kv-redis/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/graphql,code_span,code_span,medium,packages/graphql/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/graphql,explicit_path,explicit_path,high,packages/graphql/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/translations,code_span,code_span,medium,packages/translations/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/translations,explicit_path,explicit_path,high,packages/translations/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,test/,code_span,code_span,medium,test/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,docs/,code_span,code_span,medium,docs/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,tools/,code_span,code_span,medium,tools/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,templates/,code_span,code_span,medium,templates/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,examples/,code_span,code_span,medium,examples/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,examples,directory_mention,common_directory_name,medium,examples/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,/app,code_span,scope_section:code_span,high,app/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,tsconfig.base.json,code_span,scope_section:code_span,high,tsconfig.base.json,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,Packages,directory_mention,common_directory_name,medium,packages/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,test/_community/config.ts,code_span,code_span,medium,test/_community/config.ts,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,test/_community/config.ts,explicit_path,explicit_path,high,test/_community/config.ts,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,test/fields/config.ts,code_span,code_span,medium,test/fields/config.ts,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,test/fields/config.ts,explicit_path,explicit_path,high,test/fields/config.ts,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,test,code_span,code_span,low,test/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/translations/src/languages/,code_span,code_span,medium,packages/translations/src/languages/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/translations/src/languages/,explicit_path,explicit_path,high,packages/translations/src/languages/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,packages/richtext-lexical,explicit_path,explicit_path,high,packages/richtext-lexical/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,docs,code_span,code_span,low,docs/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,examples,code_span,code_span,low,examples/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,templates,code_span,code_span,low,templates/,True,valid,,,False,v2
+payloadcms/payload,CLAUDE.md,Examples,directory_mention,common_directory_name,medium,examples/,True,valid,,,False,v2
+payloadcms/payload,packages/codemod/CLAUDE.md,README.md,code_span,code_span,low,README.md,True,valid,,,False,v2
+payloadcms/payload,packages/codemod/CLAUDE.md,package.json,code_span,code_span,high,package.json,True,valid,,,False,v2
+payloadcms/payload,packages/codemod/CLAUDE.md,package.json,config_file,known_config_filename,high,package.json,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/,explicit_path,explicit_path,high,src/prefect/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src,directory_mention,common_directory_name,medium,src/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,docs/AGENTS.md,explicit_path,explicit_path,high,docs/AGENTS.md,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,examples,directory_mention,common_directory_name,medium,examples/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/integrations/AGENTS.md,explicit_path,explicit_path,high,src/integrations/AGENTS.md,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/AGENTS.md,explicit_path,explicit_path,high,src/prefect/AGENTS.md,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,tests/AGENTS.md,explicit_path,explicit_path,high,tests/AGENTS.md,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,ui-v2/AGENTS.md,explicit_path,explicit_path,high,ui-v2/AGENTS.md,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,pyproject.toml,config_file,known_config_filename,high,pyproject.toml,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,Dockerfile,config_file,known_config_filename,high,Dockerfile,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,./src/integrations/,explicit_path,explicit_path,high,src/integrations/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/,code_span,code_span,medium,src/prefect/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,tests/,code_span,code_span,medium,tests/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/flow_engine.py,code_span,code_span,medium,src/prefect/flow_engine.py,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,tests/engine/,code_span,code_span,medium,tests/engine/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/flow_engine.py,explicit_path,explicit_path,high,src/prefect/flow_engine.py,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,tests/engine/,explicit_path,explicit_path,high,tests/engine/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/client/,code_span,code_span,medium,src/prefect/client/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,tests/client/,code_span,code_span,medium,tests/client/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/client/,explicit_path,explicit_path,high,src/prefect/client/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,tests/client/,explicit_path,explicit_path,high,tests/client/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/server/,code_span,code_span,medium,src/prefect/server/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,tests/server/,code_span,code_span,medium,tests/server/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/server/,explicit_path,explicit_path,high,src/prefect/server/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,tests/server/,explicit_path,explicit_path,high,tests/server/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/cli/,code_span,code_span,medium,src/prefect/cli/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,tests/cli/,code_span,code_span,medium,tests/cli/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/cli/,explicit_path,explicit_path,high,src/prefect/cli/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,tests/cli/,explicit_path,explicit_path,high,tests/cli/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/settings/,code_span,code_span,medium,src/prefect/settings/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/settings/,explicit_path,explicit_path,high,src/prefect/settings/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/integrations/,code_span,code_span,medium,src/integrations/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/integrations/,explicit_path,explicit_path,high,src/integrations/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,ui/,code_span,code_span,medium,ui/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,ui-v2/,code_span,code_span,medium,ui-v2/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,ui-v2/e2e/,code_span,code_span,medium,ui-v2/e2e/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,ui-v2/e2e/,explicit_path,explicit_path,high,ui-v2/e2e/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,client/,code_span,scope_section:code_span,high,client/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/prefect/,code_span,scope_section:code_span,high,src/prefect/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,src/integrations/,code_span,scope_section:code_span,high,src/integrations/,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,.gitignore,code_span,code_span,low,gitignore,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,pyproject.toml,code_span,code_span,high,pyproject.toml,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,client/pyproject.toml,code_span,code_span,high,client/pyproject.toml,True,valid,,,False,v2
+prefecthq/prefect,AGENTS.md,client/pyproject.toml,explicit_path,explicit_path,high,client/pyproject.toml,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/,code_span,code_span,medium,docs/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/docs.json,code_span,code_span,medium,docs/docs.json,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/docs.json,explicit_path,explicit_path,high,docs/docs.json,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,examples,directory_mention,common_directory_name,medium,examples/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/examples/,code_span,code_span,medium,docs/v3/examples/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,examples/,code_span,code_span,medium,examples/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/examples/,explicit_path,explicit_path,high,docs/v3/examples/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/api-ref/python/,code_span,code_span,medium,docs/v3/api-ref/python/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/api-ref/cli/,code_span,code_span,medium,docs/v3/api-ref/cli/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/api-ref/python/,explicit_path,explicit_path,high,docs/v3/api-ref/python/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/api-ref/cli/,explicit_path,explicit_path,high,docs/v3/api-ref/cli/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/api-ref/rest-api/,code_span,code_span,medium,docs/v3/api-ref/rest-api/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/api-ref/rest-api/,explicit_path,explicit_path,high,docs/v3/api-ref/rest-api/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/api-ref/events/,code_span,code_span,medium,docs/v3/api-ref/events/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/api-ref/events/,explicit_path,explicit_path,high,docs/v3/api-ref/events/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,integrations/prefect-kubernetes/api-ref/,code_span,code_span,medium,docs/integrations/prefect-kubernetes/api-ref/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,integrations/prefect-kubernetes/api-ref/,explicit_path,explicit_path,high,docs/integrations/prefect-kubernetes/api-ref/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,[flows documentation](/v3/concepts/flows),markdown_link,markdown_link,low,v3/concepts/flows,False,ambiguous,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/styles/CustomStyles/WordList.yml,code_span,code_span,medium,docs/styles/CustomStyles/WordList.yml,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/styles/CustomStyles/WordList.yml,explicit_path,explicit_path,high,docs/styles/CustomStyles/WordList.yml,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/v3/,code_span,code_span,medium,docs/v3/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/,code_span,code_span,medium,docs/v3/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/resources/,code_span,code_span,medium,docs/resources/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/v3/,explicit_path,explicit_path,high,docs/v3/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/resources/,explicit_path,explicit_path,high,docs/resources/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/conftest.py,code_span,code_span,medium,docs/conftest.py,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,docs/conftest.py,explicit_path,explicit_path,high,docs/conftest.py,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,snippets/,code_span,code_span,medium,docs/snippets/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/how-to-guides/cloud/,code_span,code_span,medium,docs/v3/how-to-guides/cloud/,True,valid,,,False,v2
+prefecthq/prefect,docs/AGENTS.md,v3/how-to-guides/cloud/,explicit_path,explicit_path,high,docs/v3/how-to-guides/cloud/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,@AGENTS.md,include_directive,include_directive,high,AGENTS.md,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,docs/AGENTS.md,code_span,code_span,medium,docs/AGENTS.md,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,docs/,code_span,code_span,medium,docs/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,docs/AGENTS.md,explicit_path,explicit_path,high,docs/AGENTS.md,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/features/alerting/unified/AGENTS.md,code_span,code_span,medium,public/app/features/alerting/unified/AGENTS.md,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/features/alerting/unified/AGENTS.md,explicit_path,explicit_path,high,public/app/features/alerting/unified/AGENTS.md,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make run,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make build-backend,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg,directory_mention,common_directory_name,medium,pkg/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make test-go-unit,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make test-go-integration,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make lint-go,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make gen-go,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make gen-cue,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make gen-apps,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,apps,directory_mention,common_directory_name,medium,apps/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make swagger-gen,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/services/featuremgmt/,explicit_path,explicit_path,high,pkg/services/featuremgmt/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make gen-feature-toggles,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make i18n-extract,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make update-workspace,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make devenv,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make devenv-down,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make lefthook-install,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/api/,code_span,code_span,medium,pkg/api/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/api/,explicit_path,explicit_path,high,pkg/api/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/services/,code_span,code_span,medium,pkg/services/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/services/,explicit_path,explicit_path,high,pkg/services/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/server/,code_span,code_span,medium,pkg/server/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/server/,explicit_path,explicit_path,high,pkg/server/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/tsdb/,code_span,code_span,medium,pkg/tsdb/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/tsdb/,explicit_path,explicit_path,high,pkg/tsdb/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/plugins/,code_span,code_span,medium,pkg/plugins/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/plugins/,explicit_path,explicit_path,high,pkg/plugins/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/infra/,code_span,code_span,medium,pkg/infra/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/infra/,explicit_path,explicit_path,high,pkg/infra/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/middleware/,code_span,code_span,medium,pkg/middleware/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/middleware/,explicit_path,explicit_path,high,pkg/middleware/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/setting/,code_span,code_span,medium,pkg/setting/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/setting/,explicit_path,explicit_path,high,pkg/setting/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/core/,code_span,code_span,medium,public/app/core/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/core/,explicit_path,explicit_path,high,public/app/core/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/features/,code_span,code_span,medium,public/app/features/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/features/,explicit_path,explicit_path,high,public/app/features/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/plugins/,code_span,code_span,medium,public/app/plugins/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/plugins/,explicit_path,explicit_path,high,public/app/plugins/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/types/,code_span,code_span,medium,public/app/types/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/types/,explicit_path,explicit_path,high,public/app/types/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/store/,code_span,code_span,medium,public/app/store/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,public/app/store/,explicit_path,explicit_path,high,public/app/store/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,apps/dashboard/,code_span,code_span,medium,apps/dashboard/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,apps/folder/,code_span,code_span,medium,apps/folder/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,apps/alerting/,code_span,code_span,medium,apps/alerting/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,apps/dashboard/,explicit_path,explicit_path,high,apps/dashboard/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,apps/folder/,explicit_path,explicit_path,high,apps/folder/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,apps/alerting/,explicit_path,explicit_path,high,apps/alerting/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,kinds/,code_span,code_span,medium,kinds/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/services/featuremgmt/,code_span,code_span,medium,pkg/services/featuremgmt/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,go.work,code_span,code_span,low,go.work,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,conf/defaults.ini,code_span,code_span,medium,conf/defaults.ini,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,conf/defaults.ini,explicit_path,explicit_path,high,conf/defaults.ini,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/services/sqlstore/migrations/,code_span,code_span,medium,pkg/services/sqlstore/migrations/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,pkg/services/sqlstore/migrations/,explicit_path,explicit_path,high,pkg/services/sqlstore/migrations/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,make test-go-integration-postgres,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,.nvmrc,code_span,code_span,low,nvmrc,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,go.mod,code_span,code_span,high,go.mod,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,.yarn/releases/,code_span,code_span,medium,yarn/releases/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,yarn,code_span,code_span,low,yarn/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,.yarn/releases/,explicit_path,explicit_path,high,yarn/releases/,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,go.mod,config_file,known_config_filename,high,go.mod,True,valid,,,False,v2
+grafana/grafana,CLAUDE.md,packages,directory_mention,common_directory_name,medium,packages/,True,valid,,,False,v2
+grafana/grafana,docs/AGENTS.md,docs,directory_mention,common_directory_name,medium,docs/,True,valid,,,False,v2
+grafana/grafana,docs/AGENTS.md,docs/,code_span,code_span,medium,docs/,True,valid,,,False,v2
+grafana/grafana,docs/AGENTS.md,Make sure,command,make_command_to_makefile,medium,Makefile,True,valid,,,False,v2

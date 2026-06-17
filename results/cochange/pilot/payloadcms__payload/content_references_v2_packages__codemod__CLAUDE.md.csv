@@ -1,0 +1,4 @@
+repo_id,instruction_file,reference_type,raw_reference,raw_text,resolved_path,exists_in_head,used_for_scope,extraction_rule,confidence,parser_version
+payloadcms/payload,packages/codemod/CLAUDE.md,code_span,README.md,README.md,README.md,True,False,code_span,low,v2
+payloadcms/payload,packages/codemod/CLAUDE.md,code_span,package.json,package.json,package.json,True,True,code_span,high,v2
+payloadcms/payload,packages/codemod/CLAUDE.md,config_file,package.json,package.json,package.json,True,True,known_config_filename,high,v2

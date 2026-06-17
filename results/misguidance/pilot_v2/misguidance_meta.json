@@ -1,0 +1,27 @@
+{
+  "extraction_mode": "v2",
+  "headline": {
+    "n_references": 736,
+    "n_valid": 401,
+    "n_stale": 322,
+    "n_stale_doc": 9,
+    "n_ambiguous": 0,
+    "n_unresolved": 2,
+    "n_primary_stale": 322,
+    "stale_rate": 0.4375,
+    "n_existed_before": 38,
+    "n_never_existed": 295
+  },
+  "compare_v1": {
+    "n_references": 404,
+    "n_valid": 401,
+    "n_stale": 0,
+    "n_stale_doc": 0,
+    "n_ambiguous": 3,
+    "n_unresolved": 0,
+    "n_primary_stale": 0,
+    "stale_rate": 0.0,
+    "n_existed_before": 0,
+    "n_never_existed": 0
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-06-17T07:51:52.315207+00:00",
+  "n_selected": 20,
+  "ab_disagreements_in_pool": 52,
+  "selection_reason_counts": {
+    "ab_disagreement": 8,
+    "instruction_artifact": 1,
+    "same_commit_cochange": 1,
+    "version_bump_or_release": 1,
+    "boundary_lag_near_window": 1,
+    "no_update_instruction": 1,
+    "no_update_documentation": 1,
+    "no_update_configuration": 1,
+    "nested_instruction_path": 1,
+    "large_monorepo": 1,
+    "rapid_followup_update": 1,
+    "metric_synchronized_case": 1,
+    "metric_not_synchronized_no_update": 1
+  },
+  "failure_mode_counts": {
+    "annotator_criterion_divergence": 8,
+    "instruction_agent_consumed": 2,
+    "false_desync_scope_orthogonal": 2,
+    "false_sync_same_commit_unrelated": 1,
+    "false_sync_version_bump": 1,
+    "false_desync_stale": 1,
+    "boundary_lag": 1,
+    "false_desync_no_update_needed": 1,
+    "monorepo_noise": 1,
+    "false_sync_genesis": 1,
+    "false_sync_coincidental": 1
+  },
+  "family_counts": {
+    "configuration": 15,
+    "instructions": 3,
+    "documentation": 2
+  },
+  "metric_label_counts": {
+    "not_synchronized": 15,
+    "synchronized": 5
+  },
+  "unit_ids": [
+    "aaeefabcb61a",
+    "66897395a5b9",
+    "f57fd7c75b3a",
+    "a6c087c3535d",
+    "7fda69f5754d",
+    "6d4535c0d94a",
+    "abad311c79f9",
+    "b6ce1c603891",
+    "79cc1712d62d",
+    "cc69217b9807",
+    "86fe45ee63cc",
+    "5d73f81395e1",
+    "4161108d5698",
+    "6b27f974dc68",
+    "b7dbf7614bc6",
+    "8619d364856c",
+    "4f004fee3aad",
+    "535804d8002b",
+    "c2f82afc7c43",
+    "6a3446feed5a"
+  ]
+}

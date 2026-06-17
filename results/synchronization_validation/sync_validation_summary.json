@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-06-16T23:47:00.778561+00:00",
+  "total_rows": 100,
+  "annotated_rows": 0,
+  "decisive_rows": 0,
+  "ambiguous_rows": 0,
+  "unannotated_rows": 100,
+  "confusion_matrix": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0
+  },
+  "precision_sync30_vs_manual": null,
+  "false_positive_rate": null,
+  "false_negative_rate": null,
+  "accuracy_decisive": null,
+  "by_artifact_family": [],
+  "by_repo_size_class": [],
+  "manual_sync_type_counts": {},
+  "invalid_annotation_rows": []
+}

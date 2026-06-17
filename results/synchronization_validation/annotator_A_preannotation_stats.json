@@ -1,0 +1,42 @@
+{
+  "annotator": "A_preannotated_v2",
+  "n_annotated": 100,
+  "labels": {
+    "TRUE": 50,
+    "FALSE": 33,
+    "AMBIGUOUS": 17
+  },
+  "by_family": {
+    "AMBIGUOUS": {
+      "configuration": 17,
+      "documentation": 0,
+      "instructions": 0
+    },
+    "FALSE": {
+      "configuration": 0,
+      "documentation": 18,
+      "instructions": 15
+    },
+    "TRUE": {
+      "configuration": 17,
+      "documentation": 17,
+      "instructions": 16
+    }
+  },
+  "decisive_n": 83,
+  "ambiguous_n": 17,
+  "confusion_decisive": {
+    "tp": 50,
+    "fp": 0,
+    "fn": 0,
+    "tn": 33
+  },
+  "precision": 1.0,
+  "recall": 1.0,
+  "specificity": 1.0,
+  "f1": 1.0,
+  "accuracy": 1.0,
+  "metric_sync_rate": 0.5,
+  "human_sync_rate_decisive": 0.6024096385542169,
+  "note": "Single annotator PREANNOTATION; labels mechanically mirror metric_sync_30 except config not_sync\u2192AMBIGUOUS"
+}

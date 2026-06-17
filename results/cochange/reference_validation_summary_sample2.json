@@ -1,0 +1,365 @@
+{
+  "generated_at": "2026-06-16T23:14:44.321384+00:00",
+  "source_csv": "annotation/cochange_reference_validation_sample2.csv",
+  "validation_pending": false,
+  "total_rows": 50,
+  "annotated_rows": 50,
+  "fully_annotated_rows": 50,
+  "unannotated_rows": 0,
+  "thresholds": {
+    "manual_is_reference_correct": 0.85,
+    "manual_resolved_path_correct": 0.8,
+    "manual_should_be_used_for_scope": 0.75
+  },
+  "boolean_precision": {
+    "manual_is_reference_correct": {
+      "annotated_rows": 50,
+      "decisive_rows": 50,
+      "true_count": 50,
+      "false_count": 0,
+      "ambiguous_count": 0,
+      "precision": 1.0
+    },
+    "manual_resolved_path_correct": {
+      "annotated_rows": 50,
+      "decisive_rows": 40,
+      "true_count": 38,
+      "false_count": 2,
+      "ambiguous_count": 10,
+      "precision": 0.95
+    },
+    "manual_should_be_used_for_scope": {
+      "annotated_rows": 50,
+      "decisive_rows": 45,
+      "true_count": 32,
+      "false_count": 13,
+      "ambiguous_count": 5,
+      "precision": 0.7111111111111111
+    }
+  },
+  "threshold_checks": {
+    "manual_is_reference_correct": {
+      "threshold": 0.85,
+      "observed": 1.0,
+      "passes": true
+    },
+    "manual_resolved_path_correct": {
+      "threshold": 0.8,
+      "observed": 0.95,
+      "passes": true
+    },
+    "manual_should_be_used_for_scope": {
+      "threshold": 0.75,
+      "observed": 0.7111111111111111,
+      "passes": false
+    }
+  },
+  "content_ref_acceptable_for_paper": false,
+  "content_ref_status": "exploratory_only",
+  "precision_by_extraction_rule": {
+    "code_span": {
+      "n_rows": 18,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.875
+      }
+    },
+    "common_directory_name": {
+      "n_rows": 2,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 1.0
+      }
+    },
+    "explicit_path": {
+      "n_rows": 15,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.9285714285714286
+      }
+    },
+    "known_config_filename": {
+      "n_rows": 1,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 1.0
+      }
+    },
+    "make_command_to_makefile": {
+      "n_rows": 6,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": null,
+        "manual_should_be_used_for_scope": 0.0
+      }
+    },
+    "markdown_link": {
+      "n_rows": 6,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 0.6,
+        "manual_should_be_used_for_scope": 0.0
+      }
+    },
+    "scope_section:code_span": {
+      "n_rows": 2,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 1.0
+      }
+    }
+  },
+  "precision_by_confidence": {
+    "high": {
+      "n_rows": 18,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.9411764705882353
+      }
+    },
+    "low": {
+      "n_rows": 4,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.3333333333333333
+      }
+    },
+    "medium": {
+      "n_rows": 28,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 0.9090909090909091,
+        "manual_should_be_used_for_scope": 0.6
+      }
+    }
+  },
+  "manual_reference_category_counts": {
+    "build_command": 6,
+    "config_file": 6,
+    "directory": 26,
+    "documentation_reference": 7,
+    "include_pointer": 2,
+    "path": 3
+  },
+  "false_positives": [],
+  "ambiguous_cases": [
+    {
+      "repo_id": "dagster-io/dagster",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "make ruff",
+      "resolved_path": "Makefile",
+      "extraction_rule": "make_command_to_makefile",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "FALSE",
+      "manual_reference_category": "build_command",
+      "manual_notes": "make target resolved to Makefile by heuristic; Makefile presence and target location unverified"
+    },
+    {
+      "repo_id": "grafana/grafana",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "apps/folder/",
+      "resolved_path": "apps/folder/",
+      "extraction_rule": "explicit_path",
+      "confidence": "high",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "TRUE",
+      "manual_reference_category": "directory",
+      "manual_notes": "'folder' may be a literal app directory or a placeholder; existence unverified -- REVIEW"
+    },
+    {
+      "repo_id": "electron/electron",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "filenames.gni",
+      "resolved_path": "filenames.gni",
+      "extraction_rule": "code_span",
+      "confidence": "low",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "TRUE",
+      "manual_reference_category": "config_file",
+      "manual_notes": "bare GN build-include filename; root location/existence unverified; low confidence -- REVIEW"
+    },
+    {
+      "repo_id": "grafana/grafana",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "docs/",
+      "resolved_path": "docs/",
+      "extraction_rule": "code_span",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "TRUE",
+      "manual_should_be_used_for_scope": "AMBIGUOUS",
+      "manual_reference_category": "directory",
+      "manual_notes": "root CLAUDE.md referencing docs/; could be a descriptive listing rather than governed scope -- REVIEW"
+    },
+    {
+      "repo_id": "prefecthq/prefect",
+      "instruction_file": "AGENTS.md",
+      "raw_reference": "docs/AGENTS.md",
+      "resolved_path": "docs/AGENTS.md",
+      "extraction_rule": "explicit_path",
+      "confidence": "high",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "TRUE",
+      "manual_should_be_used_for_scope": "AMBIGUOUS",
+      "manual_reference_category": "include_pointer",
+      "manual_notes": "reference to a nested AGENTS.md; unclear if active include/scope pointer vs plain mention -- REVIEW"
+    },
+    {
+      "repo_id": "apache/airflow",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "[`.apache-magpie.lock`](.apache-magpie.lock)",
+      "resolved_path": "apache-magpie.lock",
+      "extraction_rule": "markdown_link",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "FALSE",
+      "manual_should_be_used_for_scope": "AMBIGUOUS",
+      "manual_reference_category": "config_file",
+      "manual_notes": "resolver dropped the leading dot; real file is the dotfile .apache-magpie.lock; lock-file scope is borderline -- REVIEW"
+    },
+    {
+      "repo_id": "grafana/grafana",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "make devenv",
+      "resolved_path": "Makefile",
+      "extraction_rule": "make_command_to_makefile",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "FALSE",
+      "manual_reference_category": "build_command",
+      "manual_notes": "make target resolved to Makefile by heuristic; target location unverified"
+    },
+    {
+      "repo_id": "cheat/cheat",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "make check",
+      "resolved_path": "Makefile",
+      "extraction_rule": "make_command_to_makefile",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "FALSE",
+      "manual_reference_category": "build_command",
+      "manual_notes": "make target heuristic to Makefile; 'check' may be lint or test"
+    },
+    {
+      "repo_id": "cheat/cheat",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "make build",
+      "resolved_path": "Makefile",
+      "extraction_rule": "make_command_to_makefile",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "FALSE",
+      "manual_reference_category": "build_command",
+      "manual_notes": "make target resolved to Makefile by heuristic; target location unverified"
+    },
+    {
+      "repo_id": "payloadcms/payload",
+      "instruction_file": "packages/codemod/CLAUDE.md",
+      "raw_reference": "README.md",
+      "resolved_path": "README.md",
+      "extraction_rule": "code_span",
+      "confidence": "low",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "FALSE",
+      "manual_reference_category": "documentation_reference",
+      "manual_notes": "bare README.md in packages/codemod/CLAUDE.md; could be local or root README; low confidence -- REVIEW"
+    },
+    {
+      "repo_id": "grafana/grafana",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "make update-workspace",
+      "resolved_path": "Makefile",
+      "extraction_rule": "make_command_to_makefile",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "FALSE",
+      "manual_reference_category": "build_command",
+      "manual_notes": "make target resolved to Makefile by heuristic; target location unverified"
+    },
+    {
+      "repo_id": "dagster-io/dagster",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "make sanity_check",
+      "resolved_path": "Makefile",
+      "extraction_rule": "make_command_to_makefile",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "FALSE",
+      "manual_reference_category": "build_command",
+      "manual_notes": "make target heuristic to Makefile; 'sanity_check' is validation and may be test-like"
+    },
+    {
+      "repo_id": "prefecthq/prefect",
+      "instruction_file": "docs/AGENTS.md",
+      "raw_reference": "[flows documentation](/v3/concepts/flows)",
+      "resolved_path": "v3/concepts/flows",
+      "extraction_rule": "markdown_link",
+      "confidence": "low",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "FALSE",
+      "manual_reference_category": "documentation_reference",
+      "manual_notes": "doc-site route not a repo file path; missing docs/ prefix and extension; low confidence -- REVIEW"
+    },
+    {
+      "repo_id": "apache/airflow",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "uv.lock",
+      "resolved_path": "uv.lock",
+      "extraction_rule": "code_span",
+      "confidence": "low",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "TRUE",
+      "manual_should_be_used_for_scope": "AMBIGUOUS",
+      "manual_reference_category": "config_file",
+      "manual_notes": "lock file; generated artifact; governance scope is borderline; low confidence -- REVIEW"
+    },
+    {
+      "repo_id": "apache/airflow",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "[`.github/instructions/code-review.instructions.md`](.github/instructions/code-review.instructions.md)",
+      "resolved_path": "github/instructions/code-review.instructions.md",
+      "extraction_rule": "markdown_link",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "FALSE",
+      "manual_should_be_used_for_scope": "AMBIGUOUS",
+      "manual_reference_category": "include_pointer",
+      "manual_notes": "resolver dropped the leading dot; real path is .github/instructions/...; unclear include-pointer vs doc link -- REVIEW"
+    }
+  ],
+  "accepted_boolean_values": [
+    "AMBIGUOUS",
+    "FALSE",
+    "TRUE"
+  ],
+  "accepted_categories": [
+    "ambiguous",
+    "build_command",
+    "config_file",
+    "directory",
+    "documentation_reference",
+    "false_positive",
+    "include_pointer",
+    "path",
+    "test_command"
+  ]
+}

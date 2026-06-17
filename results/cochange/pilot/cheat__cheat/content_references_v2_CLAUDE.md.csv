@@ -1,0 +1,30 @@
+repo_id,instruction_file,reference_type,raw_reference,raw_text,resolved_path,exists_in_head,used_for_scope,extraction_rule,confidence,parser_version
+cheat/cheat,CLAUDE.md,command,make build,make build,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,command,make build-release,make build-release,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,command,make install,make install,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,command,make test,make test,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,directory_mention,internal,internal,internal/,True,True,common_directory_name,medium,v2
+cheat/cheat,CLAUDE.md,command,make coverage,make coverage,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,command,make lint,make lint,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,command,make vet,make vet,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,command,make fmt,make fmt,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,command,make check,make check,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,command,make setup,make setup,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,command,make vendor-update,make vendor-update,Makefile,True,True,make_command_to_makefile,medium,v2
+cheat/cheat,CLAUDE.md,code_span,internal/config,internal/config,internal/config/,True,True,code_span,medium,v2
+cheat/cheat,CLAUDE.md,explicit_path,internal/config,internal/config,internal/config/,True,True,explicit_path,high,v2
+cheat/cheat,CLAUDE.md,code_span,internal/cheatpath,internal/cheatpath,internal/cheatpath/,True,True,code_span,medium,v2
+cheat/cheat,CLAUDE.md,explicit_path,internal/cheatpath,internal/cheatpath,internal/cheatpath/,True,True,explicit_path,high,v2
+cheat/cheat,CLAUDE.md,code_span,internal/sheet,internal/sheet,internal/sheet/,True,True,code_span,medium,v2
+cheat/cheat,CLAUDE.md,explicit_path,internal/sheet,internal/sheet,internal/sheet/,True,True,explicit_path,high,v2
+cheat/cheat,CLAUDE.md,code_span,internal/sheets,internal/sheets,internal/sheets/,True,True,code_span,medium,v2
+cheat/cheat,CLAUDE.md,explicit_path,internal/sheets,internal/sheets,internal/sheets/,True,True,explicit_path,high,v2
+cheat/cheat,CLAUDE.md,code_span,internal/display,internal/display,internal/display/,True,True,code_span,medium,v2
+cheat/cheat,CLAUDE.md,explicit_path,internal/display,internal/display,internal/display/,True,True,explicit_path,high,v2
+cheat/cheat,CLAUDE.md,code_span,internal/installer,internal/installer,internal/installer/,True,True,code_span,medium,v2
+cheat/cheat,CLAUDE.md,explicit_path,internal/installer,internal/installer,internal/installer/,True,True,explicit_path,high,v2
+cheat/cheat,CLAUDE.md,code_span,internal/repo,internal/repo,internal/repo/,True,True,code_span,medium,v2
+cheat/cheat,CLAUDE.md,explicit_path,internal/repo,internal/repo,internal/repo/,True,True,explicit_path,high,v2
+cheat/cheat,CLAUDE.md,code_span,internal/config/paths.go,internal/config/paths.go,internal/config/paths.go,True,True,code_span,medium,v2
+cheat/cheat,CLAUDE.md,explicit_path,internal/config/paths.go,internal/config/paths.go,internal/config/paths.go,True,True,explicit_path,high,v2
+cheat/cheat,CLAUDE.md,code_span,mocks,mocks,mocks/,True,False,code_span,low,v2

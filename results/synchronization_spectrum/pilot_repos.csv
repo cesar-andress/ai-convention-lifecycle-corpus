@@ -1,0 +1,26 @@
+repo_id,cohort,seed_pool,reason_selected,n_instruction_files_head,has_root_instruction,local_clone_available
+cheat/cheat,cochange_pilot,general_oss,small single-root CLAUDE.md; code-heavy CLI tool,1,True,True
+electron/electron,cochange_pilot,general_oss,small repo with root and nested docs/CLAUDE.md,2,True,True
+dagster-io/dagster,cochange_pilot,ai_adopter,medium artifact count but large monorepo history; root+nested CLAUDE.md,7,True,True
+apache/airflow,cochange_pilot,ai_adopter,monorepo with multiple AGENTS/CLAUDE paths; code-heavy OSS,18,True,True
+BerriAI/litellm,cochange_pilot,general_oss,medium repo with multiple root and nested instruction files,8,True,True
+payloadcms/payload,cochange_pilot,general_oss,documentation- and package-heavy monorepo,5,True,True
+prefecthq/prefect,cochange_pilot,ai_adopter,medium-large Python monorepo with multiple instruction paths,41,True,True
+grafana/grafana,cochange_pilot,ai_adopter,large code-heavy frontend/backend monorepo,8,True,True
+All-Hands-AI/OpenHands,lifecycle_expansion,ai_adopter,stratified expansion (ai_adopter),1,True,True
+ChromeDevTools/chrome-devtools-mcp,lifecycle_expansion,general_oss,stratified expansion (general_oss),7,True,True
+anthropics/claude-code,lifecycle_expansion,ai_adopter,stratified expansion (ai_adopter),10,False,True
+Egonex-AI/Understand-Anything,lifecycle_expansion,general_oss,stratified expansion (general_oss),9,True,True
+astral-sh/ruff,lifecycle_expansion,ai_adopter,stratified expansion (ai_adopter),2,True,True
+HKUDS/CLI-Anything,lifecycle_expansion,general_oss,stratified expansion (general_oss),127,False,True
+biomejs/biome,lifecycle_expansion,ai_adopter,stratified expansion (ai_adopter),2,True,True
+Hmbown/CodeWhale,lifecycle_expansion,general_oss,stratified expansion (general_oss),12,True,True
+browser-use/browser-use,lifecycle_expansion,ai_adopter,stratified expansion (ai_adopter),7,True,True
+JuliusBrussee/caveman,lifecycle_expansion,general_oss,stratified expansion (general_oss),13,True,True
+chroma-core/chroma,lifecycle_expansion,ai_adopter,stratified expansion (ai_adopter),4,True,True
+Leonxlnx/taste-skill,lifecycle_expansion,general_oss,stratified expansion (general_oss),13,False,True
+crewAIInc/crewAI,lifecycle_expansion,ai_adopter,stratified expansion (ai_adopter),4,False,True
+NousResearch/hermes-agent,lifecycle_expansion,general_oss,stratified expansion (general_oss),172,True,True
+e2b-dev/E2B,lifecycle_expansion,ai_adopter,stratified expansion (ai_adopter),3,True,True
+Yeachan-Heo/oh-my-claudecode,lifecycle_expansion,general_oss,stratified expansion (general_oss),52,True,True
+facebook/react,lifecycle_expansion,ai_adopter,stratified expansion (ai_adopter),9,True,True

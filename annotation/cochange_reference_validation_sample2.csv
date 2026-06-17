@@ -1,0 +1,51 @@
+repo_id,instruction_file,raw_reference,resolved_path,extraction_rule,confidence,manual_is_reference_correct,manual_resolved_path_correct,manual_should_be_used_for_scope,manual_reference_category,manual_notes,annotator,annotated_at
+dagster-io/dagster,CLAUDE.md,make ruff,Makefile,make_command_to_makefile,medium,TRUE,AMBIGUOUS,FALSE,build_command,"make target resolved to Makefile by heuristic; Makefile presence and target location unverified",sim_annotator_claude,2026-06-17
+payloadcms/payload,CLAUDE.md,packages/next,packages/next/,code_span,medium,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,apps/folder/,apps/folder/,explicit_path,high,TRUE,AMBIGUOUS,TRUE,directory,"'folder' may be a literal app directory or a placeholder; existence unverified -- REVIEW",sim_annotator_claude,2026-06-17
+electron/electron,CLAUDE.md,patches/config.json,patches/config.json,code_span,medium,TRUE,TRUE,TRUE,config_file,patches subsystem config file,sim_annotator_claude,2026-06-17
+electron/electron,CLAUDE.md,filenames.gni,filenames.gni,code_span,low,TRUE,AMBIGUOUS,TRUE,config_file,"bare GN build-include filename; root location/existence unverified; low confidence -- REVIEW",sim_annotator_claude,2026-06-17
+dagster-io/dagster,CLAUDE.md,python_modules/dagster/dagster_tests/,python_modules/dagster/dagster_tests/,explicit_path,high,TRUE,TRUE,TRUE,directory,explicit test directory annotated as directory scope,sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,airflow-core/src/airflow/utils/db_cleanup.py,airflow-core/src/airflow/utils/db_cleanup.py,code_span,medium,TRUE,TRUE,TRUE,path,explicit source file,sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,docs/,docs/,code_span,medium,TRUE,TRUE,AMBIGUOUS,directory,"root CLAUDE.md referencing docs/; could be a descriptive listing rather than governed scope -- REVIEW",sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,pkg/infra/,pkg/infra/,explicit_path,high,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+prefecthq/prefect,AGENTS.md,src/prefect/,src/prefect/,code_span,medium,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,pkg/infra/,pkg/infra/,code_span,medium,TRUE,TRUE,TRUE,directory,duplicate of pkg/infra via a different extraction rule,sim_annotator_claude,2026-06-17
+dagster-io/dagster,CLAUDE.md,python_modules,python_modules/,common_directory_name,medium,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+prefecthq/prefect,AGENTS.md,src/prefect/settings/,src/prefect/settings/,code_span,medium,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,kinds/,kinds/,code_span,medium,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,airflow-core/newsfragments/,airflow-core/newsfragments/,explicit_path,high,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+prefecthq/prefect,AGENTS.md,docs/AGENTS.md,docs/AGENTS.md,explicit_path,high,TRUE,TRUE,AMBIGUOUS,include_pointer,"reference to a nested AGENTS.md; unclear if active include/scope pointer vs plain mention -- REVIEW",sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,[`.apache-magpie.lock`](.apache-magpie.lock),apache-magpie.lock,markdown_link,medium,TRUE,FALSE,AMBIGUOUS,config_file,"resolver dropped the leading dot; real file is the dotfile .apache-magpie.lock; lock-file scope is borderline -- REVIEW",sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,make devenv,Makefile,make_command_to_makefile,medium,TRUE,AMBIGUOUS,FALSE,build_command,"make target resolved to Makefile by heuristic; target location unverified",sim_annotator_claude,2026-06-17
+cheat/cheat,CLAUDE.md,make check,Makefile,make_command_to_makefile,medium,TRUE,AMBIGUOUS,FALSE,build_command,"make target heuristic to Makefile; 'check' may be lint or test",sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,[`contributing-docs/19_execution_api_versioning.rst`](contributing-docs/19_execution_api_versioning.rst),contributing-docs/19_execution_api_versioning.rst,markdown_link,medium,TRUE,TRUE,FALSE,documentation_reference,documentation .rst link,sim_annotator_claude,2026-06-17
+electron/electron,docs/CLAUDE.md,docs/api-history.schema.json,docs/api-history.schema.json,explicit_path,high,TRUE,TRUE,TRUE,config_file,api-history JSON schema treated as config artifact,sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,go.mod,go.mod,known_config_filename,high,TRUE,TRUE,TRUE,config_file,project Go module manifest,sim_annotator_claude,2026-06-17
+prefecthq/prefect,AGENTS.md,src/prefect/,src/prefect/,explicit_path,high,TRUE,TRUE,TRUE,directory,duplicate of src/prefect via a different extraction rule,sim_annotator_claude,2026-06-17
+payloadcms/payload,CLAUDE.md,templates/,templates/,code_span,medium,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,pkg/plugins/,pkg/plugins/,code_span,medium,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+prefecthq/prefect,docs/AGENTS.md,examples/,examples/,code_span,medium,TRUE,TRUE,TRUE,directory,resolved to root examples/ which exists in repo,sim_annotator_claude,2026-06-17
+dagster-io/dagster,CLAUDE.md,python_modules/libraries/,python_modules/libraries/,code_span,medium,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+BerriAI/litellm,CLAUDE.md,litellm/proxy/proxy_cli.py,litellm/proxy/proxy_cli.py,explicit_path,high,TRUE,TRUE,TRUE,path,explicit source file,sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,contributing-docs/05_pull_requests.rst,contributing-docs/05_pull_requests.rst,explicit_path,high,TRUE,TRUE,FALSE,documentation_reference,documentation .rst file though extracted as explicit_path; category overrides scope,sim_annotator_claude,2026-06-17
+cheat/cheat,CLAUDE.md,internal/cheatpath,internal/cheatpath/,explicit_path,high,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,[`airflow-core/docs/security/jwt_token_authentication.rst`](airflow-core/docs/security/jwt_token_authentication.rst),airflow-core/docs/security/jwt_token_authentication.rst,markdown_link,medium,TRUE,TRUE,FALSE,documentation_reference,documentation .rst link,sim_annotator_claude,2026-06-17
+dagster-io/dagster,docs/CLAUDE.md,docs,docs/,common_directory_name,medium,TRUE,TRUE,TRUE,directory,docs/CLAUDE.md governing its own docs/ directory,sim_annotator_claude,2026-06-17
+cheat/cheat,CLAUDE.md,make build,Makefile,make_command_to_makefile,medium,TRUE,AMBIGUOUS,FALSE,build_command,"make target resolved to Makefile by heuristic; target location unverified",sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,chart/,chart/,scope_section:code_span,high,TRUE,TRUE,TRUE,directory,directory drawn from an explicit scope section,sim_annotator_claude,2026-06-17
+payloadcms/payload,packages/codemod/CLAUDE.md,README.md,README.md,code_span,low,TRUE,AMBIGUOUS,FALSE,documentation_reference,"bare README.md in packages/codemod/CLAUDE.md; could be local or root README; low confidence -- REVIEW",sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,make update-workspace,Makefile,make_command_to_makefile,medium,TRUE,AMBIGUOUS,FALSE,build_command,"make target resolved to Makefile by heuristic; target location unverified",sim_annotator_claude,2026-06-17
+electron/electron,docs/CLAUDE.md,docs/breaking-changes.md,docs/breaking-changes.md,code_span,medium,TRUE,TRUE,FALSE,documentation_reference,documentation markdown file,sim_annotator_claude,2026-06-17
+prefecthq/prefect,docs/AGENTS.md,v3/api-ref/rest-api/,docs/v3/api-ref/rest-api/,explicit_path,high,TRUE,TRUE,TRUE,directory,relative path correctly prefixed with docs/; docs subdirectory,sim_annotator_claude,2026-06-17
+dagster-io/dagster,CLAUDE.md,make sanity_check,Makefile,make_command_to_makefile,medium,TRUE,AMBIGUOUS,FALSE,build_command,"make target heuristic to Makefile; 'sanity_check' is validation and may be test-like",sim_annotator_claude,2026-06-17
+prefecthq/prefect,docs/AGENTS.md,docs/resources/,docs/resources/,explicit_path,high,TRUE,TRUE,TRUE,directory,docs resource directory governed by docs AGENTS.md,sim_annotator_claude,2026-06-17
+prefecthq/prefect,AGENTS.md,tests/,tests/,code_span,medium,TRUE,TRUE,TRUE,directory,explicit test directory annotated as directory scope,sim_annotator_claude,2026-06-17
+prefecthq/prefect,docs/AGENTS.md,[flows documentation](/v3/concepts/flows),v3/concepts/flows,markdown_link,low,TRUE,AMBIGUOUS,FALSE,documentation_reference,"doc-site route not a repo file path; missing docs/ prefix and extension; low confidence -- REVIEW",sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,dev/breeze/src/airflow_breeze/utils/selective_checks.py,dev/breeze/src/airflow_breeze/utils/selective_checks.py,code_span,medium,TRUE,TRUE,TRUE,path,explicit source file,sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,uv.lock,uv.lock,code_span,low,TRUE,TRUE,AMBIGUOUS,config_file,"lock file; generated artifact; governance scope is borderline; low confidence -- REVIEW",sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,[ADR 0017](dev/breeze/doc/adr/0017-use-uvx-to-run-breeze-from-local-sources.md),dev/breeze/doc/adr/0017-use-uvx-to-run-breeze-from-local-sources.md,markdown_link,medium,TRUE,TRUE,FALSE,documentation_reference,ADR documentation link,sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,apps/alerting/,apps/alerting/,explicit_path,high,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+cheat/cheat,CLAUDE.md,internal/repo,internal/repo/,explicit_path,high,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+grafana/grafana,CLAUDE.md,pkg/middleware/,pkg/middleware/,explicit_path,high,TRUE,TRUE,TRUE,directory,,sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,[`.github/instructions/code-review.instructions.md`](.github/instructions/code-review.instructions.md),github/instructions/code-review.instructions.md,markdown_link,medium,TRUE,FALSE,AMBIGUOUS,include_pointer,"resolver dropped the leading dot; real path is .github/instructions/...; unclear include-pointer vs doc link -- REVIEW",sim_annotator_claude,2026-06-17
+apache/airflow,CLAUDE.md,scripts/,scripts/,scope_section:code_span,high,TRUE,TRUE,TRUE,directory,directory drawn from an explicit scope section,sim_annotator_claude,2026-06-17

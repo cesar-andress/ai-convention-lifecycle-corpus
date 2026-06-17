@@ -1,0 +1,84 @@
+{
+  "generated_at": "2026-06-17T07:37:01.120312+00:00",
+  "total_units": 100,
+  "paired_annotated_units": 100,
+  "raw_agreement": 0.48,
+  "cohens_kappa_3class": 0.06491638194569326,
+  "decisive_paired_units": 70,
+  "decisive_raw_agreement": 0.6285714285714286,
+  "cohens_kappa_decisive": 0.0,
+  "disagreement_count": 52,
+  "disagreement_table": [
+    {
+      "A_label": "AMBIGUOUS",
+      "B_label": "AMBIGUOUS",
+      "count": 4
+    },
+    {
+      "A_label": "AMBIGUOUS",
+      "B_label": "TRUE",
+      "count": 13
+    },
+    {
+      "A_label": "False",
+      "B_label": "AMBIGUOUS",
+      "count": 7
+    },
+    {
+      "A_label": "False",
+      "B_label": "TRUE",
+      "count": 26
+    },
+    {
+      "A_label": "True",
+      "B_label": "AMBIGUOUS",
+      "count": 6
+    },
+    {
+      "A_label": "True",
+      "B_label": "TRUE",
+      "count": 44
+    }
+  ],
+  "by_artifact_family": [
+    {
+      "artifact_family": "configuration",
+      "paired_rows": 34,
+      "raw_agreement": 0.6176470588235294,
+      "kappa_3class": 0.23529411764705888
+    },
+    {
+      "artifact_family": "documentation",
+      "paired_rows": 35,
+      "raw_agreement": 0.45714285714285713,
+      "kappa_3class": 0.023494860499265767
+    },
+    {
+      "artifact_family": "instructions",
+      "paired_rows": 31,
+      "raw_agreement": 0.3548387096774194,
+      "kappa_3class": 0.008000000000000096
+    }
+  ],
+  "by_repo_size_class": [
+    {
+      "repo_size_class": "large",
+      "paired_rows": 37,
+      "raw_agreement": 0.4594594594594595,
+      "kappa_3class": -0.04964539007092187
+    },
+    {
+      "repo_size_class": "medium",
+      "paired_rows": 32,
+      "raw_agreement": 0.53125,
+      "kappa_3class": 0.21568627450980393
+    },
+    {
+      "repo_size_class": "small",
+      "paired_rows": 31,
+      "raw_agreement": 0.45161290322580644,
+      "kappa_3class": 0.01679104477611934
+    }
+  ],
+  "low_confidence_unit_count": 27
+}

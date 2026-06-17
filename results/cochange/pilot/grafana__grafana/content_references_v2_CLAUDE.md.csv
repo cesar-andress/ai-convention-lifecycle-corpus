@@ -1,0 +1,73 @@
+repo_id,instruction_file,reference_type,raw_reference,raw_text,resolved_path,exists_in_head,used_for_scope,extraction_rule,confidence,parser_version
+grafana/grafana,CLAUDE.md,include_directive,@AGENTS.md,@AGENTS.md,AGENTS.md,True,True,include_directive,high,v2
+grafana/grafana,CLAUDE.md,code_span,docs/AGENTS.md,docs/AGENTS.md,docs/AGENTS.md,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,code_span,docs/,docs/,docs/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,docs/AGENTS.md,docs/AGENTS.md,docs/AGENTS.md,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,directory_mention,docs,docs,docs/,True,True,common_directory_name,medium,v2
+grafana/grafana,CLAUDE.md,code_span,public/app/features/alerting/unified/AGENTS.md,public/app/features/alerting/unified/AGENTS.md,public/app/features/alerting/unified/AGENTS.md,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,public/app/features/alerting/unified/AGENTS.md,public/app/features/alerting/unified/AGENTS.md,public/app/features/alerting/unified/AGENTS.md,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,command,make run,make run,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make build-backend,make build-backend,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,directory_mention,pkg,pkg,pkg/,True,True,common_directory_name,medium,v2
+grafana/grafana,CLAUDE.md,command,make test-go-unit,make test-go-unit,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make test-go-integration,make test-go-integration,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make lint-go,make lint-go,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make gen-go,make gen-go,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make gen-cue,make gen-cue,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make gen-apps,make gen-apps,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,directory_mention,apps,apps,apps/,True,True,common_directory_name,medium,v2
+grafana/grafana,CLAUDE.md,command,make swagger-gen,make swagger-gen,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,pkg/services/featuremgmt/,pkg/services/featuremgmt/,pkg/services/featuremgmt/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,command,make gen-feature-toggles,make gen-feature-toggles,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make i18n-extract,make i18n-extract,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make update-workspace,make update-workspace,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make devenv,make devenv,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make devenv-down,make devenv-down,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,command,make lefthook-install,make lefthook-install,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,code_span,pkg/api/,pkg/api/,pkg/api/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,pkg/api/,pkg/api/,pkg/api/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,pkg/services/,pkg/services/,pkg/services/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,pkg/services/,pkg/services/,pkg/services/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,pkg/server/,pkg/server/,pkg/server/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,pkg/server/,pkg/server/,pkg/server/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,pkg/tsdb/,pkg/tsdb/,pkg/tsdb/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,pkg/tsdb/,pkg/tsdb/,pkg/tsdb/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,pkg/plugins/,pkg/plugins/,pkg/plugins/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,pkg/plugins/,pkg/plugins/,pkg/plugins/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,pkg/infra/,pkg/infra/,pkg/infra/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,pkg/infra/,pkg/infra/,pkg/infra/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,pkg/middleware/,pkg/middleware/,pkg/middleware/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,pkg/middleware/,pkg/middleware/,pkg/middleware/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,pkg/setting/,pkg/setting/,pkg/setting/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,pkg/setting/,pkg/setting/,pkg/setting/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,public/app/core/,public/app/core/,public/app/core/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,public/app/core/,public/app/core/,public/app/core/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,public/app/features/,public/app/features/,public/app/features/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,public/app/features/,public/app/features/,public/app/features/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,public/app/plugins/,public/app/plugins/,public/app/plugins/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,public/app/plugins/,public/app/plugins/,public/app/plugins/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,public/app/types/,public/app/types/,public/app/types/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,public/app/types/,public/app/types/,public/app/types/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,public/app/store/,public/app/store/,public/app/store/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,public/app/store/,public/app/store/,public/app/store/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,apps/dashboard/,apps/dashboard/,apps/dashboard/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,code_span,apps/folder/,apps/folder/,apps/folder/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,code_span,apps/alerting/,apps/alerting/,apps/alerting/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,apps/dashboard/,apps/dashboard/,apps/dashboard/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,explicit_path,apps/folder/,apps/folder/,apps/folder/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,explicit_path,apps/alerting/,apps/alerting/,apps/alerting/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,kinds/,kinds/,kinds/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,code_span,pkg/services/featuremgmt/,pkg/services/featuremgmt/,pkg/services/featuremgmt/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,code_span,go.work,go.work,go.work,True,False,code_span,low,v2
+grafana/grafana,CLAUDE.md,code_span,conf/defaults.ini,conf/defaults.ini,conf/defaults.ini,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,conf/defaults.ini,conf/defaults.ini,conf/defaults.ini,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,code_span,pkg/services/sqlstore/migrations/,pkg/services/sqlstore/migrations/,pkg/services/sqlstore/migrations/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,explicit_path,pkg/services/sqlstore/migrations/,pkg/services/sqlstore/migrations/,pkg/services/sqlstore/migrations/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,command,make test-go-integration-postgres,make test-go-integration-postgres,Makefile,True,True,make_command_to_makefile,medium,v2
+grafana/grafana,CLAUDE.md,code_span,.nvmrc,.nvmrc,nvmrc,True,False,code_span,low,v2
+grafana/grafana,CLAUDE.md,code_span,go.mod,go.mod,go.mod,True,True,code_span,high,v2
+grafana/grafana,CLAUDE.md,code_span,.yarn/releases/,.yarn/releases/,yarn/releases/,True,True,code_span,medium,v2
+grafana/grafana,CLAUDE.md,code_span,yarn,yarn,yarn/,True,False,code_span,low,v2
+grafana/grafana,CLAUDE.md,explicit_path,.yarn/releases/,.yarn/releases/,yarn/releases/,True,True,explicit_path,high,v2
+grafana/grafana,CLAUDE.md,config_file,go.mod,go.mod,go.mod,True,True,known_config_filename,high,v2
+grafana/grafana,CLAUDE.md,directory_mention,packages,packages,packages/,True,True,common_directory_name,medium,v2

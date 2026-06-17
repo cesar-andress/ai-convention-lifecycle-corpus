@@ -1,0 +1,288 @@
+candidate_id,repo_id,instruction_file,extracted_reference,resolved_path,extraction_rule,confidence,current_status,historical_existence,misguidance_category,resolution_status,first_seen_commit,first_seen_date,last_seen_commit,last_seen_date,deleted_commit,deleted_date,path_lifetime_days,history_path_used,history_quality,rename_from,rename_to,auto_drift_category,heuristic_likely_drift,heuristic_likely_artifact,section_heading,context_line_number,context_excerpt
+DC001,cheat/cheat,CLAUDE.md,./internal/package_name,internal/package_name,explicit_path,medium,stale,existed_before,stale_path,not_in_head,,,,,,,,,failed,,,unknown,no,no,Run a single test,26,"  21| # Run all tests
+  22| make test
+  23| go test ./...
+  24| 
+  25| # Run a single test
+  26| go test -run TestFunctionName ./internal/package_name
+  27| 
+  28| # Generate test coverage report
+  29| make coverage
+  30| 
+  31| # Run linter (revive)"
+DC002,cheat/cheat,CLAUDE.md,.cheat,cheat,code_span,medium,stale,existed_before,stale_path,not_in_head,d10290541d6868f5abc402100b821d97968e64f8,2019-08-03,e5114a3e7665e05d6e50306d00429f1607e7cda9,2019-10-20,e5114a3e7665e05d6e50306d00429f1607e7cda9,2019-10-20,78,cheat,reliable,,,unknown,yes,no,Install cheat to your PATH,15,"  10| make build
+  11| 
+  12| # Build release binaries for all platforms
+  13| make build-release
+  14| 
+  15| # Install cheat to your PATH
+  16| make install
+  17| ```
+  18| 
+  19| ### Testing and Quality Checks
+  20| ```bash"
+DC003,electron/electron,CLAUDE.md,patches/chromium/*.patch,patches/chromium/*.patch,explicit_path,medium,stale,existed_before,stale_path,not_in_head,5d2ab4d1fc4686628e2c1fb9e41dca33bfd89718,2026-06-10,d96cfe6d5c368f602dab2e3709925fe81959e1d9,2026-06-11,c6312c9b1781fd5d654e4e3ddcdbd5b5367596f6,2026-06-10,0,patches/chromium/*.patch,uncertain,,,unknown,no,yes,Find which patch affects a file,257," 252| 
+ 253| # Look for Chromium CL reference in commit
+ 254| git log -1 {commit_sha}  # Find ""Reviewed-on:"" line
+ 255| 
+ 256| # Find which patch affects a file
+ 257| grep -l ""filename.cc"" patches/chromium/*.patch
+ 258| ```
+ 259| 
+ 260| ## CI/CD
+ 261| 
+ 262| GitHub Actions workflows in `.github/workflows/`:"
+DC004,electron/electron,docs/CLAUDE.md,docs/api/file.md,docs/api/file.md,explicit_path,medium,doc_reference,existed_before,stale_doc_reference,not_in_head,,,,,,,,,failed,,,documentation_reference,no,no,Finding when an API was added,29,"  24| * `arg` type - Description.
+  25| ````
+  26| 
+  27| ### Finding when an API was added
+  28| 
+  29| - `git log --all --reverse --oneline -S ""methodName"" -- docs/api/file.md` — find first commit adding a method name
+  30| - `git log --reverse -L :FunctionName:path/to/source.cc` — trace C++ implementation history
+  31| - `git log --grep=""keyword"" --oneline` — find merge commits referencing PRs
+  32| - `gh pr view <number> --repo electron/electron --json baseRefName` — verify PR targets main (not a backport)
+  33| - Always use the main-branch PR URL in history blocks, not backport PRs
+  34| "
+DC005,dagster-io/dagster,CLAUDE.md,examples/docs_snippets/docs_snippets/intro_tutorial/basics/connecting_ops/,examples/docs_snippets/docs_snippets/intro_tutorial/basics/connecting_ops/,explicit_path,medium,stale,existed_before,stale_directory,not_in_head,84221d05f29b928962d25d45216f6bc28d52a910,2022-08-25,cb2b0148b00aebb93dea6a254eb05f2c6fcd40bb,2026-04-23,cb2b0148b00aebb93dea6a254eb05f2c6fcd40bb,2026-04-23,1336,examples/docs_snippets/docs_snippets/intro_tutorial/basics/connecting_ops/,reliable,,,deleted_directory,yes,no,Terminal 1: Start GraphQL server,57,"  52| 
+  53| ## UI Development
+  54| 
+  55| ```bash
+  56| # Terminal 1: Start GraphQL server
+  57| cd examples/docs_snippets/docs_snippets/intro_tutorial/basics/connecting_ops/
+  58| dagster-webserver -p 3333 -f complex_job.py
+  59| 
+  60| # Terminal 2: Start UI development server
+  61| cd js_modules
+  62| make dev_webapp"
+DC006,dagster-io/dagster,CLAUDE.md,setup.py,setup.py,known_config_filename,medium,stale,existed_before,stale_config,not_in_head,61d6fe3d93e76b659ecfaea38244d0ad2da87c82,2018-05-22,bd4a1bec41530293f8c8ad53d077cf63b3318463,2018-07-19,bd4a1bec41530293f8c8ad53d077cf63b3318463,2018-07-19,58,setup.py,reliable,,,config_reference,yes,no,Package Management,87,"  82| - Never skip this step - code quality checks are essential for all contributions
+  83| 
+  84| ## Package Management
+  85| 
+  86| - Always use uv instead of pip
+  87| - **IMPORTANT**: When command line entry_points change in setup.py, you must reinstall the package using `uv pip install -e .` for the changes to take effect
+  88| 
+  89| ## Code searching
+  90| 
+  91| - DO NOT search for Python code (.py files) inside of .tox folders. These are temporary environments and this will only cause confusion.
+  92| - Always search for package dependencies in setup.py files only. This is the current source of truth for dependencies in this repository."
+DC007,apache/airflow,CLAUDE.md,dev/my_script.py,dev/my_script.py,explicit_path,medium,stale,existed_before,stale_path,not_in_head,,,,,,,,,failed,,,source_code_reference,no,no,,,(reference string not found verbatim in instruction file at HEAD)
+DC008,apache/airflow,CLAUDE.md,shared/<dist>,shared/<dist,code_span,medium,stale,existed_before,stale_path,not_in_head,,,,,,,,,failed,,,unknown,no,no,,,(reference string not found verbatim in instruction file at HEAD)
+DC009,apache/airflow,CLAUDE.md,src,src/,common_directory_name,medium,stale,existed_before,stale_directory,not_in_head,e491dab9a5c9df09165e0e28fb1babae9990d873,2014-10-11,6cffc62e77dd6cbd74a0217e573389e6725ca337,2014-10-12,6cffc62e77dd6cbd74a0217e573389e6725ca337,2014-10-12,0,src,reliable,,,deleted_directory,yes,maybe,,,(reference string not found verbatim in instruction file at HEAD)
+DC010,apache/airflow,CLAUDE.md,tests/,tests/,scope_section:code_span,medium,stale,existed_before,stale_directory,not_in_head,47a1ca7bd94538bf4c053701d1d8f9f7a1c30327,2026-03-06,cf2fe46c0593839f85a44df18a92883f867834c6,2026-04-29,553228f837f9905d4e11cf0f3ede0d92ceb5e1ac,2026-02-12,0,tests/,reliable,,,deleted_directory,yes,no,,,(reference string not found verbatim in instruction file at HEAD)
+DC011,apache/airflow,CLAUDE.md,airflow/cli/cli_parser.py,airflow/cli/cli_parser.py,code_span,medium,stale,existed_before,stale_path,not_in_head,8465d66f05baeb73dd4479b019515c069444616e,2020-03-22,243fe86d4b3e59bb12977b3e36ca3f2ed27ca0f8,2025-03-21,243fe86d4b3e59bb12977b3e36ca3f2ed27ca0f8,2025-03-21,1824,airflow/cli/cli_parser.py,reliable,,,source_code_reference,yes,no,,,(reference string not found verbatim in instruction file at HEAD)
+DC012,apache/airflow,CLAUDE.md,tests/cli/test_cli_parser.py,tests/cli/test_cli_parser.py,code_span,medium,stale,existed_before,stale_path,not_in_head,8465d66f05baeb73dd4479b019515c069444616e,2020-03-22,243fe86d4b3e59bb12977b3e36ca3f2ed27ca0f8,2025-03-21,243fe86d4b3e59bb12977b3e36ca3f2ed27ca0f8,2025-03-21,1824,tests/cli/test_cli_parser.py,reliable,,,source_code_reference,yes,no,,,(reference string not found verbatim in instruction file at HEAD)
+DC013,apache/airflow,CLAUDE.md,airflow/cli/cli_parser.py,airflow/cli/cli_parser.py,explicit_path,medium,stale,existed_before,stale_path,not_in_head,8465d66f05baeb73dd4479b019515c069444616e,2020-03-22,243fe86d4b3e59bb12977b3e36ca3f2ed27ca0f8,2025-03-21,243fe86d4b3e59bb12977b3e36ca3f2ed27ca0f8,2025-03-21,1824,airflow/cli/cli_parser.py,reliable,,,source_code_reference,yes,no,,,(reference string not found verbatim in instruction file at HEAD)
+DC014,apache/airflow,CLAUDE.md,tests/cli/test_cli_parser.py,tests/cli/test_cli_parser.py,explicit_path,medium,stale,existed_before,stale_path,not_in_head,8465d66f05baeb73dd4479b019515c069444616e,2020-03-22,243fe86d4b3e59bb12977b3e36ca3f2ed27ca0f8,2025-03-21,243fe86d4b3e59bb12977b3e36ca3f2ed27ca0f8,2025-03-21,1824,tests/cli/test_cli_parser.py,reliable,,,source_code_reference,yes,no,,,(reference string not found verbatim in instruction file at HEAD)
+DC015,apache/airflow,CLAUDE.md,newsfragments/,newsfragments/,code_span,medium,stale,existed_before,stale_directory,not_in_head,996c74080210dfb8892513cbde9977a94f417f4d,2026-02-28,8bf498965c87d562486a8e9344ccdb84aa351b2d,2026-03-09,8bf498965c87d562486a8e9344ccdb84aa351b2d,2026-03-09,8,newsfragments/,reliable,,,deleted_directory,yes,no,,,(reference string not found verbatim in instruction file at HEAD)
+DC016,apache/airflow,CLAUDE.md,docs/05_pull_requests.rst,docs/05_pull_requests.rst,explicit_path,medium,doc_reference,existed_before,stale_doc_reference,not_in_head,,,,,,,,,failed,,,documentation_reference,no,no,,,(reference string not found verbatim in instruction file at HEAD)
+DC017,apache/airflow,CLAUDE.md,[Agent-assisted contribution section of `README.md`](README.md#agent-assisted-contribution-apache-steward),README.md#agent-assisted-contribution-apache-steward,markdown_link,medium,doc_reference,existed_before,stale_doc_reference,not_in_head,,,,,,,,,failed,,,documentation_reference,no,yes,,,(reference string not found verbatim in instruction file at HEAD)
+DC018,BerriAI/litellm,CLAUDE.md,litellm/proxy/dev_config.yaml,litellm/proxy/dev_config.yaml,explicit_path,medium,stale,existed_before,stale_path,not_in_head,,,,,,,,,failed,,,config_reference,no,no,,25,"  20| 
+  21| When creating PRs, don't set base to `main`. `litellm_internal_staging` serves that purpose
+  22| 
+  23| Always use @.github/pull_request_template.md as a guide for your PR body
+  24| 
+  25| Never use `pytest` commands or the like as ""Screenshots / Proof of Fix"". We prefer curl'ing a live proxy instance running on localhost:4000 (I like to run it with `python litellm/proxy/proxy_cli.py --config litellm/proxy/dev_config.yaml --detailed_debug --reload --use_v2_migration_resolver 2>&1 | tee litellm.log`) and showing both the command run and the output. Also, it should hit real LLM provider APIs, not mocks, and cost real $$$ because that is the most realistic test. The proof of fix should be exactly what the end user / customer would see / do. The run logs in PR #27703 is a prime example of how to do it (not a huge fan of using a python test script that future me and the team will have no visibility into; I prefer just curl commands or a short list of bash commands (e.g., using `for`)). If it's a UI thing, just tell me which URLs to go to (e.g., http://localhost:4000/ui/?page=logs), where to click, what fields to fill out, etc. along with the other commands to run in an ordered list, and I'll do it myself and post the screenshots after you make the PR
+  26| 
+  27| If you ever make public-facing PR descriptions, comments, issues, commit messages, etc., always follow these guidelines to sound less AI-y:
+  28| - don't use emojis
+  29| - don't use ""—"". Instead, reach for "";"", ""."", etc.
+  30| - don't use the pattern ""It's not X, it's Y"", ""You're not X, you're Y"", etc."
+DC019,payloadcms/payload,CLAUDE.md,packages/db-*,packages/db-*,code_span,medium,stale,existed_before,stale_path,not_in_head,1d6d105da6eace5725eb05212deb68c8e775efec,2026-06-09,6ed9b8507aa83613d2bbde8534241db886949f34,2026-06-11,03f81aea98bfb78bb1be43a3c3e6980b1d03fc9a,2026-05-18,0,packages/db-*,uncertain,,,unknown,no,yes,Key Directories,15,"  10| 
+  11| - `packages/` - All publishable packages
+  12|   - `packages/payload` - Core Payload package containing the main CMS logic
+  13|   - `packages/ui` - Admin UI components (React Server Components)
+  14|   - `packages/next` - Next.js integration layer
+  15|   - `packages/db-*` - Database adapters (MongoDB, Postgres, SQLite, Vercel Postgres, D1 SQLite)
+  16|   - `packages/drizzle` - Drizzle ORM integration
+  17|   - `packages/kv-redis` - Redis key-value store adapter
+  18|   - `packages/richtext-*` - Rich text editors (Lexical)
+  19|   - `packages/storage-*` - Storage adapters (S3, Azure, GCS, Uploadthing, Vercel Blob, R2)
+  20|   - `packages/email-*` - Email adapters (Nodemailer, Resend)"
+DC020,payloadcms/payload,CLAUDE.md,packages/db-*,packages/db-*,explicit_path,medium,stale,existed_before,stale_path,not_in_head,1d6d105da6eace5725eb05212deb68c8e775efec,2026-06-09,6ed9b8507aa83613d2bbde8534241db886949f34,2026-06-11,03f81aea98bfb78bb1be43a3c3e6980b1d03fc9a,2026-05-18,0,packages/db-*,uncertain,,,unknown,no,yes,Key Directories,15,"  10| 
+  11| - `packages/` - All publishable packages
+  12|   - `packages/payload` - Core Payload package containing the main CMS logic
+  13|   - `packages/ui` - Admin UI components (React Server Components)
+  14|   - `packages/next` - Next.js integration layer
+  15|   - `packages/db-*` - Database adapters (MongoDB, Postgres, SQLite, Vercel Postgres, D1 SQLite)
+  16|   - `packages/drizzle` - Drizzle ORM integration
+  17|   - `packages/kv-redis` - Redis key-value store adapter
+  18|   - `packages/richtext-*` - Rich text editors (Lexical)
+  19|   - `packages/storage-*` - Storage adapters (S3, Azure, GCS, Uploadthing, Vercel Blob, R2)
+  20|   - `packages/email-*` - Email adapters (Nodemailer, Resend)"
+DC021,payloadcms/payload,CLAUDE.md,packages/richtext-*,packages/richtext-*,code_span,medium,stale,existed_before,stale_path,not_in_head,d4944285af6d9453bbb9187c2541efff0f2f61ce,2026-06-05,47f74f491b1d8ec73fdd8bc17791b453f0c22b51,2026-06-11,d4944285af6d9453bbb9187c2541efff0f2f61ce,2026-06-05,0,packages/richtext-*,uncertain,,,unknown,no,yes,Key Directories,18,"  13|   - `packages/ui` - Admin UI components (React Server Components)
+  14|   - `packages/next` - Next.js integration layer
+  15|   - `packages/db-*` - Database adapters (MongoDB, Postgres, SQLite, Vercel Postgres, D1 SQLite)
+  16|   - `packages/drizzle` - Drizzle ORM integration
+  17|   - `packages/kv-redis` - Redis key-value store adapter
+  18|   - `packages/richtext-*` - Rich text editors (Lexical)
+  19|   - `packages/storage-*` - Storage adapters (S3, Azure, GCS, Uploadthing, Vercel Blob, R2)
+  20|   - `packages/email-*` - Email adapters (Nodemailer, Resend)
+  21|   - `packages/plugin-*` - Additional functionality plugins
+  22|   - `packages/graphql` - GraphQL API layer
+  23|   - `packages/translations` - i18n translations"
+DC022,payloadcms/payload,CLAUDE.md,packages/richtext-*,packages/richtext-*,explicit_path,medium,stale,existed_before,stale_path,not_in_head,d4944285af6d9453bbb9187c2541efff0f2f61ce,2026-06-05,47f74f491b1d8ec73fdd8bc17791b453f0c22b51,2026-06-11,d4944285af6d9453bbb9187c2541efff0f2f61ce,2026-06-05,0,packages/richtext-*,uncertain,,,unknown,no,yes,Key Directories,18,"  13|   - `packages/ui` - Admin UI components (React Server Components)
+  14|   - `packages/next` - Next.js integration layer
+  15|   - `packages/db-*` - Database adapters (MongoDB, Postgres, SQLite, Vercel Postgres, D1 SQLite)
+  16|   - `packages/drizzle` - Drizzle ORM integration
+  17|   - `packages/kv-redis` - Redis key-value store adapter
+  18|   - `packages/richtext-*` - Rich text editors (Lexical)
+  19|   - `packages/storage-*` - Storage adapters (S3, Azure, GCS, Uploadthing, Vercel Blob, R2)
+  20|   - `packages/email-*` - Email adapters (Nodemailer, Resend)
+  21|   - `packages/plugin-*` - Additional functionality plugins
+  22|   - `packages/graphql` - GraphQL API layer
+  23|   - `packages/translations` - i18n translations"
+DC023,payloadcms/payload,CLAUDE.md,packages/storage-*,packages/storage-*,code_span,medium,stale,existed_before,stale_path,not_in_head,6690769b9f736fb37a98661baa8b7a4a702b42c2,2026-04-10,a8c8da8df42f37ffc6a6b647ef9d3c8116a4717a,2026-06-09,6690769b9f736fb37a98661baa8b7a4a702b42c2,2026-04-10,0,packages/storage-*,uncertain,,,unknown,no,yes,Key Directories,19,"  14|   - `packages/next` - Next.js integration layer
+  15|   - `packages/db-*` - Database adapters (MongoDB, Postgres, SQLite, Vercel Postgres, D1 SQLite)
+  16|   - `packages/drizzle` - Drizzle ORM integration
+  17|   - `packages/kv-redis` - Redis key-value store adapter
+  18|   - `packages/richtext-*` - Rich text editors (Lexical)
+  19|   - `packages/storage-*` - Storage adapters (S3, Azure, GCS, Uploadthing, Vercel Blob, R2)
+  20|   - `packages/email-*` - Email adapters (Nodemailer, Resend)
+  21|   - `packages/plugin-*` - Additional functionality plugins
+  22|   - `packages/graphql` - GraphQL API layer
+  23|   - `packages/translations` - i18n translations
+  24| - `test/` - Test suites organized by feature area. Each directory contains a granular Payload config and test files"
+DC024,payloadcms/payload,CLAUDE.md,packages/storage-*,packages/storage-*,explicit_path,medium,stale,existed_before,stale_path,not_in_head,6690769b9f736fb37a98661baa8b7a4a702b42c2,2026-04-10,a8c8da8df42f37ffc6a6b647ef9d3c8116a4717a,2026-06-09,6690769b9f736fb37a98661baa8b7a4a702b42c2,2026-04-10,0,packages/storage-*,uncertain,,,unknown,no,yes,Key Directories,19,"  14|   - `packages/next` - Next.js integration layer
+  15|   - `packages/db-*` - Database adapters (MongoDB, Postgres, SQLite, Vercel Postgres, D1 SQLite)
+  16|   - `packages/drizzle` - Drizzle ORM integration
+  17|   - `packages/kv-redis` - Redis key-value store adapter
+  18|   - `packages/richtext-*` - Rich text editors (Lexical)
+  19|   - `packages/storage-*` - Storage adapters (S3, Azure, GCS, Uploadthing, Vercel Blob, R2)
+  20|   - `packages/email-*` - Email adapters (Nodemailer, Resend)
+  21|   - `packages/plugin-*` - Additional functionality plugins
+  22|   - `packages/graphql` - GraphQL API layer
+  23|   - `packages/translations` - i18n translations
+  24| - `test/` - Test suites organized by feature area. Each directory contains a granular Payload config and test files"
+DC025,payloadcms/payload,CLAUDE.md,packages/email-*,packages/email-*,code_span,medium,stale,existed_before,stale_path,not_in_head,f494ebabbffbff0b2b98bbd4b1620f712b6f2e96,2024-07-15,a8c8da8df42f37ffc6a6b647ef9d3c8116a4717a,2026-06-09,e50d811f25ee299529e99ff8d6f9f3b4da8e559d,2026-01-06,540,packages/email-*,uncertain,,,unknown,no,yes,Key Directories,20,"  15|   - `packages/db-*` - Database adapters (MongoDB, Postgres, SQLite, Vercel Postgres, D1 SQLite)
+  16|   - `packages/drizzle` - Drizzle ORM integration
+  17|   - `packages/kv-redis` - Redis key-value store adapter
+  18|   - `packages/richtext-*` - Rich text editors (Lexical)
+  19|   - `packages/storage-*` - Storage adapters (S3, Azure, GCS, Uploadthing, Vercel Blob, R2)
+  20|   - `packages/email-*` - Email adapters (Nodemailer, Resend)
+  21|   - `packages/plugin-*` - Additional functionality plugins
+  22|   - `packages/graphql` - GraphQL API layer
+  23|   - `packages/translations` - i18n translations
+  24| - `test/` - Test suites organized by feature area. Each directory contains a granular Payload config and test files
+  25| - `docs/` - Documentation (deployed to payloadcms.com)"
+DC026,payloadcms/payload,CLAUDE.md,packages/email-*,packages/email-*,explicit_path,medium,stale,existed_before,stale_path,not_in_head,f494ebabbffbff0b2b98bbd4b1620f712b6f2e96,2024-07-15,a8c8da8df42f37ffc6a6b647ef9d3c8116a4717a,2026-06-09,e50d811f25ee299529e99ff8d6f9f3b4da8e559d,2026-01-06,540,packages/email-*,uncertain,,,unknown,no,yes,Key Directories,20,"  15|   - `packages/db-*` - Database adapters (MongoDB, Postgres, SQLite, Vercel Postgres, D1 SQLite)
+  16|   - `packages/drizzle` - Drizzle ORM integration
+  17|   - `packages/kv-redis` - Redis key-value store adapter
+  18|   - `packages/richtext-*` - Rich text editors (Lexical)
+  19|   - `packages/storage-*` - Storage adapters (S3, Azure, GCS, Uploadthing, Vercel Blob, R2)
+  20|   - `packages/email-*` - Email adapters (Nodemailer, Resend)
+  21|   - `packages/plugin-*` - Additional functionality plugins
+  22|   - `packages/graphql` - GraphQL API layer
+  23|   - `packages/translations` - i18n translations
+  24| - `test/` - Test suites organized by feature area. Each directory contains a granular Payload config and test files
+  25| - `docs/` - Documentation (deployed to payloadcms.com)"
+DC027,payloadcms/payload,CLAUDE.md,packages/plugin-*,packages/plugin-*,code_span,medium,stale,existed_before,stale_path,not_in_head,0a840997e88ec545dc0ed4a4db25f3b0543bdc57,2026-06-11,dc41f9fb79277c2afa073736c7a68caf7bdaf4eb,2026-06-11,19342ed0ac2642747de1e5ed3eb59af012cd81d8,2026-06-10,0,packages/plugin-*,uncertain,,,unknown,no,yes,Key Directories,21,"  16|   - `packages/drizzle` - Drizzle ORM integration
+  17|   - `packages/kv-redis` - Redis key-value store adapter
+  18|   - `packages/richtext-*` - Rich text editors (Lexical)
+  19|   - `packages/storage-*` - Storage adapters (S3, Azure, GCS, Uploadthing, Vercel Blob, R2)
+  20|   - `packages/email-*` - Email adapters (Nodemailer, Resend)
+  21|   - `packages/plugin-*` - Additional functionality plugins
+  22|   - `packages/graphql` - GraphQL API layer
+  23|   - `packages/translations` - i18n translations
+  24| - `test/` - Test suites organized by feature area. Each directory contains a granular Payload config and test files
+  25| - `docs/` - Documentation (deployed to payloadcms.com)
+  26| - `tools/` - Monorepo tooling"
+DC028,payloadcms/payload,CLAUDE.md,packages/plugin-*,packages/plugin-*,explicit_path,medium,stale,existed_before,stale_path,not_in_head,0a840997e88ec545dc0ed4a4db25f3b0543bdc57,2026-06-11,dc41f9fb79277c2afa073736c7a68caf7bdaf4eb,2026-06-11,19342ed0ac2642747de1e5ed3eb59af012cd81d8,2026-06-10,0,packages/plugin-*,uncertain,,,unknown,no,yes,Key Directories,21,"  16|   - `packages/drizzle` - Drizzle ORM integration
+  17|   - `packages/kv-redis` - Redis key-value store adapter
+  18|   - `packages/richtext-*` - Rich text editors (Lexical)
+  19|   - `packages/storage-*` - Storage adapters (S3, Azure, GCS, Uploadthing, Vercel Blob, R2)
+  20|   - `packages/email-*` - Email adapters (Nodemailer, Resend)
+  21|   - `packages/plugin-*` - Additional functionality plugins
+  22|   - `packages/graphql` - GraphQL API layer
+  23|   - `packages/translations` - i18n translations
+  24| - `test/` - Test suites organized by feature area. Each directory contains a granular Payload config and test files
+  25| - `docs/` - Documentation (deployed to payloadcms.com)
+  26| - `tools/` - Monorepo tooling"
+DC029,payloadcms/payload,CLAUDE.md,src/,src/,scope_section:code_span,medium,stale,existed_before,stale_directory,not_in_head,a6524720f55577536dd363679d887a24c45d844c,2025-03-10,a6524720f55577536dd363679d887a24c45d844c,2025-03-10,54a76e1401630266cfe6efeab5ffd1bdc12a7ff0,2023-09-18,0,src/,reliable,,,deleted_directory,yes,no,Architecture Notes,36,"  31| 
+  32| - Payload 3.x is built as a Next.js native CMS that installs directly in `/app` folder
+  33| - UI is built with React Server Components (RSC)
+  34| - Database adapters use Drizzle ORM under the hood
+  35| - Packages use TypeScript with strict mode and path mappings defined in `tsconfig.base.json`
+  36| - Source files are in `src/`, compiled outputs go to `dist/`
+  37| - Monorepo uses pnpm workspaces and Turbo for builds
+  38| 
+  39| ## Quick Start
+  40| 
+  41| 1. `pnpm install`"
+DC030,payloadcms/payload,CLAUDE.md,src,src/,common_directory_name,medium,stale,existed_before,stale_directory,not_in_head,a6524720f55577536dd363679d887a24c45d844c,2025-03-10,a6524720f55577536dd363679d887a24c45d844c,2025-03-10,54a76e1401630266cfe6efeab5ffd1bdc12a7ff0,2023-09-18,0,src,reliable,,,deleted_directory,yes,maybe,Architecture Notes,36,"  31| 
+  32| - Payload 3.x is built as a Next.js native CMS that installs directly in `/app` folder
+  33| - UI is built with React Server Components (RSC)
+  34| - Database adapters use Drizzle ORM under the hood
+  35| - Packages use TypeScript with strict mode and path mappings defined in `tsconfig.base.json`
+  36| - Source files are in `src/`, compiled outputs go to `dist/`
+  37| - Monorepo uses pnpm workspaces and Turbo for builds
+  38| 
+  39| ## Quick Start
+  40| 
+  41| 1. `pnpm install`"
+DC031,payloadcms/payload,CLAUDE.md,dev,dev/,common_directory_name,medium,stale,existed_before,stale_directory,not_in_head,2f799a9420551b7999bc9f12f822fdb37042503b,2023-04-10,ac8bcfac237ea46f77bb1ee9abf3b1139d52ed41,2023-10-05,ac8bcfac237ea46f77bb1ee9abf3b1139d52ed41,2023-10-05,177,dev,reliable,,,deleted_directory,yes,maybe,Quick Start,43,"  38| 
+  39| ## Quick Start
+  40| 
+  41| 1. `pnpm install`
+  42| 2. `pnpm run build:core`
+  43| 3. `pnpm run dev` (MongoDB) or `pnpm run dev:postgres`
+  44| 
+  45| ## Build Commands
+  46| 
+  47| - `pnpm install` - Install all dependencies
+  48| - `pnpm turbo` - All Turbo commands should be run from root with pnpm - not with `turbo` directly"
+DC032,payloadcms/payload,CLAUDE.md,.scss,scss,code_span,medium,stale,existed_before,stale_path,not_in_head,929b21d68b9d4504adf2d46ccca74d8da5595179,2021-07-01,a67278b29ff6c60750c8de331e3cac5a9e4bbae0,2023-08-23,a67278b29ff6c60750c8de331e3cac5a9e4bbae0,2023-08-23,782,scss,reliable,,,unknown,yes,no,React Component File Structure,100,"  95| Each React component should have its own named folder:
+  96| 
+  97| ```
+  98| ComponentName/
+  99| ├── index.tsx       # Component implementation
+ 100| └── index.scss      # Styles (if applicable)
+ 101| ```
+ 102| 
+ 103| - **Do:** Create a folder per component with `index.tsx` and `index.scss`
+ 104| - **Don't:** Place multiple `ComponentName.tsx` files in a single folder with one shared `.scss` file
+ 105| - Re-export from barrel files (`index.ts`) when grouping related components in a parent directory"
+DC033,payloadcms/payload,CLAUDE.md,payload/shared,payload/shared,explicit_path,medium,stale,existed_before,stale_path,not_in_head,,,,,,,,,failed,,,unknown,no,no,Patterns,294," 289| ```
+ 290| 
+ 291| Correct:
+ 292| 
+ 293| ```typescript
+ 294| import { formatAdminURL } from 'payload/shared'
+ 295| import * as qs from 'qs-esm'
+ 296| 
+ 297| const where = parentId
+ 298|   ? { [parentFieldName]: { equals: parentId } }
+ 299|   : {"
+DC034,payloadcms/payload,CLAUDE.md,payload/no-imports-from-exports-dir,payload/no-imports-from-exports-dir,explicit_path,medium,stale,existed_before,stale_path,not_in_head,,,,,,,,,failed,,,unknown,no,no,RSC/Client Bundling Rules,355," 350| ```typescript
+ 351| // BAD - relative import doesn't work in prod
+ 352| import { MyClientComponent } from './MyComponent.js'
+ 353| 
+ 354| // GOOD - import from client exports bundle
+ 355| // eslint-disable-next-line payload/no-imports-from-exports-dir -- Server component must reference exports dir for proper client boundary
+ 356| import { MyClientComponent } from '../../exports/client/index.js'
+ 357| ```
+ 358| 
+ 359| **Testing bundling changes:** Always test with `pnpm prepare-run-test-against-prod` followed by `pnpm dev:prod <suite>`. Dev mode (`pnpm dev`) doesn't catch these issues."
+DC035,payloadcms/payload,CLAUDE.md,Dev,dev/,common_directory_name,medium,stale,existed_before,stale_directory,not_in_head,2f799a9420551b7999bc9f12f822fdb37042503b,2023-04-10,ac8bcfac237ea46f77bb1ee9abf3b1139d52ed41,2023-10-05,ac8bcfac237ea46f77bb1ee9abf3b1139d52ed41,2023-10-05,177,dev/,reliable,,,deleted_directory,yes,no,Development,53,"  48| - `pnpm turbo` - All Turbo commands should be run from root with pnpm - not with `turbo` directly
+  49| - `pnpm run build` or `pnpm run build:core` - Build core packages (excludes plugins and storage adapters)
+  50| - `pnpm run build:all` - Build all packages
+  51| - `pnpm run build:<directory_name>` - Build specific package (e.g. `pnpm run build:db-mongodb`, `pnpm run build:ui`)
+  52| 
+  53| ## Development
+  54| 
+  55| ### Coding Patterns and Best Practices
+  56| 
+  57| - Always use object parameters for function arguments: `fn({ name }: { name: string })` not `fn(name: string)` (improves backwards-compatibility)
+  58| - Prefer types over interfaces (except when extending external types)"
+DC036,prefecthq/prefect,AGENTS.md,tests/path.py,tests/path.py,explicit_path,medium,stale,existed_before,stale_path,not_in_head,,,,,,,,,failed,,,source_code_reference,no,no,Testing (see tests/AGENTS.md for full details),49,"  44| uv run --project ./src/integrations/<name> <cmd>   # Run against a local integration from repo root
+  45| prefect server start                               # Start local server
+  46| prefect config view                                # Inspect current configuration
+  47| 
+  48| # Testing (see tests/AGENTS.md for full details)
+  49| uv run pytest tests/path.py -k name    # Run specific test
+  50| uv run pytest tests/path.py -x -n4     # Parallel, stop on first failure
+  51| 
+  52| # Linting & formatting
+  53| uv run ruff check --fix .              # Lint with auto-fix
+  54| uv run ruff format .                   # Format code"
+DC037,grafana/grafana,CLAUDE.md,conf/custom.ini,conf/custom.ini,code_span,medium,stale,existed_before,stale_path,not_in_head,,,,,,,,,failed,,,config_reference,no,no,,,(reference string not found verbatim in instruction file at HEAD)
+DC038,grafana/grafana,CLAUDE.md,conf/custom.ini,conf/custom.ini,explicit_path,medium,stale,existed_before,stale_path,not_in_head,,,,,,,,,failed,,,config_reference,no,no,,,(reference string not found verbatim in instruction file at HEAD)

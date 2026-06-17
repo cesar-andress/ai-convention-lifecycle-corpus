@@ -1,0 +1,45 @@
+repo_id,instruction_file,reference_type,raw_reference,resolved_path,exists_in_head,used_for_scope,extraction_rule
+electron/electron,docs/CLAUDE.md,path_token,docs/development/api-history-migration-guide.md,docs/development/api-history-migration-guide.md,True,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,api-history-migration-guide.md,api-history-migration-guide.md,False,False,filename_ext
+electron/electron,docs/CLAUDE.md,directory_token,docs/,docs/,True,True,trailing_slash_token
+electron/electron,docs/CLAUDE.md,directory_token,development/,development/,False,False,trailing_slash_token
+electron/electron,docs/CLAUDE.md,path_token,docs/development/style-guide.md,docs/development/style-guide.md,True,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,style-guide.md,style-guide.md,False,False,filename_ext
+electron/electron,docs/CLAUDE.md,path_token,docs/api-history.schema.json,docs/api-history.schema.json,True,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,api-history.schema.js,api-history.schema.js,False,False,filename_ext
+electron/electron,docs/CLAUDE.md,command,npm run lint,npm run lint,False,False,npm_run
+electron/electron,docs/CLAUDE.md,path_token,npm run lint:api-history,npm run lint:api-history,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,github.com/electron/electron/pull/XXXXX,github.com/electron/electron/pull/XXXXX,False,False,inline_slash_token
+electron/electron,docs/CLAUDE.md,directory_token,github.com/,github.com/,False,False,trailing_slash_token
+electron/electron,docs/CLAUDE.md,directory_token,electron/,electron/,False,False,trailing_slash_token
+electron/electron,docs/CLAUDE.md,directory_token,pull/,pull/,False,False,trailing_slash_token
+electron/electron,docs/CLAUDE.md,path_token,arg,arg,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,"git log --all --reverse --oneline -S ""methodName"" -- docs/api/file.md","git log --all --reverse --oneline -S ""methodName"" -- docs/api/file.md",False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,docs/api/file.md,docs/api/file.md,False,False,inline_slash_token
+electron/electron,docs/CLAUDE.md,path_token,file.md,file.md,False,False,filename_ext
+electron/electron,docs/CLAUDE.md,directory_token,api/,api/,False,False,trailing_slash_token
+electron/electron,docs/CLAUDE.md,path_token,git log --reverse -L :FunctionName:path/to/source.cc,git log --reverse -L :FunctionName:path/to/source.cc,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,path/to/source.cc,path/to/source.cc,False,False,inline_slash_token
+electron/electron,docs/CLAUDE.md,directory_token,path/,path/,False,False,trailing_slash_token
+electron/electron,docs/CLAUDE.md,directory_token,to/,to/,False,False,trailing_slash_token
+electron/electron,docs/CLAUDE.md,path_token,"git log --grep=""keyword"" --oneline","git log --grep=""keyword"" --oneline",False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,gh pr view <number> --repo electron/electron --json baseRefName,gh pr view <number> --repo electron/electron --json baseRefName,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,electron/electron,electron/electron,False,False,inline_slash_token
+electron/electron,docs/CLAUDE.md,path_token,docs/breaking-changes.md,docs/breaking-changes.md,True,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,deprecations/removals,deprecations/removals,False,False,inline_slash_token
+electron/electron,docs/CLAUDE.md,path_token,breaking-changes.md,breaking-changes.md,False,False,filename_ext
+electron/electron,docs/CLAUDE.md,directory_token,deprecations/,deprecations/,False,False,trailing_slash_token
+electron/electron,docs/CLAUDE.md,path_token,git blame,git blame,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,breaking-changes-header,breaking-changes-header,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,## Methods,## Methods,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,### Instance Methods,### Instance Methods,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,## Events,## Events,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,# moduleName,# moduleName,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,added,added,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,deprecated,deprecated,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,maxItems: 1,maxItems: 1,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,changes,changes,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,description,description,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,Merge pull request #534,Merge pull request #534,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,ipcMain.on,ipcMain.on,False,False,backtick
+electron/electron,docs/CLAUDE.md,path_token,ipcRenderer.send,ipcRenderer.send,False,False,backtick

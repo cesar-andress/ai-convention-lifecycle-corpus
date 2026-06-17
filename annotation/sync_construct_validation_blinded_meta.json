@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-06-17T07:15:54.190522+00:00",
+  "source_rows": 100,
+  "calibration_n": 14,
+  "calibration_unit_ids": [
+    "4f004fee3aad",
+    "7fda69f5754d",
+    "9404c9bd7fb2",
+    "c620114d8f4c",
+    "cc69217b9807",
+    "e63c6e231ac3",
+    "05e811636411",
+    "21e176064439",
+    "79cc1712d62d",
+    "d28f0628a182",
+    "81fd6f0fd73f",
+    "984b7775755f",
+    "f141d2679668",
+    "fcb9a141ef05"
+  ],
+  "calibration_balance": {
+    "configuration": 6,
+    "documentation": 4,
+    "instructions": 4
+  },
+  "calibration_with_artifact_update": 7,
+  "calibration_without_artifact_update": 7,
+  "blinded_columns": [
+    "unit_id",
+    "repo_id",
+    "artifact_family",
+    "artifact_path",
+    "governed_code_commit",
+    "governed_code_commit_date",
+    "changed_paths_in_code_commit",
+    "artifact_update_commit",
+    "artifact_update_date",
+    "commit_message_governed_code",
+    "commit_message_artifact_update",
+    "changed_files_governed_commit",
+    "changed_files_artifact_update",
+    "diff_summary_governed",
+    "diff_summary_artifact",
+    "scope_mode",
+    "notes",
+    "manual_is_semantically_synchronized",
+    "manual_confidence",
+    "manual_reason_tag",
+    "manual_reason_free_text",
+    "annotator",
+    "annotated_at"
+  ],
+  "hidden_metric_columns": [
+    "metric_sync_30",
+    "metric_label",
+    "lag_days",
+    "repo_size_class",
+    "repo_commit_count"
+  ]
+}

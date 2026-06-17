@@ -1,0 +1,7 @@
+repo_id,instruction_file,reference_type,raw_reference,resolved_path,exists_in_head,used_for_scope,extraction_rule
+apache/airflow,airflow-core/src/airflow/_shared/AGENTS.md,path_token,www.apache.org/licenses/LICENSE-2.0,www.apache.org/licenses/LICENSE-2.0,False,False,inline_slash_token
+apache/airflow,airflow-core/src/airflow/_shared/AGENTS.md,directory_token,www.apache.org/,www.apache.org/,False,False,trailing_slash_token
+apache/airflow,airflow-core/src/airflow/_shared/AGENTS.md,directory_token,licenses/,licenses/,False,False,trailing_slash_token
+apache/airflow,airflow-core/src/airflow/_shared/AGENTS.md,path_token,../../../../shared,shared/,True,False,inline_slash_token
+apache/airflow,airflow-core/src/airflow/_shared/AGENTS.md,directory_token,../,,False,False,trailing_slash_token
+apache/airflow,airflow-core/src/airflow/_shared/AGENTS.md,path_token,prek,prek,False,False,backtick

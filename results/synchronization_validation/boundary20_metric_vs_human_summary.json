@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-06-17T07:50:19.513315+00:00",
+  "total_units": 20,
+  "decisive_human_labels": 0,
+  "ambiguous_human_labels": 0,
+  "unresolved_units": 20,
+  "overall": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "precision": null,
+    "recall": null,
+    "specificity": null,
+    "f1": null,
+    "agreement_rate": null,
+    "n": 0
+  },
+  "agreement_excluding_ambiguous": null,
+  "ambiguous_sensitivity": {
+    "ambiguous_count": 0,
+    "decisive_agreement_excluding_ambiguous": null,
+    "worst_case_if_ambiguous_all_metric_favoring": null,
+    "worst_case_if_ambiguous_all_metric_opposing": null
+  },
+  "by_artifact_family": [],
+  "examples_false_sync": [],
+  "examples_false_desync": []
+}

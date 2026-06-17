@@ -1,0 +1,40 @@
+repo_id,instruction_file,reference_type,raw_reference,resolved_path,exists_in_head,used_for_scope,extraction_rule
+cheat/cheat,CLAUDE.md,path_token,claude.ai/code,claude.ai/code,False,False,inline_slash_token
+cheat/cheat,CLAUDE.md,directory_token,claude.ai/,claude.ai/,False,False,trailing_slash_token
+cheat/cheat,CLAUDE.md,command,make build,make build,False,False,make_target
+cheat/cheat,CLAUDE.md,command,make build-release,make build-release,False,False,make_target
+cheat/cheat,CLAUDE.md,command,make install,make install,False,False,make_target
+cheat/cheat,CLAUDE.md,command,make test,make test,False,False,make_target
+cheat/cheat,CLAUDE.md,command,go test,go test,False,False,cargo_go_test
+cheat/cheat,CLAUDE.md,path_token,./...,,False,False,inline_slash_token
+cheat/cheat,CLAUDE.md,directory_token,./,,False,False,trailing_slash_token
+cheat/cheat,CLAUDE.md,path_token,./internal/package_name,internal/package_name,False,False,inline_slash_token
+cheat/cheat,CLAUDE.md,directory_token,internal/,internal/,True,True,trailing_slash_token
+cheat/cheat,CLAUDE.md,command,make coverage,make coverage,False,False,make_target
+cheat/cheat,CLAUDE.md,command,make lint,make lint,False,False,make_target
+cheat/cheat,CLAUDE.md,command,make vet,make vet,False,False,make_target
+cheat/cheat,CLAUDE.md,command,make fmt,make fmt,False,False,make_target
+cheat/cheat,CLAUDE.md,command,make check,make check,False,False,make_target
+cheat/cheat,CLAUDE.md,command,make setup,make setup,False,False,make_target
+cheat/cheat,CLAUDE.md,command,make vendor-update,make vendor-update,False,False,make_target
+cheat/cheat,CLAUDE.md,path_token,cheat,cheat,False,False,backtick
+cheat/cheat,CLAUDE.md,path_token,main.go,main.go,False,False,backtick
+cheat/cheat,CLAUDE.md,path_token,cmd_*.go,cmd_*.go,False,False,backtick
+cheat/cheat,CLAUDE.md,path_token,switch,switch,False,False,backtick
+cheat/cheat,CLAUDE.md,path_token,RunE,RunE,False,False,backtick
+cheat/cheat,CLAUDE.md,path_token,generate.go,generate.go,False,False,backtick
+cheat/cheat,CLAUDE.md,path_token,internal/config,internal/config/,True,False,backtick
+cheat/cheat,CLAUDE.md,path_token,internal/cheatpath,internal/cheatpath/,True,False,backtick
+cheat/cheat,CLAUDE.md,path_token,internal/sheet,internal/sheet/,True,False,backtick
+cheat/cheat,CLAUDE.md,path_token,internal/sheets,internal/sheets/,True,False,backtick
+cheat/cheat,CLAUDE.md,path_token,internal/display,internal/display/,True,False,backtick
+cheat/cheat,CLAUDE.md,path_token,internal/installer,internal/installer/,True,False,backtick
+cheat/cheat,CLAUDE.md,path_token,conf.yml,conf.yml,False,False,backtick
+cheat/cheat,CLAUDE.md,path_token,internal/repo,internal/repo/,True,False,backtick
+cheat/cheat,CLAUDE.md,path_token,.cheat,cheat,False,False,backtick
+cheat/cheat,CLAUDE.md,path_token,.git,git,False,False,backtick
+cheat/cheat,CLAUDE.md,path_token,go-git,go-git,False,False,backtick
+cheat/cheat,CLAUDE.md,path_token,internal/config/paths.go,internal/config/paths.go,True,False,backtick
+cheat/cheat,CLAUDE.md,path_token,paths.go,paths.go,False,False,filename_ext
+cheat/cheat,CLAUDE.md,directory_token,config/,config/,False,False,trailing_slash_token
+cheat/cheat,CLAUDE.md,path_token,mocks,mocks/,True,False,backtick

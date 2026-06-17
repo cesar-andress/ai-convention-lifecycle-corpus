@@ -1,0 +1,250 @@
+{
+  "generated_at": "2026-06-16T23:09:17.420757+00:00",
+  "source_csv": "annotation/cochange_reference_validation_sample.csv",
+  "validation_pending": false,
+  "total_rows": 50,
+  "annotated_rows": 50,
+  "fully_annotated_rows": 50,
+  "unannotated_rows": 0,
+  "thresholds": {
+    "manual_is_reference_correct": 0.85,
+    "manual_resolved_path_correct": 0.8,
+    "manual_should_be_used_for_scope": 0.75
+  },
+  "boolean_precision": {
+    "manual_is_reference_correct": {
+      "annotated_rows": 50,
+      "decisive_rows": 47,
+      "true_count": 47,
+      "false_count": 0,
+      "ambiguous_count": 3,
+      "precision": 1.0
+    },
+    "manual_resolved_path_correct": {
+      "annotated_rows": 50,
+      "decisive_rows": 45,
+      "true_count": 45,
+      "false_count": 0,
+      "ambiguous_count": 5,
+      "precision": 1.0
+    },
+    "manual_should_be_used_for_scope": {
+      "annotated_rows": 50,
+      "decisive_rows": 46,
+      "true_count": 32,
+      "false_count": 14,
+      "ambiguous_count": 4,
+      "precision": 0.6956521739130435
+    }
+  },
+  "threshold_checks": {
+    "manual_is_reference_correct": {
+      "threshold": 0.85,
+      "observed": 1.0,
+      "passes": true
+    },
+    "manual_resolved_path_correct": {
+      "threshold": 0.8,
+      "observed": 1.0,
+      "passes": true
+    },
+    "manual_should_be_used_for_scope": {
+      "threshold": 0.75,
+      "observed": 0.6956521739130435,
+      "passes": false
+    }
+  },
+  "content_ref_acceptable_for_paper": false,
+  "content_ref_status": "exploratory_only",
+  "precision_by_extraction_rule": {
+    "code_span": {
+      "n_rows": 18,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.875
+      }
+    },
+    "common_directory_name": {
+      "n_rows": 2,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 1.0
+      }
+    },
+    "explicit_path": {
+      "n_rows": 15,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.8571428571428571
+      }
+    },
+    "known_config_filename": {
+      "n_rows": 1,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 1.0
+      }
+    },
+    "make_command_to_makefile": {
+      "n_rows": 6,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.0
+      }
+    },
+    "markdown_link": {
+      "n_rows": 6,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.2
+      }
+    },
+    "scope_section:code_span": {
+      "n_rows": 2,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 1.0
+      }
+    }
+  },
+  "precision_by_confidence": {
+    "high": {
+      "n_rows": 18,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.8823529411764706
+      }
+    },
+    "low": {
+      "n_rows": 4,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.0
+      }
+    },
+    "medium": {
+      "n_rows": 28,
+      "precision": {
+        "manual_is_reference_correct": 1.0,
+        "manual_resolved_path_correct": 1.0,
+        "manual_should_be_used_for_scope": 0.6071428571428571
+      }
+    }
+  },
+  "manual_reference_category_counts": {
+    "ambiguous": 3,
+    "build_command": 4,
+    "config_file": 3,
+    "directory": 25,
+    "documentation_reference": 9,
+    "include_pointer": 1,
+    "path": 3,
+    "test_command": 2
+  },
+  "false_positives": [],
+  "ambiguous_cases": [
+    {
+      "repo_id": "electron/electron",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "filenames.gni",
+      "resolved_path": "filenames.gni",
+      "extraction_rule": "code_span",
+      "confidence": "low",
+      "manual_is_reference_correct": "AMBIGUOUS",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "AMBIGUOUS",
+      "manual_reference_category": "ambiguous",
+      "manual_notes": "PREANNOTATION draft \u2014 requires human review before use in validation summary. Low confidence; not clearly classifiable."
+    },
+    {
+      "repo_id": "apache/airflow",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "[`.apache-magpie.lock`](.apache-magpie.lock)",
+      "resolved_path": "apache-magpie.lock",
+      "extraction_rule": "markdown_link",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "TRUE",
+      "manual_reference_category": "config_file",
+      "manual_notes": "PREANNOTATION draft \u2014 requires human review before use in validation summary. Verify resolved path; leading dot or .github prefix may be wrong."
+    },
+    {
+      "repo_id": "prefecthq/prefect",
+      "instruction_file": "docs/AGENTS.md",
+      "raw_reference": "v3/api-ref/rest-api/",
+      "resolved_path": "docs/v3/api-ref/rest-api/",
+      "extraction_rule": "explicit_path",
+      "confidence": "high",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "TRUE",
+      "manual_should_be_used_for_scope": "AMBIGUOUS",
+      "manual_reference_category": "documentation_reference",
+      "manual_notes": "Reviewed correction: valid documentation path; whether it defines governed scope is ambiguous."
+    },
+    {
+      "repo_id": "prefecthq/prefect",
+      "instruction_file": "docs/AGENTS.md",
+      "raw_reference": "[flows documentation](/v3/concepts/flows)",
+      "resolved_path": "v3/concepts/flows",
+      "extraction_rule": "markdown_link",
+      "confidence": "low",
+      "manual_is_reference_correct": "AMBIGUOUS",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "AMBIGUOUS",
+      "manual_reference_category": "ambiguous",
+      "manual_notes": "PREANNOTATION draft \u2014 requires human review before use in validation summary. Low confidence; unclear resolution/governance."
+    },
+    {
+      "repo_id": "apache/airflow",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "uv.lock",
+      "resolved_path": "uv.lock",
+      "extraction_rule": "code_span",
+      "confidence": "low",
+      "manual_is_reference_correct": "AMBIGUOUS",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "AMBIGUOUS",
+      "manual_reference_category": "ambiguous",
+      "manual_notes": "PREANNOTATION draft \u2014 requires human review before use in validation summary. Low confidence; not clearly classifiable."
+    },
+    {
+      "repo_id": "apache/airflow",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "[`.github/instructions/code-review.instructions.md`](.github/instructions/code-review.instructions.md)",
+      "resolved_path": "github/instructions/code-review.instructions.md",
+      "extraction_rule": "markdown_link",
+      "confidence": "medium",
+      "manual_is_reference_correct": "TRUE",
+      "manual_resolved_path_correct": "AMBIGUOUS",
+      "manual_should_be_used_for_scope": "FALSE",
+      "manual_reference_category": "documentation_reference",
+      "manual_notes": "PREANNOTATION draft \u2014 requires human review before use in validation summary. Verify resolved path; leading dot or .github prefix may be wrong."
+    }
+  ],
+  "accepted_boolean_values": [
+    "AMBIGUOUS",
+    "FALSE",
+    "TRUE"
+  ],
+  "accepted_categories": [
+    "ambiguous",
+    "build_command",
+    "config_file",
+    "directory",
+    "documentation_reference",
+    "false_positive",
+    "include_pointer",
+    "path",
+    "test_command"
+  ]
+}

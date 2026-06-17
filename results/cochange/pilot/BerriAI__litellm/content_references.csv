@@ -1,0 +1,5 @@
+repo_id,instruction_file,reference_type,raw_reference,resolved_path,exists_in_head,used_for_scope,extraction_rule
+BerriAI/litellm,litellm/proxy/_experimental/mcp_server/CLAUDE.md,path_token,available_on_public_internet: false,available_on_public_internet: false,False,False,backtick
+BerriAI/litellm,litellm/proxy/_experimental/mcp_server/CLAUDE.md,path_token,delegate_auth_to_upstream: true,delegate_auth_to_upstream: true,False,False,backtick
+BerriAI/litellm,litellm/proxy/_experimental/mcp_server/CLAUDE.md,path_token,client_credentials,client_credentials,False,False,backtick
+BerriAI/litellm,litellm/proxy/_experimental/mcp_server/CLAUDE.md,path_token,/authorize,authorize,False,False,backtick

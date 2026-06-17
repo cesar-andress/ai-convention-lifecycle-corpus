@@ -1,0 +1,12 @@
+{
+  "n_candidates": 38,
+  "evidence_strength": {
+    "strong": 2,
+    "moderate": 13,
+    "weak": 23
+  },
+  "priority_score_range": [
+    5,
+    100
+  ]
+}

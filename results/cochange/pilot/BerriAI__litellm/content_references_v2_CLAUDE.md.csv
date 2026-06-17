@@ -1,0 +1,13 @@
+repo_id,instruction_file,reference_type,raw_reference,raw_text,resolved_path,exists_in_head,used_for_scope,extraction_rule,confidence,parser_version
+BerriAI/litellm,CLAUDE.md,command,make new,make new,Makefile,True,True,make_command_to_makefile,medium,v2
+BerriAI/litellm,CLAUDE.md,command,make the,make the,Makefile,True,True,make_command_to_makefile,medium,v2
+BerriAI/litellm,CLAUDE.md,command,make it,make it,Makefile,True,True,make_command_to_makefile,medium,v2
+BerriAI/litellm,CLAUDE.md,code_span,tests/test_litellm/,tests/test_litellm/,tests/test_litellm/,True,True,code_span,medium,v2
+BerriAI/litellm,CLAUDE.md,code_span,litellm/,litellm/,litellm/,True,True,code_span,medium,v2
+BerriAI/litellm,CLAUDE.md,code_span,tests/test_litellm/readme.md,tests/test_litellm/readme.md,tests/test_litellm/readme.md,True,True,code_span,medium,v2
+BerriAI/litellm,CLAUDE.md,explicit_path,tests/test_litellm/,tests/test_litellm/,tests/test_litellm/,True,True,explicit_path,high,v2
+BerriAI/litellm,CLAUDE.md,explicit_path,tests/test_litellm/readme.md,tests/test_litellm/readme.md,tests/test_litellm/readme.md,True,True,explicit_path,high,v2
+BerriAI/litellm,CLAUDE.md,explicit_path,.github/pull_request_template.md,.github/pull_request_template.md,github/pull_request_template.md,True,True,explicit_path,high,v2
+BerriAI/litellm,CLAUDE.md,explicit_path,litellm/proxy/proxy_cli.py,litellm/proxy/proxy_cli.py,litellm/proxy/proxy_cli.py,True,True,explicit_path,high,v2
+BerriAI/litellm,CLAUDE.md,command,make public-facing,make public-facing,Makefile,True,True,make_command_to_makefile,medium,v2
+BerriAI/litellm,CLAUDE.md,command,make sure,make sure,Makefile,True,True,make_command_to_makefile,medium,v2

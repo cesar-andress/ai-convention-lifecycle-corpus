@@ -1,0 +1,9 @@
+repo_id,reason_selected,n_instruction_files_known,has_root_instruction,has_nested_instruction,local_clone_available,pilot_instruction_files
+cheat/cheat,small single-root CLAUDE.md; code-heavy CLI tool,1,True,False,True,CLAUDE.md
+electron/electron,small repo with root and nested docs/CLAUDE.md,2,True,True,True,CLAUDE.md;docs/CLAUDE.md
+dagster-io/dagster,medium artifact count but large monorepo history; root+nested CLAUDE.md,9,True,True,True,CLAUDE.md;docs/CLAUDE.md
+apache/airflow,monorepo with multiple AGENTS/CLAUDE paths; code-heavy OSS,18,True,True,True,CLAUDE.md;airflow-core/src/airflow/_shared/AGENTS.md
+BerriAI/litellm,medium repo with multiple root and nested instruction files,8,True,True,True,CLAUDE.md;litellm/proxy/_experimental/mcp_server/CLAUDE.md
+payloadcms/payload,documentation- and package-heavy monorepo,5,True,True,True,CLAUDE.md;packages/codemod/CLAUDE.md
+prefecthq/prefect,medium-large Python monorepo with multiple instruction paths,41,True,True,True,AGENTS.md;docs/AGENTS.md
+grafana/grafana,large code-heavy frontend/backend monorepo,8,True,True,True,CLAUDE.md;docs/AGENTS.md

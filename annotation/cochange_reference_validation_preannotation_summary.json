@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "total_rows": 50,
+    "annotator": "PREANNOTATION",
+    "annotated_at": "2026-06-17",
+    "status": "preannotation_draft_not_final_validation",
+    "category_counts": {
+      "ambiguous": 3,
+      "build_command": 4,
+      "config_file": 3,
+      "directory": 22,
+      "documentation_reference": 12,
+      "include_pointer": 1,
+      "path": 3,
+      "test_command": 2
+    },
+    "boolean_value_counts": {
+      "manual_is_reference_correct": {
+        "TRUE": 47,
+        "AMBIGUOUS": 3
+      },
+      "manual_resolved_path_correct": {
+        "TRUE": 45,
+        "AMBIGUOUS": 5
+      },
+      "manual_should_be_used_for_scope": {
+        "FALSE": 18,
+        "TRUE": 29,
+        "AMBIGUOUS": 3
+      }
+    },
+    "ambiguous_rows": 3,
+    "scope_true": 29,
+    "scope_false": 18,
+    "rows_requiring_human_review": 6
+  },
+  "review_rows": [
+    {
+      "csv_row": 6,
+      "repo_id": "electron/electron",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "filenames.gni",
+      "resolved_path": "filenames.gni",
+      "confidence": "low",
+      "extraction_rule": "code_span",
+      "preannotation_category": "ambiguous",
+      "review_reasons": "low parser confidence"
+    },
+    {
+      "csv_row": 18,
+      "repo_id": "apache/airflow",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "[`.apache-magpie.lock`](.apache-magpie.lock)",
+      "resolved_path": "apache-magpie.lock",
+      "confidence": "medium",
+      "extraction_rule": "markdown_link",
+      "preannotation_category": "config_file",
+      "review_reasons": "markdown link resolution; possible dot-prefix resolution error"
+    },
+    {
+      "csv_row": 36,
+      "repo_id": "payloadcms/payload",
+      "instruction_file": "packages/codemod/CLAUDE.md",
+      "raw_reference": "README.md",
+      "resolved_path": "README.md",
+      "confidence": "low",
+      "extraction_rule": "code_span",
+      "preannotation_category": "documentation_reference",
+      "review_reasons": "low parser confidence"
+    },
+    {
+      "csv_row": 43,
+      "repo_id": "prefecthq/prefect",
+      "instruction_file": "docs/AGENTS.md",
+      "raw_reference": "[flows documentation](/v3/concepts/flows)",
+      "resolved_path": "v3/concepts/flows",
+      "confidence": "low",
+      "extraction_rule": "markdown_link",
+      "preannotation_category": "ambiguous",
+      "review_reasons": "low parser confidence; markdown link resolution; relative or docs-path resolution suspect"
+    },
+    {
+      "csv_row": 45,
+      "repo_id": "apache/airflow",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "uv.lock",
+      "resolved_path": "uv.lock",
+      "confidence": "low",
+      "extraction_rule": "code_span",
+      "preannotation_category": "ambiguous",
+      "review_reasons": "low parser confidence"
+    },
+    {
+      "csv_row": 50,
+      "repo_id": "apache/airflow",
+      "instruction_file": "CLAUDE.md",
+      "raw_reference": "[`.github/instructions/code-review.instructions.md`](.github/instructions/code-review.instructions.md)",
+      "resolved_path": "github/instructions/code-review.instructions.md",
+      "confidence": "medium",
+      "extraction_rule": "markdown_link",
+      "preannotation_category": "documentation_reference",
+      "review_reasons": "markdown link resolution; possible dot-prefix resolution error"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+repo_id,instruction_file,reference_type,raw_reference,resolved_path,exists_in_head,used_for_scope,extraction_rule
+grafana/grafana,docs/AGENTS.md,path_token,docs/,docs/,True,False,backtick
+grafana/grafana,docs/AGENTS.md,directory_token,docs/,docs/,True,True,trailing_slash_token
+grafana/grafana,docs/AGENTS.md,path_token,---,---,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,title,title,False,False,backtick
+grafana/grafana,docs/AGENTS.md,command,Make sure,Make sure,False,False,make_target
+grafana/grafana,docs/AGENTS.md,path_token,allowlist/blocklist,allowlist/blocklist,False,False,inline_slash_token
+grafana/grafana,docs/AGENTS.md,path_token,whitelist/blacklist,whitelist/blacklist,False,False,inline_slash_token
+grafana/grafana,docs/AGENTS.md,directory_token,allowlist/,allowlist/,False,False,trailing_slash_token
+grafana/grafana,docs/AGENTS.md,directory_token,whitelist/,whitelist/,False,False,trailing_slash_token
+grafana/grafana,docs/AGENTS.md,path_token,primary/secondary,primary/secondary,False,False,inline_slash_token
+grafana/grafana,docs/AGENTS.md,path_token,master/slave,master/slave,False,False,inline_slash_token
+grafana/grafana,docs/AGENTS.md,directory_token,primary/,primary/,False,False,trailing_slash_token
+grafana/grafana,docs/AGENTS.md,directory_token,master/,master/,False,False,trailing_slash_token
+grafana/grafana,docs/AGENTS.md,path_token,[Link text](https://example.com),[Link text](https://example.com),False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,**bold**,**bold**,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,_italics_,_italics_,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,<PLACEHOLDER_NAME>,<PLACEHOLDER_NAME>,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,files/directories,files/directories,False,False,inline_slash_token
+grafana/grafana,docs/AGENTS.md,path_token,options/values,options/values,False,False,inline_slash_token
+grafana/grafana,docs/AGENTS.md,directory_token,files/,files/,False,False,trailing_slash_token
+grafana/grafana,docs/AGENTS.md,directory_token,options/,options/,False,False,trailing_slash_token
+grafana/grafana,docs/AGENTS.md,path_token,UPPER_SNAKE_CASE,UPPER_SNAKE_CASE,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,<SERVICE_NAME>,<SERVICE_NAME>,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,GET,GET,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,POST,POST,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,PUT,PUT,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,DELETE,DELETE,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,{paramName},{paramName},False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,sh,sh,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,text,text,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,console,console,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,json,json,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,yaml,yaml,False,False,backtick
+grafana/grafana,docs/AGENTS.md,path_token,notes/cautions/warnings,notes/cautions/warnings,False,False,inline_slash_token
+grafana/grafana,docs/AGENTS.md,directory_token,notes/,notes/,False,False,trailing_slash_token
+grafana/grafana,docs/AGENTS.md,directory_token,cautions/,cautions/,False,False,trailing_slash_token

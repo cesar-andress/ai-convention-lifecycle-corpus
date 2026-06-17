@@ -1,0 +1,4 @@
+repo_id,instruction_file,reference_type,raw_reference,raw_text,resolved_path,exists_in_head,used_for_scope,extraction_rule,confidence,parser_version
+grafana/grafana,docs/AGENTS.md,directory_mention,docs,docs,docs/,True,True,common_directory_name,medium,v2
+grafana/grafana,docs/AGENTS.md,code_span,docs/,docs/,docs/,True,True,code_span,medium,v2
+grafana/grafana,docs/AGENTS.md,command,Make sure,Make sure,Makefile,True,True,make_command_to_makefile,medium,v2

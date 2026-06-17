@@ -1,0 +1,63 @@
+{
+  "repo": "dagster-io/dagster",
+  "manifest": "/home/cesar/papers/ai-artifact-cochange/ai-convention-lifecycle-corpus/results/cochange/prototype/dagster_changed_files.parquet",
+  "commits_parsed": 27595,
+  "changed_file_rows": 274498,
+  "windows_days": [
+    0,
+    7,
+    30
+  ],
+  "instruction_metrics": [
+    {
+      "repo": "dagster-io/dagster",
+      "instruction_file": "CLAUDE.md",
+      "governed_scope": "repository-wide (excluding vendor/build/binary paths)",
+      "instruction_file_found_in_history": true,
+      "number_of_instruction_update_events": 20,
+      "number_of_governed_code_events": 27406,
+      "synchronization_rate": {
+        "W=0": 0.0006567904838356564,
+        "W=7": 0.020251039918266073,
+        "W=30": 0.04878493760490404
+      },
+      "median_lag_days_to_next_instruction_update": {
+        "W=0": 0.0,
+        "W=7": 1.064675925925926,
+        "W=30": 11.134467592592593
+      },
+      "assumptions": [
+        "Provisional scope rules in docs/cochange_scope_rules.md",
+        "git log --no-merges on default branch (HEAD)",
+        "Governed-code event requires \u22651 governed path plus \u22651 non-instruction changed path",
+        "W=0 requires instruction update in the same commit"
+      ],
+      "notes": []
+    },
+    {
+      "repo": "dagster-io/dagster",
+      "instruction_file": "docs/CLAUDE.md",
+      "governed_scope": "subtree `docs/` (excluding vendor/build/binary paths)",
+      "instruction_file_found_in_history": true,
+      "number_of_instruction_update_events": 4,
+      "number_of_governed_code_events": 5089,
+      "synchronization_rate": {
+        "W=0": 0.0005895067793279622,
+        "W=7": 0.01296914914521517,
+        "W=30": 0.037728433876989584
+      },
+      "median_lag_days_to_next_instruction_update": {
+        "W=0": 0.0,
+        "W=7": 1.819537037037037,
+        "W=30": 10.032390046296296
+      },
+      "assumptions": [
+        "Provisional scope rules in docs/cochange_scope_rules.md",
+        "git log --no-merges on default branch (HEAD)",
+        "Governed-code event requires \u22651 governed path plus \u22651 non-instruction changed path",
+        "W=0 requires instruction update in the same commit"
+      ],
+      "notes": []
+    }
+  ]
+}

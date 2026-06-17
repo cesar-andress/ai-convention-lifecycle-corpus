@@ -1,0 +1,37 @@
+repo_id,instruction_file,reference_type,raw_reference,raw_text,resolved_path,exists_in_head,used_for_scope,extraction_rule,confidence,parser_version
+dagster-io/dagster,CLAUDE.md,markdown_link,[.claude/python_packages.md](./.claude/python_packages.md),[.claude/python_packages.md](./.claude/python_packages.md),claude/python_packages.md,True,True,markdown_link,medium,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,.claude/python_packages.md,.claude/python_packages.md,claude/python_packages.md,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,./.claude/python_packages.md,./.claude/python_packages.md,claude/python_packages.md,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,markdown_link,[.claude/dev_workflow.md](./.claude/dev_workflow.md),[.claude/dev_workflow.md](./.claude/dev_workflow.md),claude/dev_workflow.md,True,True,markdown_link,medium,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,.claude/dev_workflow.md,.claude/dev_workflow.md,claude/dev_workflow.md,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,./.claude/dev_workflow.md,./.claude/dev_workflow.md,claude/dev_workflow.md,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,markdown_link,[.claude/ui_workflow.md](./.claude/ui_workflow.md),[.claude/ui_workflow.md](./.claude/ui_workflow.md),claude/ui_workflow.md,True,True,markdown_link,medium,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,.claude/ui_workflow.md,.claude/ui_workflow.md,claude/ui_workflow.md,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,./.claude/ui_workflow.md,./.claude/ui_workflow.md,claude/ui_workflow.md,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,markdown_link,[.claude/coding_conventions.md](./.claude/coding_conventions.md),[.claude/coding_conventions.md](./.claude/coding_conventions.md),claude/coding_conventions.md,True,True,markdown_link,medium,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,.claude/coding_conventions.md,.claude/coding_conventions.md,claude/coding_conventions.md,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,./.claude/coding_conventions.md,./.claude/coding_conventions.md,claude/coding_conventions.md,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,command,make ruff,make ruff,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,CLAUDE.md,markdown_link,[docs/docs/about/contributing.md](docs/docs/about/contributing.md),[docs/docs/about/contributing.md](docs/docs/about/contributing.md),docs/docs/about/contributing.md,True,True,markdown_link,medium,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,docs/docs/about/contributing.md,docs/docs/about/contributing.md,docs/docs/about/contributing.md,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,directory_mention,docs,docs,docs/,True,True,common_directory_name,medium,v2
+dagster-io/dagster,CLAUDE.md,command,make dev_install,make dev_install,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,CLAUDE.md,command,make pyright,make pyright,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,CLAUDE.md,command,make quick_pyright,make quick_pyright,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,python_modules/dagster/dagster_tests/,python_modules/dagster/dagster_tests/,python_modules/dagster/dagster_tests/,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,directory_mention,python_modules,python_modules,python_modules/,True,True,common_directory_name,medium,v2
+dagster-io/dagster,CLAUDE.md,command,make generate-graphql,make generate-graphql,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,CLAUDE.md,command,make rebuild_ui,make rebuild_ui,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,CLAUDE.md,command,make graphql_codegen,make graphql_codegen,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,CLAUDE.md,command,make sanity_check,make sanity_check,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,CLAUDE.md,code_span,python_modules/dagster/,python_modules/dagster/,python_modules/dagster/,True,True,code_span,medium,v2
+dagster-io/dagster,CLAUDE.md,code_span,python_modules/libraries/,python_modules/libraries/,python_modules/libraries/,True,True,code_span,medium,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,python_modules/dagster/,python_modules/dagster/,python_modules/dagster/,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,explicit_path,python_modules/libraries/,python_modules/libraries/,python_modules/libraries/,True,True,explicit_path,high,v2
+dagster-io/dagster,CLAUDE.md,code_span,js_modules/,js_modules/,js_modules/,True,True,code_span,medium,v2
+dagster-io/dagster,CLAUDE.md,code_span,docs/,docs/,docs/,True,True,code_span,medium,v2
+dagster-io/dagster,CLAUDE.md,directory_mention,Docs,Docs,docs/,True,True,common_directory_name,medium,v2
+dagster-io/dagster,CLAUDE.md,directory_mention,examples,examples,examples/,True,True,common_directory_name,medium,v2
+dagster-io/dagster,CLAUDE.md,command,make dev_webapp,make dev_webapp,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,CLAUDE.md,command,make command,make command,Makefile,True,True,make_command_to_makefile,medium,v2
+dagster-io/dagster,CLAUDE.md,config_file,Makefile,Makefile,Makefile,True,True,known_config_filename,high,v2

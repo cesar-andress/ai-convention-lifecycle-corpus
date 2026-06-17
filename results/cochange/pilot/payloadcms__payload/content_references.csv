@@ -1,0 +1,26 @@
+repo_id,instruction_file,reference_type,raw_reference,resolved_path,exists_in_head,used_for_scope,extraction_rule
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,README.md,README.md,True,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,"{ project, packageJsons }","{ project, packageJsons }",False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,TransformContext,TransformContext,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,dry,dry,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,print,print,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,Project,Project,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,packageJsons,packageJsons,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,{ filesChanged: [] },{ filesChanged: [] },False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,filesChanged,filesChanged,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,notes,notes,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,console,console,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,package.json,package.json,True,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,data,data,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,"{ path, data }","{ path, data }",False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,package.js,package.js,False,False,filename_ext
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,<case>.input.<ext>,<case>.input.<ext>,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,<case>.output.<ext>,<case>.output.<ext>,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,.ts,ts,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,.json,json,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,index.ts,index.ts,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,__fixtures__,__fixtures__,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,payload build,payload build,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,path_token,--since,--since,False,False,backtick
+payloadcms/payload,packages/codemod/CLAUDE.md,known_root_file,package.json,package.json,True,True,known_config_filename
+payloadcms/payload,packages/codemod/CLAUDE.md,known_root_file,README.md,README.md,True,True,known_config_filename
