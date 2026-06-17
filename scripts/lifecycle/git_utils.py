@@ -49,11 +49,19 @@ def clone_repo(url: str, dest: Path, timeout: int = 180, shallow: bool = False) 
     return proc.returncode == 0
 
 
+def normalize_repo_relative_path(path: str) -> str:
+    """Normalize a repository-relative path; strip only a literal leading './'."""
+    p = path.replace("\\", "/").strip()
+    if p.startswith("./"):
+        p = p[2:]
+    return p
+
+
 def list_head_files(repo_dir: Path) -> list[str]:
     proc = run_git(["git", "ls-tree", "-r", "--name-only", "HEAD"], cwd=repo_dir)
     if proc.returncode != 0:
         return []
-    return [p.replace("\\", "/").lstrip("./") for p in proc.stdout.splitlines() if p.strip()]
+    return [normalize_repo_relative_path(p) for p in proc.stdout.splitlines() if p.strip()]
 
 
 def repo_last_commit_ts(repo_dir: Path) -> datetime | None:

@@ -1,0 +1,83 @@
+# gh_actions_v1 — GitHub Actions workflow family (fixed 209-repo cohort; separate outputs)
+
+family_id: gh_actions_v1
+family_label: "GitHub Actions workflow files"
+
+project: gh-actions-lifecycle
+
+research_question: >
+  Do paired adoption-maintenance gap estimands separate artifact-level and
+  repository-level maintenance for GitHub Actions workflow files on the same
+  fixed repository cohort?
+
+unit_of_analysis: artifact_instance
+
+observation_end: null
+
+stasis_thresholds_days:
+  primary: 180
+  sensitivity:
+    - 90
+    - 365
+
+artifact_patterns:
+  - id: workflow_yaml
+    regex: '(^|/)\.github/workflows/.*\.ya?ml$'
+
+exclude_path_prefixes:
+  - node_modules/
+  - vendor/
+  - dist/
+  - build/
+  - target/
+  - coverage/
+  - .git/
+
+exclude_basenames: []
+
+exclude_path_regex:
+  - '/examples/'
+  - '/example/'
+  - '/fixtures/'
+  - '/testdata/'
+  - '/samples/'
+
+primary_analysis:
+  root_workflows_only: true
+  path_prefix: ".github/workflows/"
+
+sensitivity_analysis:
+  include_nested_subtree_workflows: true
+
+history_git_pathscope: ".github/workflows"
+history_git_timeout: 180
+
+bot_author_regex: '(?i)(bot|dependabot|renovate|github-actions|noreply|\[bot\])'
+
+extraction:
+  repos_dir: data/repos
+  clone_timeout_seconds: 180
+  min_repo_commits: 20
+
+outputs:
+  cohort: data/lifecycle_gh_actions/cohort_209.csv
+  discovered: data/lifecycle_gh_actions/discovered_gh_actions.csv
+  touch_history: data/lifecycle_gh_actions/touch_history_gh_actions.parquet
+  repo_covariates: data/lifecycle_gh_actions/repo_covariates_gh_actions.parquet
+  artifacts: data/lifecycle_gh_actions/artifacts_gh_actions.parquet
+  artifacts_full: data/lifecycle_gh_actions/artifacts_full_gh_actions.parquet
+  artifact_states: data/lifecycle_gh_actions/artifact_states_gh_actions.parquet
+  attrition: results/lifecycle_gh_actions/extract_attrition_gh_actions.csv
+  extract_meta: data/lifecycle_gh_actions/extract_meta_gh_actions.json
+  summary: results/lifecycle_gh_actions/adoption_maintenance_gh_actions.json
+  bootstrap: results/lifecycle_gh_actions/bootstrap_gh_actions.json
+  loo: results/lifecycle_gh_actions/loo_gh_actions.csv
+  bot_sensitivity: results/lifecycle_gh_actions/bot_sensitivity_gh_actions.json
+  gate_report: results/lifecycle_gh_actions/gh_actions_gate_report.json
+  summary_md: results/lifecycle_gh_actions/gh_actions_summary.md
+
+analysis:
+  primary_threshold_days: 180
+  bootstrap_replicates: 5000
+  bootstrap_seed: 42
+  exclude_top_workflow_repos: 3

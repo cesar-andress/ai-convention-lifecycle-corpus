@@ -8,14 +8,14 @@ else
   PYTHON ?= .venv/bin/python3
 endif
 
-.PHONY: install analyze lifecycle-v2 verify-headline repository-typology-analysis prototype-cochange-dagster pilot-cochange-scope pilot-cochange-scope-v2 pilot-cochange-scope-v3 prepare-reference-validation prepare-reference-validation-sample2 summarize-reference-validation summarize-reference-validation-sample2 pilot-misguidance pilot-misguidance-v2 drift-candidate-audit validated-drift-package synchronization-spectrum-pilot prepare-sync-validation summarize-sync-validation prepare-sync-validation-blinded summarize-sync-agreement summarize-sync-metric-vs-human prepare-boundary20-validation summarize-boundary20-agreement summarize-boundary20-metric-vs-human clean
+.PHONY: install analyze lifecycle-v2 verify-headline verify-path-normalization verify-ai-headlines gh-actions-family verify-gh-actions-gate repository-typology-analysis prototype-cochange-dagster pilot-cochange-scope pilot-cochange-scope-v2 pilot-cochange-scope-v3 prepare-reference-validation prepare-reference-validation-sample2 summarize-reference-validation summarize-reference-validation-sample2 pilot-misguidance pilot-misguidance-v2 drift-candidate-audit validated-drift-package synchronization-spectrum-pilot prepare-sync-validation summarize-sync-validation prepare-sync-validation-blinded summarize-sync-agreement summarize-sync-metric-vs-human prepare-boundary20-validation summarize-boundary20-agreement summarize-boundary20-metric-vs-human clean
 
 install:
 	$(PYTHON) -m pip install -r requirements.txt
 
 # Recompute analysis from frozen parquets (no network; no git clone)
 analyze:
-	$(PYTHON) scripts/lifecycle/adoption_maintenance_v2.py
+	$(PYTHON) scripts/lifecycle/adoption_maintenance_v2.py --skip-extract-stale-check
 	$(PYTHON) scripts/lifecycle/maturity_gap_v2.py
 	$(PYTHON) scripts/lifecycle/bot_sensitivity_v2.py
 
@@ -29,6 +29,21 @@ lifecycle-v2:
 
 verify-headline:
 	@$(PYTHON) -c "import json; s=json.load(open('results/lifecycle/adoption_maintenance_v2.json')); h=s['headline_primary_180']; assert h['n_repos']==209; print('OK: n_repos=209 artifact_gap=', round(h['artifact_gap_mature'],3))"
+
+verify-path-normalization:
+	$(PYTHON) scripts/lifecycle/verify_path_normalization.py
+
+verify-ai-headlines:
+	$(PYTHON) scripts/lifecycle/verify_ai_headlines.py
+
+gh-actions-family:
+	$(PYTHON) scripts/lifecycle/run_gh_actions_family.py --stage all
+
+gh-actions-analyze:
+	$(PYTHON) scripts/lifecycle/run_gh_actions_family.py --stage analyze
+
+verify-gh-actions-gate:
+	@$(PYTHON) -c "import json; g=json.load(open('results/lifecycle_gh_actions/gh_actions_gate_report.json')); assert g['passed'], g; print('OK: gh_actions gate passed')"
 
 # Co-change feasibility prototype (isolated; does not modify lifecycle v2 outputs)
 prototype-cochange-dagster:

@@ -20,7 +20,7 @@ from lifecycle.corpus_paths import configure
 
 ROOT = configure()
 
-from lifecycle.detection import artifact_type, is_bot, is_ci_path, is_lifecycle_artifact, load_config
+from lifecycle.detection import artifact_type, is_bot, is_ci_path, is_lifecycle_artifact, load_config, normalize_path
 from lifecycle.git_utils import (
     GIT_ENV,
     clone_repo,
@@ -36,19 +36,20 @@ DEFAULT_CONFIG = ROOT / "protocol" / "lifecycle_v1.yaml"
 
 def discover_artifact_paths(repo_dir: Path, cfg: dict) -> set[str]:
     """Paths matching lifecycle scope seen anywhere in git history."""
-    proc = run_git(
-        ["git", "log", "--all", "--pretty=format:", "--name-only", "--diff-filter=AMR"],
-        cwd=repo_dir,
-    )
+    scope = cfg.get("history_git_pathscope")
+    git_args = ["git", "log", "--all", "--pretty=format:", "--name-only", "--diff-filter=AMR"]
+    if scope:
+        git_args.extend(["--", scope])
+    proc = run_git(git_args, cwd=repo_dir, timeout=cfg.get("history_git_timeout", 300))
     paths: set[str] = set()
     if proc.returncode == 0:
         for line in proc.stdout.splitlines():
-            p = line.strip().replace("\\", "/").lstrip("./")
+            p = normalize_path(line.strip())
             if p and is_lifecycle_artifact(p, cfg):
                 paths.add(p)
     for p in list_head_files(repo_dir):
         if is_lifecycle_artifact(p, cfg):
-            paths.add(p)
+            paths.add(normalize_path(p))
     return paths
 
 
@@ -117,7 +118,7 @@ def repo_commit_stats(repo_dir: Path, cfg: dict) -> dict:
                         n_ci_commits += 1
                 files = []
             elif raw.strip():
-                files.append(raw.strip().replace("\\", "/").lstrip("./"))
+                files.append(normalize_path(raw.strip()))
         if files:
             n_valid_commits += 1
             if any(is_ci_path(f, cfg) for f in files):

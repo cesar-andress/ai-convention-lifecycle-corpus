@@ -1,0 +1,251 @@
+{
+  "family_regex": "(^|/)\\.github/workflows/.*\\.ya?ml$",
+  "t_primary_days": 180,
+  "pilot_n": 20,
+  "pilot_repo_ids": [
+    "HKUDS/nanobot",
+    "NousResearch/hermes-agent",
+    "TransformerOptimus/SuperAGI",
+    "apache/airflow",
+    "apache/flink",
+    "bottlepy/bottle",
+    "caddyserver/caddy",
+    "cypress-io/cypress",
+    "facebook/react",
+    "langgenius/dify",
+    "mem0ai/mem0",
+    "open-telemetry/opentelemetry-go",
+    "rabbitmq/rabbitmq-server",
+    "rtk-ai/rtk",
+    "safishamsi/graphify",
+    "scalacenter/scalafix",
+    "scikit-learn/scikit-learn",
+    "supabase/supabase",
+    "vercel/next.js",
+    "wandb/wandb"
+  ],
+  "pilot_metrics": {
+    "n_repos_analyzed": 20,
+    "n_repos_with_workflows_head": 19,
+    "n_repos_with_mature_present": 15,
+    "n_mature_present_paths": 212,
+    "n_workflow_paths_head_total": 292,
+    "median_workflow_paths_head_per_adopted_repo": 12.0,
+    "median_workflow_paths_ever_per_repo_with_any": 20.0,
+    "max_workflow_paths_head": 47,
+    "max_workflow_paths_ever": 170,
+    "false_positive_path_count": 1,
+    "false_positive_examples": [
+      {
+        "artifact_path": "examples/edge-functions/.github/workflows/deploy.yaml",
+        "present_in_head": true,
+        "introduced_at": "2022-10-07T07:30:37+00:00",
+        "last_touch_at": "2026-05-28T15:31:04+00:00",
+        "follow_up_days": 1342,
+        "mature_present_180": true,
+        "false_positive_flags": [
+          "nested_subtree",
+          "under_examples"
+        ]
+      }
+    ]
+  },
+  "full_cohort_n": 209,
+  "full_cohort_metrics": {
+    "n_repos_analyzed": 209,
+    "n_repos_with_workflows_head": 187,
+    "n_repos_with_mature_present": 156,
+    "n_mature_present_paths": 2221,
+    "n_workflow_paths_head_total": 3231,
+    "median_workflow_paths_head_per_adopted_repo": 11.0,
+    "median_workflow_paths_ever_per_repo_with_any": 18.0,
+    "max_workflow_paths_head": 335,
+    "max_workflow_paths_ever": 408,
+    "false_positive_path_count": 104,
+    "false_positive_examples": [
+      {
+        "artifact_path": "extensions/copilot/.github/workflows/copilot-setup-steps.yml",
+        "present_in_head": true,
+        "introduced_at": "2025-09-23T23:39:34+00:00",
+        "last_touch_at": "2026-03-30T18:12:26+00:00",
+        "follow_up_days": 259,
+        "mature_present_180": true,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "extensions/copilot/.github/workflows/ensure-node-modules-cache.yml",
+        "present_in_head": true,
+        "introduced_at": "2025-07-04T15:17:51+00:00",
+        "last_touch_at": "2026-03-30T18:12:26+00:00",
+        "follow_up_days": 340,
+        "mature_present_180": true,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "extensions/copilot/.github/workflows/pr.yml",
+        "present_in_head": true,
+        "introduced_at": "2025-06-27T09:35:20+00:00",
+        "last_touch_at": "2026-04-09T17:53:58+00:00",
+        "follow_up_days": 348,
+        "mature_present_180": true,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "compiler/rustc_codegen_cranelift/.github/workflows/abi-cafe.yml",
+        "present_in_head": true,
+        "introduced_at": null,
+        "last_touch_at": null,
+        "follow_up_days": null,
+        "mature_present_180": false,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "compiler/rustc_codegen_cranelift/.github/workflows/cranelift-release-branch.yml",
+        "present_in_head": true,
+        "introduced_at": null,
+        "last_touch_at": null,
+        "follow_up_days": null,
+        "mature_present_180": false,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "compiler/rustc_codegen_cranelift/.github/workflows/main.yml",
+        "present_in_head": true,
+        "introduced_at": null,
+        "last_touch_at": null,
+        "follow_up_days": null,
+        "mature_present_180": false,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "compiler/rustc_codegen_cranelift/.github/workflows/rustc.yml",
+        "present_in_head": true,
+        "introduced_at": null,
+        "last_touch_at": null,
+        "follow_up_days": null,
+        "mature_present_180": false,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "compiler/rustc_codegen_gcc/.github/workflows/ci.yml",
+        "present_in_head": true,
+        "introduced_at": null,
+        "last_touch_at": null,
+        "follow_up_days": null,
+        "mature_present_180": false,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "compiler/rustc_codegen_gcc/.github/workflows/failures.yml",
+        "present_in_head": true,
+        "introduced_at": "2026-02-27T03:48:05+00:00",
+        "last_touch_at": "2026-02-27T03:48:05+00:00",
+        "follow_up_days": 103,
+        "mature_present_180": false,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "compiler/rustc_codegen_gcc/.github/workflows/gcc12.yml",
+        "present_in_head": true,
+        "introduced_at": null,
+        "last_touch_at": null,
+        "follow_up_days": null,
+        "mature_present_180": false,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "compiler/rustc_codegen_gcc/.github/workflows/m68k.yml",
+        "present_in_head": true,
+        "introduced_at": "2026-02-27T03:48:05+00:00",
+        "last_touch_at": "2026-02-27T03:48:05+00:00",
+        "follow_up_days": 103,
+        "mature_present_180": false,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "compiler/rustc_codegen_gcc/.github/workflows/release.yml",
+        "present_in_head": true,
+        "introduced_at": null,
+        "last_touch_at": null,
+        "follow_up_days": null,
+        "mature_present_180": false,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "compiler/rustc_codegen_gcc/.github/workflows/stdarch.yml",
+        "present_in_head": true,
+        "introduced_at": "2026-02-27T03:48:05+00:00",
+        "last_touch_at": "2026-02-27T03:48:05+00:00",
+        "follow_up_days": 103,
+        "mature_present_180": false,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "library/compiler-builtins/.github/workflows/main.yaml",
+        "present_in_head": true,
+        "introduced_at": "2019-09-11T01:16:26+00:00",
+        "last_touch_at": "2026-05-16T19:52:17+00:00",
+        "follow_up_days": 2464,
+        "mature_present_180": true,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      },
+      {
+        "artifact_path": "library/compiler-builtins/.github/workflows/publish.yaml",
+        "present_in_head": true,
+        "introduced_at": "2024-07-18T05:29:04+00:00",
+        "last_touch_at": "2026-04-01T09:59:16+00:00",
+        "follow_up_days": 691,
+        "mature_present_180": true,
+        "false_positive_flags": [
+          "nested_subtree"
+        ]
+      }
+    ]
+  },
+  "extrapolation": {
+    "scale_factor": 10.45,
+    "from_pilot_linear": {
+      "n_repos_with_workflows_head": 199,
+      "n_repos_with_mature_present": 157,
+      "n_mature_present_paths": 2215
+    },
+    "from_full_cohort_direct": {
+      "n_repos_with_workflows_head": 187,
+      "n_repos_with_mature_present": 156,
+      "n_mature_present_paths": 2221
+    }
+  },
+  "decision_thresholds": {
+    "min_adopted_repos": 80,
+    "min_restricted_repos": 40,
+    "min_mature_present_paths": 150
+  }
+}

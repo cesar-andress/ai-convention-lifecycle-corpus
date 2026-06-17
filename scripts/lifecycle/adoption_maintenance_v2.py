@@ -8,6 +8,7 @@ import json
 import sys
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 _SCRIPTS = Path(__file__).resolve().parents[1]
@@ -27,6 +28,7 @@ from lifecycle.adoption_maintenance import (
     enrich_present_in_head,
     gap_artifact_mature,
     gap_repo_level,
+    gap_repo_restricted,
     load_am_config,
     table_by_cohort,
 )
@@ -38,6 +40,7 @@ DEFAULT_V2 = ROOT / "protocol" / "adoption_maintenance_v2.yaml"
 DEFAULT_AM = ROOT / "protocol" / "adoption_maintenance_v1.yaml"
 DEFAULT_LC = ROOT / "protocol" / "lifecycle_v1.yaml"
 DEFAULT_DISCOVERED_V2 = ROOT / "data" / "lifecycle" / "discovered_v2.csv"
+FROZEN_STATES = ROOT / "data" / "lifecycle" / "artifact_states_v2.parquet"
 EXTRACT_META = ROOT / "data" / "lifecycle" / "extract_meta.json"
 
 
@@ -46,6 +49,8 @@ def validate_extract_scale(
     touch_path: Path,
     artifacts_path: Path,
     meta_path: Path = EXTRACT_META,
+    *,
+    skip_stale_check: bool = False,
 ) -> dict:
     """Fail fast when downstream reads stale or incomplete extract outputs."""
     if not discovered_path.exists():
@@ -60,7 +65,7 @@ def validate_extract_scale(
     touch_repos = int(pd.read_parquet(touch_path)["repo_id"].nunique())
     art_repos = int(pd.read_parquet(artifacts_path)["repo_id"].nunique())
 
-    if touch_path.stat().st_mtime < discovered_path.stat().st_mtime:
+    if not skip_stale_check and touch_path.stat().st_mtime < discovered_path.stat().st_mtime:
         raise SystemExit(
             f"stale extract: {discovered_path.name} is newer than {touch_path.name} "
             f"({disc_n} discovered vs {touch_repos} repos in touch history). "
@@ -133,6 +138,29 @@ def cluster_bootstrap_repo_gap(df: pd.DataFrame, t: int, n: int, seed: int) -> d
     }
 
 
+def cluster_bootstrap_repo_restricted_gap(df: pd.DataFrame, t: int, n: int, seed: int) -> dict:
+    """Cluster bootstrap for maturity-aligned restricted repository gap."""
+    repos = df["repo_id"].unique()
+    groups = {r: df[df["repo_id"] == r] for r in repos}
+    rng = np.random.default_rng(seed)
+    samples = []
+    for _ in range(n):
+        picked = rng.choice(repos, size=len(repos), replace=True)
+        boot = pd.concat([groups[r] for r in picked], ignore_index=True)
+        g = gap_repo_restricted(boot, t)
+        if g["gap_rate"] is not None:
+            samples.append(g["gap_rate"])
+    obs = gap_repo_restricted(df, t)["gap_rate"]
+    if not samples:
+        return {"observed": obs, "ci_95": {"low": None, "high": None}, "n_bootstrap": 0}
+    arr = np.array(samples)
+    return {
+        "observed": obs,
+        "ci_95": {"low": float(np.percentile(arr, 2.5)), "high": float(np.percentile(arr, 97.5))},
+        "n_bootstrap": len(samples),
+    }
+
+
 def cluster_bootstrap_artifact_gap(df: pd.DataFrame, t: int, n: int, seed: int) -> dict:
     from lifecycle.adoption_maintenance import cluster_bootstrap_gap
 
@@ -144,6 +172,7 @@ def full_bootstrap(df: pd.DataFrame, thresholds: list[int], n: int, seed: int) -
     for t in thresholds:
         art = cluster_bootstrap_artifact_gap(df, t, n, seed)
         repo = cluster_bootstrap_repo_gap(df, t, n, seed)
+        repo_restricted = cluster_bootstrap_repo_restricted_gap(df, t, n, seed)
         out[str(t)] = {
             "artifact_gap_mature": {
                 "observed": art["observed_gap_rate_mature"],
@@ -153,6 +182,7 @@ def full_bootstrap(df: pd.DataFrame, thresholds: list[int], n: int, seed: int) -
                 "n_bootstrap": art["n_bootstrap"],
             },
             "repo_gap": repo,
+            "repo_gap_restricted": repo_restricted,
         }
     return out
 
@@ -436,6 +466,11 @@ def main() -> int:
     parser.add_argument("--discovered", type=Path, default=None)
     parser.add_argument("--repos-dir", type=Path, default=ROOT / "data" / "repos")
     parser.add_argument("--discovery-funnel-json", type=Path, default=None)
+    parser.add_argument(
+        "--skip-extract-stale-check",
+        action="store_true",
+        help="Skip discovered-vs-touch mtime validation (offline re-analysis on frozen parquets).",
+    )
     args = parser.parse_args()
 
     v2_cfg = load_v2(args.v2_config)
@@ -445,10 +480,16 @@ def main() -> int:
     touch_path = ROOT / lc_cfg["outputs"]["touch_history"]
     discovered_path = args.discovered or DEFAULT_DISCOVERED_V2
 
-    extract_meta = validate_extract_scale(discovered_path, touch_path, artifacts_path)
+    extract_meta = validate_extract_scale(
+        discovered_path, touch_path, artifacts_path, skip_stale_check=args.skip_extract_stale_check
+    )
 
-    df = load_artifact_frame(artifacts_path, touch_path)
-    df = enrich_present_in_head(df, args.repos_dir)
+    if args.skip_extract_stale_check and FROZEN_STATES.exists():
+        df = pd.read_parquet(FROZEN_STATES)
+        extract_meta = {**extract_meta, "analysis_panel": str(FROZEN_STATES.relative_to(ROOT))}
+    else:
+        df = load_artifact_frame(artifacts_path, touch_path)
+        df = enrich_present_in_head(df, args.repos_dir)
 
     funnel_disc = None
     funnel_path = ROOT / v2_cfg["discovery"]["outputs"]["funnel"]

@@ -128,6 +128,25 @@ def gap_repo_level(df: pd.DataFrame, t: int) -> dict:
     }
 
 
+def gap_repo_maturity_matched_unrestricted(df: pd.DataFrame, t: int) -> dict:
+    """All adopted repositories: share with no Active mature-present path at T."""
+    adopted_repos = df.groupby("repo_id")["present_in_head"].any()
+    n_adopted = int(adopted_repos.sum())
+    if n_adopted == 0:
+        return {
+            "n_repos_adopted": 0,
+            "n_repos_with_active_mature_present": 0,
+            "gap_rate": None,
+        }
+    active_mature_repos = df[df[f"mature_present_{t}"] & (df[f"state_{t}"] == "ACTIVE")]["repo_id"].nunique()
+    n_gap = n_adopted - int(active_mature_repos)
+    return {
+        "n_repos_adopted": n_adopted,
+        "n_repos_with_active_mature_present": int(active_mature_repos),
+        "gap_rate": n_gap / n_adopted,
+    }
+
+
 def gap_repo_restricted(df: pd.DataFrame, t: int) -> dict:
     """Among repos with >=1 mature-present path: share with no active mature-present path."""
     mature_repos = df.groupby("repo_id")[f"mature_present_{t}"].any()

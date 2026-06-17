@@ -19,8 +19,11 @@ def load_config(path: str | None = None) -> dict:
         return yaml.safe_load(f)
 
 
+from lifecycle.git_utils import normalize_repo_relative_path
+
+
 def normalize_path(p: str) -> str:
-    return p.replace("\\", "/").lstrip("./")
+    return normalize_repo_relative_path(p)
 
 
 def _matches_any(path: str, patterns: list[str]) -> bool:
