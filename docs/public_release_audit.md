@@ -137,7 +137,7 @@ OK: n_repos=209 artifact_gap= 0.56
 
 - [ ] Confirm `data/repos/` is not populated locally before `git add -A`
 - [ ] Run `make clean` and verify no `__pycache__` before tagging a release
-- [x] Replace `PLACEHOLDER` DOI and URLs in `CITATION.cff` and `metadata/zenodo.json` (`10.5281/zenodo.20637986`)
+- [x] Replace `PLACEHOLDER` DOI and URLs in `CITATION.cff` and `metadata/zenodo.json` (`10.5281/zenodo.20729490`)
 - [ ] Upload from a fresh clone or `git archive` to avoid untracked local files
 
 ---

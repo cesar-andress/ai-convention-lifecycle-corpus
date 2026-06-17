@@ -8,7 +8,7 @@ Use **`metadata/zenodo.json`** as the canonical upload metadata template (copy f
 
 ## Before uploading
 
-1. Confirm DOI `10.5281/zenodo.20637986` in `CITATION.cff`, `metadata/zenodo.json`, and `README.md` matches the Zenodo record for this release.
+1. Confirm DOI `10.5281/zenodo.20729490` in `CITATION.cff`, `metadata/zenodo.json`, and `README.md` matches the Zenodo record for this release.
 2. Confirm author metadata in `CITATION.cff` and `metadata/zenodo.json` matches the release tag.
 3. Tag the GitHub release as **`v2.0.0`**.
 

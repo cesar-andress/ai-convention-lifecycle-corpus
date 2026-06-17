@@ -168,13 +168,13 @@ Copy description HTML from [`metadata/zenodo.json`](../metadata/zenodo.json) and
 
 After Zenodo assigns a DOI:
 
-1. Copy DOI: `10.5281/zenodo.20637986`
-2. Resolve in browser: `https://doi.org/10.5281/zenodo.20637986`
+1. Copy DOI: `10.5281/zenodo.20729490`
+2. Resolve in browser: `https://doi.org/10.5281/zenodo.20729490`
 3. Confirm landing page shows correct **version**, **files**, and **title**.
 
 ```bash
 # Quick HTTP check (expect 200 or 302 to Zenodo record)
-DOI=10.5281/zenodo.20637986
+DOI=10.5281/zenodo.20729490
 curl -sI "https://doi.org/${DOI}" | head -5
 ```
 
@@ -186,7 +186,7 @@ curl -sI "https://doi.org/${DOI}" | head -5
 
 ## Citation update
 
-For the **first public deposit**, the assigned DOI is `10.5281/zenodo.20637986` (record ID `20637986`). It is recorded in:
+For the **first public deposit**, the assigned DOI is `10.5281/zenodo.20729490` (record ID `20729490`). It is recorded in:
 
 | File | Fields |
 |------|--------|
@@ -201,7 +201,7 @@ For **subsequent versioned deposits**, replace the record ID in those files and 
 rg 'XXXXXXX|zenodo\.PLACEHOLDER|zenodo\.________' .
 ```
 
-- [x] No Zenodo DOI placeholders remain in citation files (first deposit: `20637986`)
+- [x] No Zenodo DOI placeholders remain in citation files (first deposit: `20729490`)
 - [ ] [`CITATION.cff`](../CITATION.cff) validates (optional: [cff-validator](https://github.com/citation-file-format/cff-validator))
 - [ ] GitHub release description updated with DOI link
 
@@ -305,7 +305,7 @@ sha256sum corpus.zip
 Release:     vX.Y.Z
 Git tag:     vX.Y.Z
 GitHub:      https://github.com/cesar-andress/ai-convention-lifecycle-corpus/releases/tag/vX.Y.Z
-Zenodo DOI:  https://doi.org/10.5281/zenodo.20637986
+Zenodo DOI:  https://doi.org/10.5281/zenodo.20729490
 Cohort:      ___ discovered / ___ analyzed repos; ___ ever-introduced artifacts
 Headline:    ___% artifact-level gap (T=180 d); ___% repo-level gap
 Verified:    make verify-headline OK on YYYY-MM-DD
@@ -318,8 +318,8 @@ SHA-256:     (zip checksum)
 
 | Version | Date | DOI | Notes |
 |---------|------|-----|-------|
-| v1.0.1 | 2026-06-11 | `10.5281/zenodo.20637986` | Public Zenodo deposit; citation metadata |
-| v2.0.0 | 2026-06-11 | `10.5281/zenodo.20637986` | Canonical public release: Expanded 209-Repository Dataset and Adoption–Maintenance Framework |
+| v1.0.1 | 2026-06-11 | `10.5281/zenodo.20729490` | Public Zenodo deposit; citation metadata |
+| v2.0.0 | 2026-06-11 | `10.5281/zenodo.20729490` | Canonical public release: Expanded 209-Repository Dataset and Adoption–Maintenance Framework |
 | | | | |
 
 Append a row after each successful release.

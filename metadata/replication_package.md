@@ -1,7 +1,7 @@
 # Replication package inventory
 
 **Release title:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
-**DOI:** [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986)
+**DOI:** [https://doi.org/10.5281/zenodo.20729490](https://doi.org/10.5281/zenodo.20729490)
 
 This document describes **data, code, and protocols only**. It does not reproduce manuscript text, figures, or paper-specific claims.
 
@@ -216,6 +216,6 @@ Technical notes for reproduction and release auditing. **No manuscript content.*
 ## Citation
 
 **Release title:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
-**Dataset DOI:** [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986)
+**Dataset DOI:** [https://doi.org/10.5281/zenodo.20729490](https://doi.org/10.5281/zenodo.20729490)
 
 See also `CITATION.cff` and `README.md` (Citation section).

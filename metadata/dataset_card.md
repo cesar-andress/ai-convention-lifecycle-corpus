@@ -8,7 +8,7 @@ license_code: MIT
 license_data: CC-BY-4.0
 language: en
 homepage: https://github.com/cesar-andress/ai-convention-lifecycle-corpus
-doi: 10.5281/zenodo.20637986
+doi: 10.5281/zenodo.20729490
 tags:
   - mining-software-repositories
   - github
@@ -30,7 +30,7 @@ tags:
 | **License (code)** | MIT |
 | **License (aggregated data)** | CC-BY 4.0 |
 | **Citation** | [`CITATION.cff`](../CITATION.cff) · [`docs/CITING.md`](../docs/CITING.md) |
-| **DOI** | `10.5281/zenodo.20637986` · [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986) |
+| **DOI** | `10.5281/zenodo.20729490` · [https://doi.org/10.5281/zenodo.20729490](https://doi.org/10.5281/zenodo.20729490) |
 
 This card describes the corpus as a **standalone research artifact**. No companion publication is required to understand scope, provenance, or appropriate use.
 
@@ -297,7 +297,7 @@ Semantic versioning on git tags (e.g. `v2.0.0`). Record each release on Zenodo w
 
 | Version | Date | Notes |
 |---------|------|-------|
-| v2.0.0 | 2026-06-11 | Canonical public release (209 analyzed repos); DOI `10.5281/zenodo.20637986` |
+| v2.0.0 | 2026-06-11 | Canonical public release (209 analyzed repos); DOI `10.5281/zenodo.20729490` |
 
 Release procedure: [`docs/ZENODO_RELEASE_CHECKLIST.md`](../docs/ZENODO_RELEASE_CHECKLIST.md).
 

@@ -1,7 +1,7 @@
 # AI Convention Lifecycle Corpus
 
 **Release title:** AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework  
-**DOI:** [https://doi.org/10.5281/zenodo.20637986](https://doi.org/10.5281/zenodo.20637986)
+**DOI:** [https://doi.org/10.5281/zenodo.20729490](https://doi.org/10.5281/zenodo.20729490)
 
 Replication package for measuring the adoption–maintenance gap in AI instructional artifacts on public GitHub repositories.
 
@@ -144,8 +144,8 @@ Equivalent: `python scripts/lifecycle/run_v2.py` with `PYTHONPATH=./scripts`.
   year         = {2026},
   publisher    = {Zenodo},
   version      = {2.0.0},
-  doi          = {10.5281/zenodo.20637986},
-  url          = {https://doi.org/10.5281/zenodo.20637986}
+  doi          = {10.5281/zenodo.20729490},
+  url          = {https://doi.org/10.5281/zenodo.20729490}
 }
 ```
 
@@ -178,8 +178,8 @@ When in doubt, treat **tabular outputs and seed lists as CC-BY 4.0** and **code 
 | Field | Value |
 |-------|-------|
 | **Release title** | AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework |
-| **DOI** | `10.5281/zenodo.20637986` |
-| **URL** | `https://doi.org/10.5281/zenodo.20637986` |
+| **DOI** | `10.5281/zenodo.20729490` |
+| **URL** | `https://doi.org/10.5281/zenodo.20729490` |
 | **Version** | 2.0.0 |
 | **Upload metadata template** | `metadata/zenodo.json` |
 | **Deposit checklist** | `zenodo/README.md` |

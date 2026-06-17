@@ -20,8 +20,8 @@ The Zenodo record is the **canonical, citable archive** for the bundled datasets
 |-------|-------|
 | Title | AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework |
 | Version | 2.0.0 |
-| DOI | `10.5281/zenodo.20637986` |
-| URL | `https://doi.org/10.5281/zenodo.20637986` |
+| DOI | `10.5281/zenodo.20729490` |
+| URL | `https://doi.org/10.5281/zenodo.20729490` |
 
 ### BibTeX (dataset entry)
 
@@ -32,19 +32,19 @@ The Zenodo record is the **canonical, citable archive** for the bundled datasets
   year         = {2026},
   publisher    = {Zenodo},
   version      = {2.0.0},
-  doi          = {10.5281/zenodo.20637986},
-  url          = {https://doi.org/10.5281/zenodo.20637986}
+  doi          = {10.5281/zenodo.20729490},
+  url          = {https://doi.org/10.5281/zenodo.20729490}
 }
 ```
 
 ### Plain text (APA-style)
 
-> Andrés, C., & Moncunilla, D. M. (2026). *AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework* (Version 2.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20637986
+> Andrés, C., & Moncunilla, D. M. (2026). *AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework* (Version 2.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20729490
 
 ### Markdown link
 
 ```markdown
-[AI Convention Lifecycle Corpus v2.0.0](https://doi.org/10.5281/zenodo.20637986)
+[AI Convention Lifecycle Corpus v2.0.0](https://doi.org/10.5281/zenodo.20729490)
 ```
 
 ---
@@ -98,15 +98,15 @@ Use this when you need an explicit version string in the citation key or bibliog
   year         = {2026},
   publisher    = {Zenodo},
   version      = {v2.0.0},
-  doi          = {10.5281/zenodo.20637986},
-  url          = {https://doi.org/10.5281/zenodo.20637986},
+  doi          = {10.5281/zenodo.20729490},
+  url          = {https://doi.org/10.5281/zenodo.20729490},
   note         = {209 analyzed repositories; 13{,}988 ever-introduced artifacts; headline mature-present gap 56.0\% at T=180 days}
 }
 ```
 
 ### In prose (methods / data availability)
 
-> We used the AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework (Andrés & Moncunilla, 2026; Zenodo: https://doi.org/10.5281/zenodo.20637986), comprising 209 analyzed GitHub repositories and 13,988 ever-introduced AI instructional artifact instances.
+> We used the AI Convention Lifecycle Corpus v2.0.0 — Expanded 209-Repository Dataset and Adoption–Maintenance Framework (Andrés & Moncunilla, 2026; Zenodo: https://doi.org/10.5281/zenodo.20729490), comprising 209 analyzed GitHub repositories and 13,988 ever-introduced AI instructional artifact instances.
 
 ### Version + Git commit (optional, for code-only forks)
 
