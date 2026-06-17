@@ -128,6 +128,27 @@ def gap_repo_level(df: pd.DataFrame, t: int) -> dict:
     }
 
 
+def gap_repo_restricted(df: pd.DataFrame, t: int) -> dict:
+    """Among repos with >=1 mature-present path: share with no active mature-present path."""
+    mature_repos = df.groupby("repo_id")[f"mature_present_{t}"].any()
+    eligible = mature_repos[mature_repos].index
+    n_eligible = int(len(eligible))
+    if n_eligible == 0:
+        return {
+            "n_repos_with_mature_present": 0,
+            "n_repos_with_active_mature_present": 0,
+            "gap_rate": None,
+        }
+    sub = df[df["repo_id"].isin(eligible)]
+    active_repos = sub[sub[f"mature_present_{t}"] & (sub[f"state_{t}"] == "ACTIVE")]["repo_id"].nunique()
+    n_gap = n_eligible - int(active_repos)
+    return {
+        "n_repos_with_mature_present": n_eligible,
+        "n_repos_with_active_mature_present": int(active_repos),
+        "gap_rate": n_gap / n_eligible,
+    }
+
+
 def table_by_type(df: pd.DataFrame, t: int, min_mature: int = 30) -> pd.DataFrame:
     rows = []
     for atype, grp in df.groupby("artifact_type", sort=True):

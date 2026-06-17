@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-06-17T08:13:29.673657+00:00",
+  "n_repos": 209,
+  "counts_by_type": {
+    "codebase": 176,
+    "collection_or_list": 6,
+    "unclear": 27
+  },
+  "confidence_counts": {
+    "medium": 177,
+    "high": 5,
+    "low": 27
+  },
+  "known_collection_repos_present": [
+    "ComposioHQ/awesome-claude-skills",
+    "f/prompts.chat",
+    "mattpocock/skills",
+    "sickn33/antigravity-awesome-skills",
+    "thedaviddias/Front-End-Checklist"
+  ],
+  "collection_or_list_repo_ids": [
+    "ComposioHQ/awesome-claude-skills",
+    "affaan-m/ECC",
+    "f/prompts.chat",
+    "mattpocock/skills",
+    "sickn33/antigravity-awesome-skills",
+    "thedaviddias/Front-End-Checklist"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-06-17T08:13:29.953250+00:00",
+  "T": 180,
+  "n_repos_analyzed": 209,
+  "n_repos_with_mature_present": 84,
+  "n_repos_with_active_mature_present": 66,
+  "original_repository_gap": 0.07177033492822966,
+  "original_repository_gap_pct": 7.2,
+  "restricted_repository_gap": 0.21428571428571427,
+  "restricted_repository_gap_pct": 21.4,
+  "maturity_matched_unrestricted_repository_gap": 0.6842105263157895,
+  "maturity_matched_unrestricted_repository_gap_pct": 68.4,
+  "artifact_gap": 0.5597920277296361,
+  "n_mature_present_artifacts": 577,
+  "typology_counts": {
+    "codebase": 176,
+    "unclear": 27,
+    "collection_or_list": 6
+  }
+}

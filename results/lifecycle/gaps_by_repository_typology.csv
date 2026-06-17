@@ -1,0 +1,6 @@
+T,n_repos_analyzed,n_ever_introduced_paths,artifact_gap,artifact_gap_pct,n_mature_present_artifacts,repository_gap_original,repository_gap_original_pct,n_repos_adopted_denominator,repository_gap_restricted,repository_gap_restricted_pct,n_repos_with_mature_present_denominator,n_repos_with_active_mature_present,group
+180,209,13988,0.5597920277296361,56.0,577,0.07177033492822966,7.2,209,0.21428571428571427,21.4,84,66,all_repositories
+180,176,3852,0.6328828828828829,63.3,444,0.07386363636363637,7.4,176,0.22857142857142856,22.9,70,54,codebase_only
+180,6,9305,0.9629629629629629,96.3,27,0.0,0.0,6,0.0,0.0,1,1,collection_or_list_only
+180,203,4683,0.54,54.0,550,0.07389162561576355,7.4,203,0.21686746987951808,21.7,83,65,excluding_collection_or_list
+180,27,831,0.1509433962264151,15.1,106,0.07407407407407407,7.4,27,0.15384615384615385,15.4,13,11,unclear_only

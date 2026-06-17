@@ -8,7 +8,7 @@ else
   PYTHON ?= .venv/bin/python3
 endif
 
-.PHONY: install analyze lifecycle-v2 verify-headline prototype-cochange-dagster pilot-cochange-scope pilot-cochange-scope-v2 pilot-cochange-scope-v3 prepare-reference-validation prepare-reference-validation-sample2 summarize-reference-validation summarize-reference-validation-sample2 pilot-misguidance pilot-misguidance-v2 drift-candidate-audit validated-drift-package synchronization-spectrum-pilot prepare-sync-validation summarize-sync-validation prepare-sync-validation-blinded summarize-sync-agreement summarize-sync-metric-vs-human prepare-boundary20-validation summarize-boundary20-agreement summarize-boundary20-metric-vs-human clean
+.PHONY: install analyze lifecycle-v2 verify-headline repository-typology-analysis prototype-cochange-dagster pilot-cochange-scope pilot-cochange-scope-v2 pilot-cochange-scope-v3 prepare-reference-validation prepare-reference-validation-sample2 summarize-reference-validation summarize-reference-validation-sample2 pilot-misguidance pilot-misguidance-v2 drift-candidate-audit validated-drift-package synchronization-spectrum-pilot prepare-sync-validation summarize-sync-validation prepare-sync-validation-blinded summarize-sync-agreement summarize-sync-metric-vs-human prepare-boundary20-validation summarize-boundary20-agreement summarize-boundary20-metric-vs-human clean
 
 install:
 	$(PYTHON) -m pip install -r requirements.txt
@@ -18,6 +18,10 @@ analyze:
 	$(PYTHON) scripts/lifecycle/adoption_maintenance_v2.py
 	$(PYTHON) scripts/lifecycle/maturity_gap_v2.py
 	$(PYTHON) scripts/lifecycle/bot_sensitivity_v2.py
+
+repository-typology-analysis:
+	$(PYTHON) scripts/lifecycle/repository_typology.py
+	$(PYTHON) scripts/lifecycle/gaps_by_repository_typology.py
 
 # Full v2 pipeline: discover → extract → build → analyze (requires git + network)
 lifecycle-v2:
