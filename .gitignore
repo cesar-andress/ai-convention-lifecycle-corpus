@@ -8,3 +8,7 @@ data/repos/
 *.log
 .DS_Store
 data/lifecycle/commit_authors.parquet
+
+# Local cloned repositories / extraction cache
+data/independent_cohort/repos/
+data/independent_cohort/repos_full/

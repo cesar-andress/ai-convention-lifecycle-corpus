@@ -1,0 +1,10 @@
+{
+  "discovered_path": "/home/cesar/papers/ai-artifact-cochange/ai-convention-lifecycle-corpus/data/independent_cohort/discovered_dependabot_independent.csv",
+  "n_discovered": 300,
+  "n_extract_ok": 118,
+  "n_extract_skipped": 182,
+  "n_repos_in_touch_history": 118,
+  "n_touch_rows": 648,
+  "attrition_out": "/home/cesar/papers/ai-artifact-cochange/ai-convention-lifecycle-corpus/results/independent_cohort/extract_attrition_dependabot_independent.csv",
+  "complete": true
+}

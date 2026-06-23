@@ -1,0 +1,27 @@
+{
+  "n_artifacts": 121,
+  "n_repos": 118,
+  "eligibility_by_threshold": {
+    "90": {
+      "stasis_T_rate_all": 0.6198347107438017,
+      "stasis_T_rate_eligible": 0.6756756756756757,
+      "n_eligible_T": 111,
+      "n_event_stasis_T": 75,
+      "censoring_rate_T": 0.32432432432432434
+    },
+    "180": {
+      "stasis_T_rate_all": 0.5371900826446281,
+      "stasis_T_rate_eligible": 0.6565656565656566,
+      "n_eligible_T": 99,
+      "n_event_stasis_T": 65,
+      "censoring_rate_T": 0.3434343434343434
+    },
+    "365": {
+      "stasis_T_rate_all": 0.4380165289256198,
+      "stasis_T_rate_eligible": 0.5888888888888889,
+      "n_eligible_T": 90,
+      "n_event_stasis_T": 53,
+      "censoring_rate_T": 0.4111111111111111
+    }
+  }
+}
