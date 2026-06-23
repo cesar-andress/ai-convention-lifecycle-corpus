@@ -54,14 +54,31 @@ def normalize_repo_relative_path(path: str) -> str:
     p = path.replace("\\", "/").strip()
     if p.startswith("./"):
         p = p[2:]
+    if p.startswith("../") or "/../" in f"/{p}":
+        raise ValueError(f"path escapes repository root: {path!r}")
     return p
+
+
+def safe_normalize_repo_relative_path(path: str) -> str | None:
+    """Return normalized path, or None when the path escapes the repository root."""
+    try:
+        return normalize_repo_relative_path(path)
+    except ValueError:
+        return None
 
 
 def list_head_files(repo_dir: Path) -> list[str]:
     proc = run_git(["git", "ls-tree", "-r", "--name-only", "HEAD"], cwd=repo_dir)
     if proc.returncode != 0:
         return []
-    return [normalize_repo_relative_path(p) for p in proc.stdout.splitlines() if p.strip()]
+    out: list[str] = []
+    for raw in proc.stdout.splitlines():
+        if not raw.strip():
+            continue
+        p = safe_normalize_repo_relative_path(raw.strip())
+        if p:
+            out.append(p)
+    return out
 
 
 def repo_last_commit_ts(repo_dir: Path) -> datetime | None:

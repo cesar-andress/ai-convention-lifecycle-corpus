@@ -1,0 +1,95 @@
+{
+  "90": {
+    "artifact_gap_mature": {
+      "observed": 0.22266244057052298,
+      "maintenance_rate_observed": 0.777337559429477,
+      "gap_ci_95": {
+        "low": 0.04549467700205406,
+        "high": 0.78035580380378
+      },
+      "maintenance_ci_95": {
+        "low": 0.21964419619621925,
+        "high": 0.954505322997946
+      },
+      "n_bootstrap": 5000
+    },
+    "repo_gap": {
+      "observed": 0.12871287128712872,
+      "ci_95": {
+        "low": 0.09375,
+        "high": 0.16279069767441862
+      },
+      "n_bootstrap": 5000
+    },
+    "repo_gap_restricted": {
+      "observed": 0.22377622377622378,
+      "ci_95": {
+        "low": 0.17045454545454544,
+        "high": 0.27472527472527475
+      },
+      "n_bootstrap": 5000
+    }
+  },
+  "180": {
+    "artifact_gap_mature": {
+      "observed": 0.2848297213622291,
+      "maintenance_rate_observed": 0.7151702786377709,
+      "gap_ci_95": {
+        "low": 0.13785015155342256,
+        "high": 0.4826229889642333
+      },
+      "maintenance_ci_95": {
+        "low": 0.5173770110357665,
+        "high": 0.8621498484465774
+      },
+      "n_bootstrap": 5000
+    },
+    "repo_gap": {
+      "observed": 0.04950495049504951,
+      "ci_95": {
+        "low": 0.024193548387096774,
+        "high": 0.07142857142857142
+      },
+      "n_bootstrap": 5000
+    },
+    "repo_gap_restricted": {
+      "observed": 0.17333333333333334,
+      "ci_95": {
+        "low": 0.10416666666666667,
+        "high": 0.23809523809523808
+      },
+      "n_bootstrap": 5000
+    }
+  },
+  "365": {
+    "artifact_gap_mature": {
+      "observed": 0.09090909090909091,
+      "maintenance_rate_observed": 0.9090909090909091,
+      "gap_ci_95": {
+        "low": 0.0,
+        "high": 0.3333333333333333
+      },
+      "maintenance_ci_95": {
+        "low": 0.6666666666666666,
+        "high": 1.0
+      },
+      "n_bootstrap": 4999
+    },
+    "repo_gap": {
+      "observed": 0.0049504950495049506,
+      "ci_95": {
+        "low": 0.0,
+        "high": 0.008333333333333333
+      },
+      "n_bootstrap": 5000
+    },
+    "repo_gap_restricted": {
+      "observed": 0.125,
+      "ci_95": {
+        "low": 0.0,
+        "high": 0.3333333333333333
+      },
+      "n_bootstrap": 4999
+    }
+  }
+}

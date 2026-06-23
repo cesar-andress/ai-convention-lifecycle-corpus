@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -20,7 +21,15 @@ from lifecycle.corpus_paths import configure
 
 ROOT = configure()
 
-from lifecycle.detection import artifact_type, is_bot, is_ci_path, is_lifecycle_artifact, load_config, normalize_path
+from lifecycle.detection import (
+    artifact_type,
+    is_bot,
+    is_ci_path,
+    is_lifecycle_artifact,
+    load_config,
+    normalize_path,
+    safe_normalize_path,
+)
 from lifecycle.git_utils import (
     GIT_ENV,
     clone_repo,
@@ -44,7 +53,7 @@ def discover_artifact_paths(repo_dir: Path, cfg: dict) -> set[str]:
     paths: set[str] = set()
     if proc.returncode == 0:
         for line in proc.stdout.splitlines():
-            p = normalize_path(line.strip())
+            p = safe_normalize_path(line.strip())
             if p and is_lifecycle_artifact(p, cfg):
                 paths.add(p)
     for p in list_head_files(repo_dir):
@@ -53,11 +62,15 @@ def discover_artifact_paths(repo_dir: Path, cfg: dict) -> set[str]:
     return paths
 
 
-def touch_history_for_path(repo_dir: Path, path: str) -> list[dict]:
-    proc = run_git(
-        ["git", "log", "--all", "--follow", "--format=%H|%at|%an|%ae", "--", path],
-        cwd=repo_dir,
-    )
+def touch_history_for_path(repo_dir: Path, path: str, *, timeout: int | None = None) -> list[dict]:
+    try:
+        proc = run_git(
+            ["git", "log", "--all", "--follow", "--format=%H|%at|%an|%ae", "--", path],
+            cwd=repo_dir,
+            timeout=timeout,
+        )
+    except subprocess.TimeoutExpired:
+        return []
     if proc.returncode != 0 or not proc.stdout.strip():
         return []
 
@@ -85,10 +98,17 @@ def touch_history_for_path(repo_dir: Path, path: str) -> list[dict]:
 def repo_commit_stats(repo_dir: Path, cfg: dict) -> dict:
     n_commits = count_repo_commits(repo_dir)
 
-    proc_auth = run_git(
-        ["git", "log", "--all", "--no-merges", "--pretty=format:%an|%ae"],
-        cwd=repo_dir,
-    )
+    auth_timeout = cfg.get("repo_stats_auth_log_timeout", cfg.get("history_git_timeout", 180))
+    try:
+        proc_auth = run_git(
+            ["git", "log", "--all", "--no-merges", "--pretty=format:%an|%ae"],
+            cwd=repo_dir,
+            timeout=auth_timeout,
+        )
+    except subprocess.TimeoutExpired:
+        proc_auth = subprocess.CompletedProcess(
+            ["git", "log"], returncode=1, stdout="", stderr=""
+        )
     n_auth = 0
     n_bot = 0
     if proc_auth.returncode == 0:
@@ -102,10 +122,15 @@ def repo_commit_stats(repo_dir: Path, cfg: dict) -> dict:
             if is_bot(author, email, cfg):
                 n_bot += 1
 
-    proc_ci = run_git(
-        ["git", "log", "--all", "--no-merges", "--pretty=format:@@", "--name-only"],
-        cwd=repo_dir,
-    )
+    proc_ci_args = ["git", "log", "--all", "--no-merges", "--pretty=format:@@", "--name-only"]
+    scope = cfg.get("history_git_pathscope")
+    if scope:
+        proc_ci_args.extend(["--", scope])
+    ci_timeout = cfg.get("repo_stats_ci_log_timeout", cfg.get("history_git_timeout", 300))
+    try:
+        proc_ci = run_git(proc_ci_args, cwd=repo_dir, timeout=ci_timeout)
+    except subprocess.TimeoutExpired:
+        proc_ci = subprocess.CompletedProcess(proc_ci_args, returncode=1, stdout="", stderr="")
     n_ci_commits = 0
     n_valid_commits = 0
     if proc_ci.returncode == 0:
@@ -118,7 +143,9 @@ def repo_commit_stats(repo_dir: Path, cfg: dict) -> dict:
                         n_ci_commits += 1
                 files = []
             elif raw.strip():
-                files.append(normalize_path(raw.strip()))
+                p = safe_normalize_path(raw.strip())
+                if p:
+                    files.append(p)
         if files:
             n_valid_commits += 1
             if any(is_ci_path(f, cfg) for f in files):
@@ -159,8 +186,9 @@ def extract_repo(
         return [], None, "no_artifacts"
 
     touch_rows: list[dict] = []
+    touch_timeout = int(cfg.get("touch_follow_timeout", cfg.get("history_git_timeout", 180)))
     for path in sorted(artifact_paths):
-        history = touch_history_for_path(repo_dir, path)
+        history = touch_history_for_path(repo_dir, path, timeout=touch_timeout)
         if not history:
             continue
         atype = artifact_type(path, cfg)
@@ -198,6 +226,26 @@ def extract_repo(
         "n_artifacts": len(artifact_paths),
     }
     return touch_rows, covariates, None
+
+
+def write_extract_checkpoint(
+    touch_rows: list[dict],
+    cov_rows: list[dict],
+    attrition: list[dict],
+    *,
+    touch_out: Path,
+    cov_out: Path,
+    attrition_out: Path,
+) -> None:
+    if not touch_rows:
+        return
+    touch_out.parent.mkdir(parents=True, exist_ok=True)
+    attrition_out.parent.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(touch_rows).to_parquet(touch_out, index=False)
+    pd.DataFrame(cov_rows).to_parquet(cov_out, index=False)
+    pd.DataFrame(attrition).drop_duplicates(subset=["repo_id"], keep="last").to_csv(
+        attrition_out, index=False
+    )
 
 
 def main() -> int:
@@ -325,6 +373,14 @@ def main() -> int:
             }
         )
         print(f"ok: {row['repo_id']} ({len(touches)} touch rows)", file=sys.stderr)
+        write_extract_checkpoint(
+            touch_rows,
+            cov_rows,
+            attrition,
+            touch_out=touch_out,
+            cov_out=cov_out,
+            attrition_out=attrition_out,
+        )
 
     if not touch_rows:
         print("no touch history extracted", file=sys.stderr)

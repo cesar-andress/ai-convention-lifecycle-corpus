@@ -45,6 +45,12 @@ gh-actions-analyze:
 verify-gh-actions-gate:
 	@$(PYTHON) -c "import json; g=json.load(open('results/lifecycle_gh_actions/gh_actions_gate_report.json')); assert g['passed'], g; print('OK: gh_actions gate passed')"
 
+prompts-ablation:
+	$(PYTHON) scripts/lifecycle/run_prompts_ablation.py
+
+empirical-decision-report:
+	$(PYTHON) scripts/lifecycle/write_empirical_decision_report.py
+
 # Co-change feasibility prototype (isolated; does not modify lifecycle v2 outputs)
 prototype-cochange-dagster:
 	$(PYTHON) scripts/cochange/prototype_changed_files.py --csv

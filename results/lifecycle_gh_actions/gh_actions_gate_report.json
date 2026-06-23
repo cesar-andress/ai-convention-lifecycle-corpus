@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": {
+    "adopted_repos_ge_80": true,
+    "restricted_repos_ge_40": true,
+    "mature_present_paths_ge_150": true,
+    "concentration_below_50pct": true,
+    "artifact_bootstrap_present": true,
+    "restricted_bootstrap_present": true,
+    "unguarded_bootstrap_present": true
+  },
+  "thresholds": {
+    "min_adopted_repos": 80,
+    "min_restricted_repos": 40,
+    "min_mature_present_paths": 150,
+    "max_top_repo_share_mature_present": 0.5
+  },
+  "concentration": {
+    "top_repo_id": "apache/beam",
+    "top_repo_share": 0.15356321839080458,
+    "n_mature_present": 2175,
+    "top_repo_n_mature_present": 334
+  },
+  "recommendation": "PROCEED"
+}

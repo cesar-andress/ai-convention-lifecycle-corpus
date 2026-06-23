@@ -215,6 +215,42 @@ def leave_one_repo_out_v2(df: pd.DataFrame, t: int) -> pd.DataFrame:
     return loo.sort_values("abs_delta_artifact_gap", ascending=False)
 
 
+def leave_one_repo_out_extended(df: pd.DataFrame, t: int) -> pd.DataFrame:
+    """LOO deltas for artifact, unguarded repository, and restricted repository gaps."""
+    full_art = gap_artifact_mature(df, t)
+    full_repo = gap_repo_level(df, t)
+    full_restricted = gap_repo_restricted(df, t)
+    rows = []
+    for repo_id in sorted(df["repo_id"].unique()):
+        sub = df[df["repo_id"] != repo_id]
+        art = gap_artifact_mature(sub, t)
+        repo = gap_repo_level(sub, t)
+        restricted = gap_repo_restricted(sub, t)
+        rows.append(
+            {
+                "repo_id": repo_id,
+                "n_artifacts_removed": int((df["repo_id"] == repo_id).sum()),
+                "artifact_gap_mature": art["gap_rate"],
+                "delta_artifact_gap_vs_full": (art["gap_rate"] - full_art["gap_rate"])
+                if art["gap_rate"] is not None and full_art["gap_rate"] is not None
+                else None,
+                "repo_gap_unguarded": repo["gap_rate"],
+                "delta_repo_gap_unguarded_vs_full": (repo["gap_rate"] - full_repo["gap_rate"])
+                if repo["gap_rate"] is not None and full_repo["gap_rate"] is not None
+                else None,
+                "repo_gap_restricted": restricted["gap_rate"],
+                "delta_repo_gap_restricted_vs_full": (restricted["gap_rate"] - full_restricted["gap_rate"])
+                if restricted["gap_rate"] is not None and full_restricted["gap_rate"] is not None
+                else None,
+            }
+        )
+    loo = pd.DataFrame(rows)
+    loo["abs_delta_artifact_gap"] = loo["delta_artifact_gap_vs_full"].abs()
+    loo["abs_delta_repo_gap_unguarded"] = loo["delta_repo_gap_unguarded_vs_full"].abs()
+    loo["abs_delta_repo_gap_restricted"] = loo["delta_repo_gap_restricted_vs_full"].abs()
+    return loo.sort_values("abs_delta_artifact_gap", ascending=False)
+
+
 def top_prompt_repos(df: pd.DataFrame, k: int) -> list[str]:
     prompts = df[df["artifact_type"] == "prompts"]
     if prompts.empty:

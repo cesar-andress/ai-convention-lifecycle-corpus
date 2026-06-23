@@ -1,0 +1,99 @@
+{
+  "generated_at": "2026-06-18T05:34:54.332145+00:00",
+  "canonical_ai_headlines_unchanged": {
+    "artifact_gap_pct": 56.0,
+    "restricted_repo_gap_pct": 21.4,
+    "unguarded_repo_gap_pct": 7.2,
+    "maturity_matched_repo_gap_pct": 68.4
+  },
+  "missing_artifacts": [],
+  "github_actions": {
+    "family": "GitHub Actions (root .github/workflows/)",
+    "repos_adopted": 186,
+    "repos_mature_present": 155,
+    "mature_present_paths": 2175,
+    "median_paths": 10.5,
+    "max_paths": 335,
+    "artifact_gap": "7.6% [4.8, 11.5]",
+    "restricted_gap": "2.6% [1.0, 4.3]",
+    "unguarded_gap": "1.6% [0.0, 2.7]",
+    "maturity_matched_gap": "18.8%",
+    "loo_artifact": 0.01267676862275001,
+    "loo_restricted": 0.006325932132383746,
+    "loo_unguarded": 0.005318221447253704
+  },
+  "github_actions_gate": {
+    "passed": true,
+    "checks": {
+      "adopted_repos_ge_80": true,
+      "restricted_repos_ge_40": true,
+      "mature_present_paths_ge_150": true,
+      "concentration_below_50pct": true,
+      "artifact_bootstrap_present": true,
+      "restricted_bootstrap_present": true,
+      "unguarded_bootstrap_present": true
+    },
+    "thresholds": {
+      "min_adopted_repos": 80,
+      "min_restricted_repos": 40,
+      "min_mature_present_paths": 150,
+      "max_top_repo_share_mature_present": 0.5
+    },
+    "concentration": {
+      "top_repo_id": "apache/beam",
+      "top_repo_share": 0.15356321839080458,
+      "n_mature_present": 2175,
+      "top_repo_n_mature_present": 334
+    },
+    "recommendation": "PROCEED"
+  },
+  "ai_comparison_rows": [
+    {
+      "family": "AI conventions (full detector)",
+      "repos_adopted": 209,
+      "repos_mature_present": 84,
+      "mature_present_paths": 577,
+      "median_paths": 2.0,
+      "max_paths": 4881,
+      "artifact_gap": "56.0%",
+      "restricted_gap": "21.4%",
+      "unguarded_gap": "7.2%",
+      "maturity_matched_gap": "68.4%",
+      "loo_artifact": null,
+      "loo_restricted": null,
+      "loo_unguarded": null
+    },
+    {
+      "family": "AI conventions (no prompts/)",
+      "repos_adopted": 202,
+      "repos_mature_present": 75,
+      "mature_present_paths": 323,
+      "median_paths": 2.0,
+      "max_paths": 4881,
+      "artifact_gap": "28.5% [13.8, 48.3]",
+      "restricted_gap": "17.3% [10.4, 23.8]",
+      "unguarded_gap": "5.0% [2.4, 7.1]",
+      "maturity_matched_gap": "69.3%",
+      "loo_artifact": 0.06631531680570979,
+      "loo_restricted": 0.011171171171171168,
+      "loo_unguarded": 0.004728831092064435
+    }
+  ],
+  "integrate_github_actions_rationale": "Yes \u2014 gate passed; second family exercises the protocol on configuration artifacts without altering AI headline values.",
+  "integrate_prompts_rationale": "INTEGRATE_WITH_CAVEAT: artifact\u2013restricted spread 11.1 pp (32.3% of full 34.6 pp retained).",
+  "prompts_ablation_decision": {
+    "full_artifact_minus_restricted_pp": 34.6,
+    "ablated_artifact_minus_restricted_pp": 11.1,
+    "spread_retained_pct": 32.3,
+    "qualitative_pattern_remains": true,
+    "recommendation": "INTEGRATE_WITH_CAVEAT"
+  },
+  "risks": [
+    "GitHub Actions: high per-repo workflow multiplicity may widen artifact CIs and increase runtime.",
+    "GitHub Actions: cohort was selected for AI conventions, not CI prevalence.",
+    "Prompts ablation: skill_md concentration remains even after prompts/ removal.",
+    "Either addition increases Results/Discussion length and reviewer surface area."
+  ],
+  "page_impact": "GitHub Actions subsection + comparison table: ~0.5\u20130.75 pages. Prompts ablation robustness row: ~0.15\u20130.25 pages. Combined upper bound ~1 page.",
+  "final_recommendation": "integrate_both"
+}

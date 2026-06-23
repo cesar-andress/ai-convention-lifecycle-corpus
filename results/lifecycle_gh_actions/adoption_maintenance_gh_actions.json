@@ -1,0 +1,252 @@
+{
+  "study_id": "gh_actions_v1",
+  "family_label": "GitHub Actions workflow files",
+  "panel": "primary_root_workflows_example_excluded",
+  "headline_primary_180": {
+    "threshold_days": 180,
+    "n_repos_in_panel": 188,
+    "n_repos_adopted_head": 186,
+    "n_ever_introduced": 5634,
+    "n_present_head": 3127,
+    "n_mature_present_paths": 2175,
+    "n_repos_with_mature_present": 155,
+    "median_paths_per_adopted_repo": 10.5,
+    "max_paths_per_adopted_repo": 335,
+    "artifact_gap_mature": 0.07586206896551724,
+    "artifact_maintenance_rate_mature": 0.9241379310344827,
+    "repo_gap_unguarded": 0.016129032258064516,
+    "repo_gap_restricted": 0.025806451612903226,
+    "repo_gap_maturity_matched_unrestricted": 0.1881720430107527,
+    "n_repos_with_active_mature_present": 151
+  },
+  "by_threshold": {
+    "90": {
+      "artifact": {
+        "n_mature_present": 2493,
+        "n_active": 2093,
+        "n_dormant": 400,
+        "gap_rate": 0.16044925792218212,
+        "maintenance_rate": 0.8395507420778179
+      },
+      "repo_unguarded": {
+        "n_repos_adopted": 186,
+        "n_repos_maintained": 176,
+        "n_repos_dormant_only": 10,
+        "gap_rate": 0.053763440860215055,
+        "dormant_only_rate": 0.053763440860215055
+      },
+      "repo_restricted": {
+        "n_repos_with_mature_present": 169,
+        "n_repos_with_active_mature_present": 159,
+        "gap_rate": 0.05917159763313609
+      },
+      "repo_maturity_matched": {
+        "n_repos_adopted": 186,
+        "n_repos_with_active_mature_present": 159,
+        "gap_rate": 0.14516129032258066
+      }
+    },
+    "180": {
+      "artifact": {
+        "n_mature_present": 2175,
+        "n_active": 2010,
+        "n_dormant": 165,
+        "gap_rate": 0.07586206896551724,
+        "maintenance_rate": 0.9241379310344827
+      },
+      "repo_unguarded": {
+        "n_repos_adopted": 186,
+        "n_repos_maintained": 183,
+        "n_repos_dormant_only": 3,
+        "gap_rate": 0.016129032258064516,
+        "dormant_only_rate": 0.016129032258064516
+      },
+      "repo_restricted": {
+        "n_repos_with_mature_present": 155,
+        "n_repos_with_active_mature_present": 151,
+        "gap_rate": 0.025806451612903226
+      },
+      "repo_maturity_matched": {
+        "n_repos_adopted": 186,
+        "n_repos_with_active_mature_present": 151,
+        "gap_rate": 0.1881720430107527
+      }
+    },
+    "365": {
+      "artifact": {
+        "n_mature_present": 1855,
+        "n_active": 1795,
+        "n_dormant": 60,
+        "gap_rate": 0.03234501347708895,
+        "maintenance_rate": 0.967654986522911
+      },
+      "repo_unguarded": {
+        "n_repos_adopted": 186,
+        "n_repos_maintained": 185,
+        "n_repos_dormant_only": 1,
+        "gap_rate": 0.005376344086021506,
+        "dormant_only_rate": 0.005376344086021506
+      },
+      "repo_restricted": {
+        "n_repos_with_mature_present": 141,
+        "n_repos_with_active_mature_present": 140,
+        "gap_rate": 0.0070921985815602835
+      },
+      "repo_maturity_matched": {
+        "n_repos_adopted": 186,
+        "n_repos_with_active_mature_present": 140,
+        "gap_rate": 0.24731182795698925
+      }
+    }
+  },
+  "bootstrap": {
+    "90": {
+      "artifact_gap_mature": {
+        "observed": 0.16044925792218212,
+        "maintenance_rate_observed": 0.8395507420778179,
+        "gap_ci_95": {
+          "low": 0.11037890187851483,
+          "high": 0.22571096790206627
+        },
+        "maintenance_ci_95": {
+          "low": 0.7742890320979336,
+          "high": 0.8896210981214852
+        },
+        "n_bootstrap": 5000
+      },
+      "repo_gap": {
+        "observed": 0.053763440860215055,
+        "ci_95": {
+          "low": 0.026785714285714284,
+          "high": 0.07758620689655173
+        },
+        "n_bootstrap": 5000
+      },
+      "repo_gap_restricted": {
+        "observed": 0.05917159763313609,
+        "ci_95": {
+          "low": 0.03,
+          "high": 0.08490566037735849
+        },
+        "n_bootstrap": 5000
+      }
+    },
+    "180": {
+      "artifact_gap_mature": {
+        "observed": 0.07586206896551724,
+        "maintenance_rate_observed": 0.9241379310344827,
+        "gap_ci_95": {
+          "low": 0.04827235755033109,
+          "high": 0.1151613831689754
+        },
+        "maintenance_ci_95": {
+          "low": 0.8848386168310246,
+          "high": 0.9517276424496689
+        },
+        "n_bootstrap": 5000
+      },
+      "repo_gap": {
+        "observed": 0.016129032258064516,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.02654867256637168
+        },
+        "n_bootstrap": 5000
+      },
+      "repo_gap_restricted": {
+        "observed": 0.025806451612903226,
+        "ci_95": {
+          "low": 0.009615384615384616,
+          "high": 0.0425531914893617
+        },
+        "n_bootstrap": 5000
+      }
+    },
+    "365": {
+      "artifact_gap_mature": {
+        "observed": 0.03234501347708895,
+        "maintenance_rate_observed": 0.967654986522911,
+        "gap_ci_95": {
+          "low": 0.01748036337487515,
+          "high": 0.05529676750386777
+        },
+        "maintenance_ci_95": {
+          "low": 0.9447032324961322,
+          "high": 0.9825196366251249
+        },
+        "n_bootstrap": 5000
+      },
+      "repo_gap": {
+        "observed": 0.005376344086021506,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.00909090909090909
+        },
+        "n_bootstrap": 5000
+      },
+      "repo_gap_restricted": {
+        "observed": 0.0070921985815602835,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.012195121951219513
+        },
+        "n_bootstrap": 5000
+      }
+    }
+  },
+  "loo_max_abs_delta_artifact_gap": 0.01267676862275001,
+  "loo_max_abs_delta_repo_gap_unguarded": 0.005318221447253704,
+  "loo_max_abs_delta_repo_gap_restricted": 0.006325932132383746,
+  "sensitivity_exclude_top_workflow_repos": {
+    "excluded_repos": [
+      "apache/beam",
+      "grafana/grafana",
+      "n8n-io/n8n"
+    ],
+    "headline_180": {
+      "threshold_days": 180,
+      "n_repos_in_panel": 185,
+      "n_repos_adopted_head": 183,
+      "n_ever_introduced": 4929,
+      "n_present_head": 2621,
+      "n_mature_present_paths": 1742,
+      "n_repos_with_mature_present": 152,
+      "median_paths_per_adopted_repo": 10.0,
+      "max_paths_per_adopted_repo": 63,
+      "artifact_gap_mature": 0.09242250287026406,
+      "artifact_maintenance_rate_mature": 0.9075774971297359,
+      "repo_gap_unguarded": 0.01639344262295082,
+      "repo_gap_restricted": 0.02631578947368421,
+      "repo_gap_maturity_matched_unrestricted": 0.1912568306010929,
+      "n_repos_with_active_mature_present": 148
+    }
+  },
+  "sensitivity_nested_subtree_workflows": {
+    "threshold_days": 180,
+    "n_repos_in_panel": 188,
+    "n_repos_adopted_head": 187,
+    "n_ever_introduced": 5711,
+    "n_present_head": 3204,
+    "n_mature_present_paths": 2220,
+    "n_repos_with_mature_present": 156,
+    "median_paths_per_adopted_repo": 11.0,
+    "max_paths_per_adopted_repo": 335,
+    "artifact_gap_mature": 0.08063063063063063,
+    "artifact_maintenance_rate_mature": 0.9193693693693694,
+    "repo_gap_unguarded": 0.016042780748663103,
+    "repo_gap_restricted": 0.02564102564102564,
+    "repo_gap_maturity_matched_unrestricted": 0.18716577540106952,
+    "n_repos_with_active_mature_present": 152
+  },
+  "bot_filtered_primary_180": {
+    "artifact_gap_mature": 0.19694072657743786,
+    "repo_gap_unguarded": 0.04838709677419355,
+    "n_paths_retained": 5304
+  },
+  "concentration_primary_180": {
+    "top_repo_id": "apache/beam",
+    "top_repo_share": 0.15356321839080458,
+    "n_mature_present": 2175,
+    "top_repo_n_mature_present": 334
+  }
+}

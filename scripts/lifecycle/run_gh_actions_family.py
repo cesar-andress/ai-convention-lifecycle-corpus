@@ -28,7 +28,7 @@ from lifecycle.adoption_maintenance import (
     gap_repo_maturity_matched_unrestricted,
     gap_repo_restricted,
 )
-from lifecycle.adoption_maintenance_v2 import full_bootstrap, leave_one_repo_out_v2
+from lifecycle.adoption_maintenance_v2 import full_bootstrap, leave_one_repo_out_extended
 from lifecycle.build_dataset import build_artifacts, eligibility_summary
 from lifecycle.corpus_paths import configure
 from lifecycle.detection import is_bot, load_config, normalize_path
@@ -82,6 +82,7 @@ def headline_bundle(df: pd.DataFrame, t: int) -> dict:
     restricted = gap_repo_restricted(df, t)
     maturity_matched = gap_repo_maturity_matched_unrestricted(df, t)
     adopted = df[df["present_in_head"]].groupby("repo_id").size()
+    adopted_counts = adopted.tolist() if len(adopted) else [0]
     return {
         "threshold_days": t,
         "n_repos_in_panel": int(df["repo_id"].nunique()),
@@ -91,6 +92,7 @@ def headline_bundle(df: pd.DataFrame, t: int) -> dict:
         "n_mature_present_paths": art["n_mature_present"],
         "n_repos_with_mature_present": restricted["n_repos_with_mature_present"],
         "median_paths_per_adopted_repo": float(median(adopted)) if len(adopted) else 0.0,
+        "max_paths_per_adopted_repo": int(max(adopted_counts)),
         "artifact_gap_mature": art["gap_rate"],
         "artifact_maintenance_rate_mature": art["maintenance_rate"],
         "repo_gap_unguarded": repo["gap_rate"],
@@ -195,8 +197,10 @@ def render_summary_md(summary: dict, gate: dict, cfg: dict) -> str:
         f"- Unguarded repo gap: **{h['repo_gap_unguarded']*100:.1f}%** "
         f"CI [{repo['ci_95']['low']*100:.1f}, {repo['ci_95']['high']*100:.1f}]",
         f"- Maturity-matched unrestricted repo gap: **{h['repo_gap_maturity_matched_unrestricted']*100:.1f}%**",
-        f"- LOO max |Δ| artifact / repo gap: "
-        f"**{summary['loo_max_abs_delta_artifact_gap']:.3f} / {summary['loo_max_abs_delta_repo_gap']:.3f}**",
+        f"- LOO max |Δ| artifact / unguarded / restricted: "
+        f"**{summary['loo_max_abs_delta_artifact_gap']:.3f} / "
+        f"{summary['loo_max_abs_delta_repo_gap_unguarded']:.3f} / "
+        f"{summary['loo_max_abs_delta_repo_gap_restricted']:.3f}**",
         "",
         "## Gate decision",
         "",
@@ -293,7 +297,7 @@ def run_analyze(cfg: dict) -> int:
     df = add_states_and_flags(df, THRESHOLDS)
 
     bootstrap = full_bootstrap(df, THRESHOLDS, n_boot, seed)
-    loo = leave_one_repo_out_v2(df, primary_t)
+    loo = leave_one_repo_out_extended(df, primary_t)
     concentration = concentration_top_repo_share(df, primary_t)
     headline = headline_bundle(df, primary_t)
 
@@ -331,7 +335,12 @@ def run_analyze(cfg: dict) -> int:
         },
         "bootstrap": bootstrap,
         "loo_max_abs_delta_artifact_gap": float(loo["abs_delta_artifact_gap"].max()) if len(loo) else None,
-        "loo_max_abs_delta_repo_gap": float(loo["abs_delta_repo_gap"].max()) if len(loo) else None,
+        "loo_max_abs_delta_repo_gap_unguarded": float(loo["abs_delta_repo_gap_unguarded"].max())
+        if len(loo)
+        else None,
+        "loo_max_abs_delta_repo_gap_restricted": float(loo["abs_delta_repo_gap_restricted"].max())
+        if len(loo)
+        else None,
         "sensitivity_exclude_top_workflow_repos": {
             "excluded_repos": excluded,
             "headline_180": headline_excl,

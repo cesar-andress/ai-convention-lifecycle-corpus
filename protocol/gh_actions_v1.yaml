@@ -51,6 +51,8 @@ sensitivity_analysis:
 
 history_git_pathscope: ".github/workflows"
 history_git_timeout: 180
+touch_follow_timeout: 120
+repo_stats_ci_log_timeout: 180
 
 bot_author_regex: '(?i)(bot|dependabot|renovate|github-actions|noreply|\[bot\])'
 

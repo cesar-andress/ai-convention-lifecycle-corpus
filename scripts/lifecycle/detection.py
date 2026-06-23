@@ -19,11 +19,15 @@ def load_config(path: str | None = None) -> dict:
         return yaml.safe_load(f)
 
 
-from lifecycle.git_utils import normalize_repo_relative_path
+from lifecycle.git_utils import normalize_repo_relative_path, safe_normalize_repo_relative_path
 
 
 def normalize_path(p: str) -> str:
     return normalize_repo_relative_path(p)
+
+
+def safe_normalize_path(p: str) -> str | None:
+    return safe_normalize_repo_relative_path(p)
 
 
 def _matches_any(path: str, patterns: list[str]) -> bool:
